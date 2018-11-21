@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation project(path: ':utils')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.bouncycastle:bcprov-jdk15on:$bouncycastleVersion"
+    implementation "org.slf4j:slf4j-api:$slf4jVersion"
+
+    testImplementation(
+            "junit:junit:$junitVersion"
+    )
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
