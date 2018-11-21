@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(path: ':crypto')
+    implementation project(path: ':utils')
+    implementation 'com.google.protobuf:protobuf-java:3.6.1'
+    implementation 'com.google.protobuf:protobuf-java-util:3.6.1'
+    implementation 'com.google.api.grpc:proto-google-common-protos:1.12.0'
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+
+    testImplementation(
+            "junit:junit:$junitVersion"
+    )
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
