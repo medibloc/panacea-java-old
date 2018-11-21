@@ -22,6 +22,6 @@ public abstract class Request<T> {
     }
 
     public Flowable<T> flowable() {
-        return new RemoteCall<>(this::send).flowable();
+        return Flowable.fromCallable(this::send);
     }
 }

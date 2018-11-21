@@ -12,8 +12,7 @@ public class ApiClientTest {
     private static final int TESTNET_CHAIN_ID = 180830;
 
     private Med4J getMed4J() {
-        HttpService httpService = new HttpService(TESTNET_URL);
-        return Med4J.create(httpService);
+        return Med4J.create(new HttpService(TESTNET_URL));
     }
 
     @Test
