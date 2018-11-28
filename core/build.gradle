@@ -10,6 +10,7 @@ dependencies {
     implementation 'com.google.api.grpc:proto-google-common-protos:1.12.0'
     implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
     implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
 
     testImplementation(
             "junit:junit:$junitVersion"

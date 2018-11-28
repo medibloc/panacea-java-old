@@ -6,6 +6,7 @@ buildscript {
     ext.okhttpVersion = '3.11.0'
     ext.rxjavaVersion = '2.2.3'
     ext.slf4jVersion = '1.7.25'
+    ext.jacksonVersion = '2.9.7'
 
     repositories {
         google()
