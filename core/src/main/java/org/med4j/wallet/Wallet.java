@@ -1,6 +1,7 @@
 package org.med4j.wallet;
 
 import org.med4j.crypto.ECKeyPair;
+import org.med4j.utils.Numeric;
 
 public class Wallet {
     private WalletFile walletFile;
@@ -30,5 +31,9 @@ public class Wallet {
         if (password.isEmpty()) {
             throw new IllegalArgumentException("Password can not be empty.");
         }
+    }
+
+    public String getAddress() {
+        return Numeric.toHexStringZeroPadded(this.ecKeyPair.getPubKey(), 66);
     }
 }
