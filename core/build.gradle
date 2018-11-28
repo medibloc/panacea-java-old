@@ -11,6 +11,7 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
     implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
     implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    implementation "org.bouncycastle:bcprov-jdk15on:$bouncycastleVersion"
 
     testImplementation(
             "junit:junit:$junitVersion"
