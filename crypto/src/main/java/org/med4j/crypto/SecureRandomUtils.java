@@ -11,7 +11,7 @@ import java.security.SecureRandom;
  * <p>This is to address issues with SecureRandom on Android. For more information, refer to the
  * following <a href="https://github.com/web3j/web3j/issues/146">issue</a>.
  */
-public final class SecureRandomUtils {
+final class SecureRandomUtils {
 
     private static final SecureRandom SECURE_RANDOM;
 
@@ -22,7 +22,7 @@ public final class SecureRandomUtils {
         SECURE_RANDOM = new SecureRandom();
     }
 
-    public static SecureRandom secureRandom() {
+    static SecureRandom secureRandom() {
         return SECURE_RANDOM;
     }
 

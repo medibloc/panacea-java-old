@@ -5,10 +5,12 @@ import org.med4j.utils.Numeric;
 
 import java.math.BigInteger;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertEquals;
 import static org.med4j.crypto.Keys.PBKDF2_KEY_SIZE;
 
 public class KeysTest {
+
     @Test
     public void testKeyPairFromPassphrase() throws Exception {
         for (String[] mnemonicKey: SampleKeys.mnemonicKeys) {
@@ -21,13 +23,6 @@ public class KeysTest {
 
             assertEquals(mnemonicKey[1], Numeric.toHexStringZeroPadded(privKey, PBKDF2_KEY_SIZE * 2));
         }
-    }
-
-    @Test
-    public void testGetAddress() {
-        String validAddress = "021afe7c3a1d74e8f76cf777fe1ecb89f8aeaccbe17ea1d5748e73e9f785e4e90b";
-        ECKeyPair ecKeyPair = new ECKeyPair(null, new BigInteger(validAddress, 16));
-        assertTrue(Keys.getAddress(ecKeyPair).equals(validAddress));
     }
 
     /*

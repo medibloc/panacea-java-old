@@ -1,12 +1,13 @@
 package org.med4j.crypto;
 
 import java.math.BigInteger;
+import java.security.KeyPair;
 
 public class ECKeyPair {
     private final BigInteger privKey;
     private final BigInteger pubKey;
 
-    public ECKeyPair(BigInteger privKey, BigInteger pubKey) {
+    ECKeyPair(BigInteger privKey, BigInteger pubKey) {
         this.privKey = privKey;
         this.pubKey = pubKey;
     }

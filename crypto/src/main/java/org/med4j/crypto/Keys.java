@@ -5,7 +5,6 @@ import org.bouncycastle.crypto.ec.CustomNamedCurves;
 import org.bouncycastle.crypto.params.ECDomainParameters;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
-import org.med4j.utils.Numeric;
 
 import java.math.BigInteger;
 import java.security.InvalidAlgorithmParameterException;
@@ -20,9 +19,6 @@ import java.util.Arrays;
 import static org.med4j.crypto.SecureRandomUtils.secureRandom;
 
 public class Keys {
-    public static final int PRIVATE_KEY_SIZE = 32;
-    public static final int PUBLIC_KEY_SIZE = 33;
-
     private Keys() {}
 
     private static final X9ECParameters CURVE_PARAMS = CustomNamedCurves.getByName("secp256k1");
@@ -79,9 +75,5 @@ public class Keys {
         byte[] encoded = pubKeyPoint.getEncoded(false);
         BigInteger pubKey = new BigInteger(1, Arrays.copyOfRange(encoded, 1, encoded.length)); // remove prefix
         return new ECKeyPair(privKey, pubKey);
-    }
-
-    public static String getAddress(ECKeyPair ecKeyPair) {
-        return Numeric.toHexStringZeroPadded(ecKeyPair.getPubKey(), 66);
     }
 }
