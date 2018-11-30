@@ -21,6 +21,8 @@ public class AccountUtils {
     public static Account createAccount(String password, ECKeyPair ecKeyPair, AccountOption accountOption) throws Exception {
         validatePassword(password);
 
+        if (accountOption == null) accountOption = new AccountOption();
+
         Account account = new Account(ecKeyPair);
         account.setV3Settings(accountOption);
         account.generateCryptoValues(password, ecKeyPair, accountOption);
