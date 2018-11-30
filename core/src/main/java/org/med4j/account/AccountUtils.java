@@ -15,10 +15,9 @@ public class AccountUtils {
      *
      * @param password required
      * @param existingKeyPair optional(if null, generate new key pair)
-     * @param accountOption optional(if null, use default option)
      * @return New Wallet
      */
-    public static Account createAccount(String password, ECKeyPair existingKeyPair, AccountOption accountOption) throws Exception {
+    public static Account createAccount(String password, ECKeyPair existingKeyPair) throws Exception {
         validatePassword(password);
 
         ECKeyPair ecKeyPair;
@@ -28,14 +27,7 @@ public class AccountUtils {
             ecKeyPair = existingKeyPair;
         }
 
-        AccountOption option;
-        if (accountOption == null) {
-            option = new AccountOption();
-        } else {
-            option = accountOption;
-        }
-
-        return new Account(password, ecKeyPair, option);
+        return new Account(password, ecKeyPair);
     }
 
     public static File saveAccount(Account account) throws Exception {
