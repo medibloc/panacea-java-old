@@ -10,28 +10,26 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class AccountUtils {
-    /**
-     * Create new Account.
-     *
-     * @param password required
-     * @param existingKeyPair optional(if null, generate new key pair)
-     * @return New Wallet
-     */
-    public static Account createAccount(String password, ECKeyPair existingKeyPair) throws Exception {
-        validatePassword(password);
 
-        ECKeyPair ecKeyPair;
-        if (existingKeyPair == null) {
-            ecKeyPair = Keys.generateKeysFromPassphrase(password);
-        } else {
-            ecKeyPair = existingKeyPair;
-        }
-
-        return new Account(password, ecKeyPair);
+    /** Create new Account. A new key pair will be generated internally. */
+    public static Account createAccount(String password, AccountOption accountOption) throws Exception {
+        ECKeyPair ecKeyPair = Keys.generateKeysFromPassphrase(password);
+        return createAccount(password, ecKeyPair, accountOption);
     }
 
-    public static File saveAccount(Account account) throws Exception {
-        return saveAccount(account, getDefaultWalletFilePath());
+    /** Create new Account with the given key pair. */
+    public static Account createAccount(String password, ECKeyPair ecKeyPair, AccountOption accountOption) throws Exception {
+        validatePassword(password);
+
+        Account account = new Account(ecKeyPair);
+        account.setV3Settings(accountOption);
+        account.generateCryptoValues(password, ecKeyPair, accountOption);
+
+        return account;
+    }
+
+    public static File saveAccountToDefaultPath(Account account) throws Exception {
+        return saveAccount(account, getDefaultAccountFilePath());
     }
 
     public static File saveAccount(Account account, String destinationPath) throws Exception {
@@ -53,7 +51,7 @@ public class AccountUtils {
         }
     }
 
-    private static String getDefaultWalletFilePath() {
+    private static String getDefaultAccountFilePath() {
         String lowerOsName = System.getProperty("os.name").toLowerCase();
 
         if (lowerOsName.startsWith("mac")) {

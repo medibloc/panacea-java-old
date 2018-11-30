@@ -47,24 +47,15 @@ public class Account {
 
     private String address;
 
-    /**
-     * Create Account class with given Crypto class.
-     */
-    public Account(Crypto crypto) {
-        this.crypto = crypto;
-    }
-
-    public Account(String password, ECKeyPair ecKeyPair) throws CipherException {
-        setV3Settings();
+    Account(ECKeyPair ecKeyPair) {
         setAddress(Numeric.toHexStringZeroPadded(ecKeyPair.getPubKey(), PUBLIC_KEY_SIZE));
-        generateCryptoValues(password, ecKeyPair);
     }
 
     public int getVersion() {
         return version;
     }
 
-    public void setVersion(int version) {
+    void setVersion(int version) {
         this.version = version;
     }
 
@@ -72,7 +63,7 @@ public class Account {
         return id;
     }
 
-    public void setId(String id) {
+    void setId(String id) {
         this.id = id;
     }
 
@@ -80,7 +71,7 @@ public class Account {
         return crypto;
     }
 
-    public void setCrypto(Crypto crypto) {
+    void setCrypto(Crypto crypto) {
         this.crypto = crypto;
     }
 
@@ -88,42 +79,45 @@ public class Account {
         return address;
     }
 
-    public void setAddress(String address) {
+    void setAddress(String address) {
         this.address = address;
     }
 
-    /**
-     * Set Crypto properties V3.
-     */
-    public void setV3Settings() {
-        this.version = CURRENT_VERSION;
+    void setV3Settings(AccountOption option) {
+        setVersion(CURRENT_VERSION);
 
         Crypto crypto = new Crypto();
-        crypto.cipher = AES_128_CTR;
-        crypto.kdf = SCRYPT;
+        String cipher = option.getCipher() != null ? option.getCipher() : AES_128_CTR;
+        crypto.setCipher(cipher);
+        String kdf = option.getKdf() != null ? option.getKdf() : SCRYPT;
+        crypto.setKdf(kdf);
 
         CipherParams cipherParams = new CipherParams();
         crypto.setCipherparams(cipherParams);
 
         ScryptKdfParams kdfParams = new ScryptKdfParams();
-        kdfParams.setDklen(DKLEN);
-        kdfParams.setN(N);
-        kdfParams.setP(P);
-        kdfParams.setR(R);
+        int dklen = option.getDklen() != -1 ? option.getDklen() : DKLEN;
+        kdfParams.setDklen(dklen);
+        int n = option.getN() != -1 ? option.getN() : N;
+        kdfParams.setN(n);
+        int p = option.getP() != -1 ? option.getP() : P;
+        kdfParams.setP(p);
+        int r = option.getR() != -1 ? option.getR() : R;
+        kdfParams.setR(r);
         crypto.setKdfparams(kdfParams);
 
-        this.crypto = crypto;
+        setCrypto(crypto);
     }
 
-    public void generateCryptoValues(String password, ECKeyPair ecKeyPair) throws CipherException {
+    void generateCryptoValues(String password, ECKeyPair ecKeyPair, AccountOption option) throws CipherException {
         if (this.version == 0 || this.crypto == null || this.crypto.kdfparams == null) {
             throw new IllegalArgumentException("Account options was not set. Valid Crypto values should be set before call generateCryptoValues() method.");
         }
 
-        this.id = UUID.randomUUID().toString();
+        this.id = option.getUuid() != null ? option.getUuid() : UUID.randomUUID().toString();
 
-        byte[] salt = generateRandomBytes(KDFPARAMS_SALT_SIZE);
-        byte[] iv = generateRandomBytes(IV_SIZE);
+        byte[] salt = option.getSalt() != null ? option.getSalt() : generateRandomBytes(KDFPARAMS_SALT_SIZE);
+        byte[] iv = option.getIv() != null ? option.getIv() : generateRandomBytes(IV_SIZE);
 
         byte[] derivedKey;
         if (this.crypto.kdfparams instanceof ScryptKdfParams) {
