@@ -46,6 +46,22 @@ public class Numeric {
                 && input.charAt(0) == '0' && input.charAt(1) == 'x';
     }
 
+    public static String toHexStringNoPrefix(byte[] value) {
+        return toHexString(value, 0, value.length, false);
+    }
+
+    public static String toHexString(byte[] input, int offset, int length, boolean withPrefix) {
+        StringBuilder stringBuilder = new StringBuilder();
+        if (withPrefix) {
+            stringBuilder.append("0x");
+        }
+        for (int i = offset; i < offset + length; i++) {
+            stringBuilder.append(String.format("%02x", input[i] & 0xFF));
+        }
+
+        return stringBuilder.toString();
+    }
+
     private static String toHexStringNoPrefix(BigInteger value) {
         return value.toString(16);
     }
@@ -65,6 +81,29 @@ public class Numeric {
             result = Strings.zeros(size - length) + result;
         }
 
+        return result;
+    }
+
+    public static byte[] toBytesPadded(BigInteger value, int length) {
+        byte[] result = new byte[length];
+        byte[] bytes = value.toByteArray();
+
+        int bytesLength;
+        int srcOffset;
+        if (bytes[0] == 0) {
+            bytesLength = bytes.length - 1;
+            srcOffset = 1;
+        } else {
+            bytesLength = bytes.length;
+            srcOffset = 0;
+        }
+
+        if (bytesLength > length) {
+            throw new RuntimeException("Input is too large to put in byte array of size " + length);
+        }
+
+        int destOffset = length - bytesLength;
+        System.arraycopy(bytes, srcOffset, result, destOffset, bytesLength);
         return result;
     }
 

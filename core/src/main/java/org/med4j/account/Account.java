@@ -3,12 +3,20 @@ package org.med4j.account;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.bouncycastle.crypto.generators.SCrypt;
+import org.med4j.crypto.CipherException;
 import org.med4j.crypto.ECKeyPair;
-import org.med4j.crypto.Keys;
+import org.med4j.crypto.Hash;
 import org.med4j.utils.Numeric;
 
+import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
-import java.security.Key;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.UUID;
 
@@ -28,7 +36,8 @@ public class Account {
     private static final int R = 8;
     private static final int DKLEN = 32;
 
-    private static final int PUBLIC_KEY_SIZE = 66;
+    private static final int PRIVATE_KEY_SIZE = 32;
+    private static final int PUBLIC_KEY_SIZE = 33;
     private static final int KDFPARAMS_SALT_SIZE = 32;
     private static final int IV_SIZE = 16;
 
@@ -40,13 +49,12 @@ public class Account {
 
     /**
      * Create Account class with given Crypto class.
-     * If
      */
     public Account(Crypto crypto) {
         this.crypto = crypto;
     }
 
-    public Account(String password, ECKeyPair ecKeyPair) {
+    public Account(String password, ECKeyPair ecKeyPair) throws CipherException {
         setV3Settings();
         setAddress(Numeric.toHexStringZeroPadded(ecKeyPair.getPubKey(), PUBLIC_KEY_SIZE));
         generateCryptoValues(password, ecKeyPair);
@@ -94,6 +102,9 @@ public class Account {
         crypto.cipher = AES_128_CTR;
         crypto.kdf = SCRYPT;
 
+        CipherParams cipherParams = new CipherParams();
+        crypto.setCipherparams(cipherParams);
+
         ScryptKdfParams kdfParams = new ScryptKdfParams();
         kdfParams.setDklen(DKLEN);
         kdfParams.setN(N);
@@ -104,33 +115,59 @@ public class Account {
         this.crypto = crypto;
     }
 
-    public void generateCryptoValues(String password, ECKeyPair ecKeyPair) {
+    public void generateCryptoValues(String password, ECKeyPair ecKeyPair) throws CipherException {
         if (this.version == 0 || this.crypto == null || this.crypto.kdfparams == null) {
-            throw new IllegalArgumentException("Account options was not set. Create AccountOption class with 'useDefaultSettings=true' parameter.");
+            throw new IllegalArgumentException("Account options was not set. Valid Crypto values should be set before call generateCryptoValues() method.");
         }
 
         this.id = UUID.randomUUID().toString();
 
-        this.crypto.kdfparams.setSalt(generateRandomBytes(KDFPARAMS_SALT_SIZE));
-        this.crypto.cipherparams.setIv(generateRandomBytes(IV_SIZE));
+        byte[] salt = generateRandomBytes(KDFPARAMS_SALT_SIZE);
+        byte[] iv = generateRandomBytes(IV_SIZE);
 
-        byte[] derivedKey = SCrypt.generate(password.getBytes(UTF_8), salt, N, R, P, DKLEN);
+        byte[] derivedKey;
+        if (this.crypto.kdfparams instanceof ScryptKdfParams) {
+            derivedKey = getDerivedKey(password, salt, (ScryptKdfParams)this.crypto.kdfparams);
+        } else {
+            throw new IllegalArgumentException("Unsupported kdf");
+        }
         byte[] encryptKey = Arrays.copyOfRange(derivedKey, 0, 16);
-        byte[] privateKeyBytes = Numeric.toBytesPadded(ecKeyPair.getPrivKey(), Keys.PRIVATE_KEY_SIZE);
+        byte[] privateKeyBytes = Numeric.toBytesPadded(ecKeyPair.getPrivKey(), PRIVATE_KEY_SIZE);
         byte[] cipherText = performCipherOperation(Cipher.ENCRYPT_MODE, iv, encryptKey, privateKeyBytes);
         byte[] mac = generateMac(derivedKey, cipherText);
 
-        WalletFile walletFile = new WalletFile();
-        walletFile.setAddress(Keys.getAddress(ecKeyPair));
+        this.crypto.kdfparams.setSalt(Numeric.toHexStringNoPrefix(salt));
+        this.crypto.cipherparams.setIv(Numeric.toHexStringNoPrefix(iv));
+        this.crypto.ciphertext = Numeric.toHexStringNoPrefix(cipherText);
+        this.crypto.mac = Numeric.toHexStringNoPrefix(mac);
+    }
 
-        WalletFile.Crypto crypto = new WalletFile.Crypto();
-        crypto.setCipher(CIPHER);
-        crypto.setCiphertext(Numeric.toHexStringNoPrefix(cipherText));
+    private byte[] getDerivedKey(String password, byte[] salt, ScryptKdfParams kdfParams) {
+        return SCrypt.generate(password.getBytes(UTF_8), salt, kdfParams.getN(), kdfParams.getR(), kdfParams.getP(), kdfParams.getDklen());
+    }
 
-        WalletFile.CipherParams cipherParams = new WalletFile.CipherParams();
-        crypto.setCipherparams(cipherParams);
+    private static byte[] performCipherOperation(int mode, byte[] iv, byte[] encryptKey, byte[] text) throws CipherException {
+        try {
+            IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
+            Cipher cipher = Cipher.getInstance("AES/CTR/NoPadding");
 
-        crypto.setMac(Numeric.toHexStringNoPrefix(mac));
+            SecretKeySpec secretKeySpec = new SecretKeySpec(encryptKey, "AES");
+            cipher.init(mode, secretKeySpec, ivParameterSpec);
+            return cipher.doFinal(text);
+        } catch (NoSuchPaddingException | NoSuchAlgorithmException
+                | InvalidAlgorithmParameterException | InvalidKeyException
+                | BadPaddingException | IllegalBlockSizeException e) {
+            throw new CipherException("Error performing cipher operation", e);
+        }
+    }
+
+    private static byte[] generateMac(byte[] derivedKey, byte[] cipherText) {
+        byte[] result = new byte[16 + cipherText.length];
+
+        System.arraycopy(derivedKey, 16, result, 0, 16);
+        System.arraycopy(cipherText, 0, result, 16, cipherText.length);
+
+        return Hash.sha256(result);
     }
 
     private static byte[] generateRandomBytes(int size) {
