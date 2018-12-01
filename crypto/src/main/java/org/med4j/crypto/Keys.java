@@ -72,7 +72,7 @@ public class Keys {
         BigInteger privKey = new BigInteger(1, privKeyBytes);
         ECPoint pubKeyPoint = publicPointFromPrivate(privKey);
 
-        byte[] encoded = pubKeyPoint.getEncoded(false);
+        byte[] encoded = pubKeyPoint.getEncoded(true);
         BigInteger pubKey = new BigInteger(1, Arrays.copyOfRange(encoded, 1, encoded.length)); // remove prefix
         return new ECKeyPair(privKey, pubKey);
     }

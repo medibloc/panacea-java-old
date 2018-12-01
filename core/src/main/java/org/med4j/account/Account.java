@@ -48,7 +48,7 @@ public class Account {
     private String address;
 
     Account(ECKeyPair ecKeyPair) {
-        setAddress(Numeric.toHexStringZeroPadded(ecKeyPair.getPubKey(), PUBLIC_KEY_SIZE));
+        setAddress(Numeric.toHexStringZeroPadded(ecKeyPair.getPubKey(), PUBLIC_KEY_SIZE * 2));
     }
 
     public int getVersion() {

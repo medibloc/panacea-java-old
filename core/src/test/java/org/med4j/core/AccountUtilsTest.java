@@ -11,7 +11,7 @@ public class AccountUtilsTest {
         try {
             account = AccountUtils.createAccount("abcd", null);
         } catch (Exception ex) {
-            System.out.println(ex);
+            ex.printStackTrace();
         }
 
         // TODO : assert account.toJson() result
