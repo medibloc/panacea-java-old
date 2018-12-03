@@ -76,4 +76,11 @@ public class Keys {
         BigInteger pubKey = new BigInteger(1, Arrays.copyOfRange(encoded, 1, encoded.length)); // remove prefix
         return new ECKeyPair(privKey, pubKey);
     }
+
+    public static String compressPubKey(BigInteger pubKey) {
+        String pubKeyYPrefix = pubKey.testBit(0) ? "03" : "02";
+        String pubKeyHex = pubKey.toString(16);
+        String pubKeyX = pubKeyHex.substring(0, 64);
+        return pubKeyYPrefix + pubKeyX;
+    }
 }
