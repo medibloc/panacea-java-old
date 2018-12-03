@@ -6,6 +6,7 @@ import org.bouncycastle.crypto.generators.SCrypt;
 import org.med4j.crypto.CipherException;
 import org.med4j.crypto.ECKeyPair;
 import org.med4j.crypto.Hash;
+import org.med4j.crypto.Keys;
 import org.med4j.utils.Numeric;
 
 import javax.crypto.BadPaddingException;
@@ -50,7 +51,7 @@ public class Account {
     Account() { }
 
     Account(ECKeyPair ecKeyPair) {
-        setAddress(Numeric.toHexStringZeroPadded(ecKeyPair.getPubKey(), PUBLIC_KEY_SIZE * 2));
+        setAddress(Keys.compressPubKey(ecKeyPair.getPubKey()));
     }
 
     public int getVersion() {

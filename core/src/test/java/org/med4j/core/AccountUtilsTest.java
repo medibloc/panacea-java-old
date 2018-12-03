@@ -6,6 +6,7 @@ import org.med4j.account.Account;
 import org.med4j.account.AccountUtils;
 
 import java.io.File;
+import java.security.SecureRandom;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -26,8 +27,7 @@ public class AccountUtilsTest {
     @Test
     public void testCreateAccount() {
         try {
-            Account account = AccountUtils.createAccount("abcd", null);
-
+            Account account = AccountUtils.createAccount(generateRandomBytes(32), null);
             File accountFile = new File("testCreateAccount.testresult");
             new ObjectMapper().writeValue(accountFile, account);
             System.out.println("Created Account file by AccountUtilsTest.testCreateAccount() : " + accountFile.getAbsolutePath());
@@ -38,5 +38,11 @@ public class AccountUtilsTest {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+    private static String generateRandomBytes(int size) {
+        byte[] bytes = new byte[size];
+        new SecureRandom().nextBytes(bytes);
+        return new String(bytes);
     }
 }
