@@ -47,6 +47,8 @@ public class Account {
 
     private String address;
 
+    Account() { }
+
     Account(ECKeyPair ecKeyPair) {
         setAddress(Numeric.toHexStringZeroPadded(ecKeyPair.getPubKey(), PUBLIC_KEY_SIZE * 2));
     }
@@ -170,6 +172,48 @@ public class Account {
         return bytes;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Account)) {
+            return false;
+        }
+
+        Account that = (Account) o;
+
+        if (getVersion() != that.getVersion()) {
+            return false;
+        }
+        if (getId() != null
+                ? !getId().equals(that.getId())
+                : that.getId() != null) {
+            return false;
+        }
+        if (getCrypto() != null
+                ? !getCrypto().equals(that.getCrypto())
+                : that.getCrypto() != null) {
+            return false;
+        }
+        if (getAddress() != null
+                ? !getAddress().equals(that.getAddress())
+                : that.getAddress() != null) {
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getVersion();
+        result = 31 * result + (getId() != null ? getId().hashCode() : 0);
+        result = 31 * result + (getCrypto() != null ? getCrypto().hashCode() : 0);
+        result = 31 * result + (getAddress() != null ? getAddress().hashCode() : 0);
+        return result;
+    }
+
     public static class Crypto {
         private String cipher;
         private String ciphertext;
@@ -221,13 +265,8 @@ public class Account {
                 include = JsonTypeInfo.As.EXTERNAL_PROPERTY,
                 property = "kdf")
         @JsonSubTypes({
-                @JsonSubTypes.Type(value = Aes128CtrKdfParams.class, name = AES_128_CTR),
                 @JsonSubTypes.Type(value = ScryptKdfParams.class, name = SCRYPT)
         })
-        // To support my Ether Wallet keys uncomment this annotation & comment out the above
-        //  @JsonDeserialize(using = KdfParamsDeserialiser.class)
-        // Also add the following to the ObjectMapperFactory
-        // objectMapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
         public void setKdfparams(KdfParams kdfparams) {
             this.kdfparams = kdfparams;
         }

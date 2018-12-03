@@ -10,3 +10,6 @@
 # IntelliJ
 out/
 
+# junit test result files
+*.testresult
+
