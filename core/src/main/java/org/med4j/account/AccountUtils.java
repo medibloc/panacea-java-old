@@ -23,9 +23,7 @@ public class AccountUtils {
 
         if (accountOption == null) accountOption = new AccountOption();
 
-        Account account = new Account(ecKeyPair);
-        account.setV3Settings(accountOption);
-        account.generateCryptoValues(password, ecKeyPair, accountOption);
+        Account account = new Account(password, ecKeyPair, accountOption);
 
         return account;
     }

@@ -50,8 +50,10 @@ public class Account {
 
     Account() { }
 
-    Account(ECKeyPair ecKeyPair) {
+    Account(String password, ECKeyPair ecKeyPair, AccountOption accountOption) throws CipherException {
         setAddress(Keys.compressPubKey(ecKeyPair.getPubKey()));
+        setV3Settings(accountOption);
+        generateCryptoValues(password, ecKeyPair, accountOption);
     }
 
     public int getVersion() {
@@ -82,11 +84,11 @@ public class Account {
         return address;
     }
 
-    void setAddress(String address) {
+    private void setAddress(String address) {
         this.address = address;
     }
 
-    void setV3Settings(AccountOption option) {
+    private void setV3Settings(AccountOption option) {
         setVersion(CURRENT_VERSION);
 
         Crypto crypto = new Crypto();
@@ -112,7 +114,7 @@ public class Account {
         setCrypto(crypto);
     }
 
-    void generateCryptoValues(String password, ECKeyPair ecKeyPair, AccountOption option) throws CipherException {
+    private void generateCryptoValues(String password, ECKeyPair ecKeyPair, AccountOption option) throws CipherException {
         if (this.version == 0 || this.crypto == null || this.crypto.kdfparams == null) {
             throw new IllegalArgumentException("Account options was not set. Valid Crypto values should be set before call generateCryptoValues() method.");
         }
