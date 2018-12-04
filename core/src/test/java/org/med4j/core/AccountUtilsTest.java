@@ -41,11 +41,15 @@ public class AccountUtilsTest {
     }
 
     @Test
-    public void testConvertAccountToString() {
+    public void testConvertAccountToJson() {
         try {
-            Account account = AccountUtils.createAccount(generateRandomBytes(32), null);
-            String actual = AccountUtils.convertAccountToString(account);
-            System.out.println(actual);
+            Account createdAccount = AccountUtils.createAccount(generateRandomBytes(32), null);
+            String jsonAccount = AccountUtils.convertAccountToJson(createdAccount);
+
+            System.out.println(jsonAccount);
+
+            Account parsedAccount = AccountUtils.parseJsonAccount(jsonAccount);
+            assertEquals(createdAccount, parsedAccount);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

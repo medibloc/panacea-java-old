@@ -13,5 +13,5 @@ out/
 *.jar
 
 # junit test result files
-*.testresult
+*.testresult*
 

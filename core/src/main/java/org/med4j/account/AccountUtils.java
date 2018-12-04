@@ -36,8 +36,12 @@ public class AccountUtils {
         return account;
     }
 
-    public static String convertAccountToString(Account account) throws Exception {
+    public static String convertAccountToJson(Account account) throws Exception {
         return objectMapper.writeValueAsString(account);
+    }
+
+    public static Account parseJsonAccount(String jsonAccount) throws Exception {
+        return objectMapper.readValue(jsonAccount, Account.class);
     }
 
     public static File saveAccountToDefaultPath(Account account) throws Exception {
