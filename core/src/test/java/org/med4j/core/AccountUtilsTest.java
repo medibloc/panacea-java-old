@@ -41,6 +41,17 @@ public class AccountUtilsTest {
     }
 
     @Test
+    public void testConvertAccountToString() {
+        try {
+            Account account = AccountUtils.createAccount(generateRandomBytes(32), null);
+            String actual = AccountUtils.convertAccountToString(account);
+            System.out.println(actual);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    @Test
     public void testSaveAccountToDefaultPath() {
         try {
             Account createdAccount = AccountUtils.createAccount(generateRandomBytes(32), null);

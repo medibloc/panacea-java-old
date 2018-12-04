@@ -36,6 +36,10 @@ public class AccountUtils {
         return account;
     }
 
+    public static String convertAccountToString(Account account) throws Exception {
+        return objectMapper.writeValueAsString(account);
+    }
+
     public static File saveAccountToDefaultPath(Account account) throws Exception {
         return saveAccount(account, getDefaultAccountFilePath());
     }
