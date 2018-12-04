@@ -1,5 +1,7 @@
 package org.med4j.account;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.med4j.crypto.ECKeyPair;
 import org.med4j.crypto.Keys;
@@ -10,6 +12,12 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class AccountUtils {
+    private static final ObjectMapper objectMapper = new ObjectMapper();
+
+    static {
+        objectMapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    }
 
     /** Create new Account. A new key pair will be generated internally. */
     public static Account createAccount(String password, AccountOption accountOption) throws Exception {
@@ -37,8 +45,12 @@ public class AccountUtils {
         String fileName = getAccountFileName(account);
         File destination = new File(destinationDirectory, fileName);
 
-        new ObjectMapper().writeValue(destination, account);
+        objectMapper.writeValue(destination, account);
         return destination;
+    }
+
+    public static Account loadAccount(File accountFile) throws Exception {
+        return objectMapper.readValue(accountFile, Account.class);
     }
 
     private static void validatePassword(String password) {

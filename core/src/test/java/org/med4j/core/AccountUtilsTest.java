@@ -40,6 +40,20 @@ public class AccountUtilsTest {
         }
     }
 
+    @Test
+    public void testSaveAccountToDefaultPath() {
+        try {
+            Account createdAccount = AccountUtils.createAccount(generateRandomBytes(32), null);
+            File savedFile = AccountUtils.saveAccountToDefaultPath(createdAccount);
+
+            Account loadedAccount = AccountUtils.loadAccount(savedFile);
+
+            assertEquals(createdAccount, loadedAccount);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
     private static String generateRandomBytes(int size) {
         byte[] bytes = new byte[size];
         new SecureRandom().nextBytes(bytes);
