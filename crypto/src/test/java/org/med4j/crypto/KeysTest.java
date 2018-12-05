@@ -22,6 +22,7 @@ public class KeysTest {
             assertNotNull(pubKey);
 
             assertEquals(mnemonicKey[1], Numeric.toHexStringZeroPadded(privKey, PBKDF2_KEY_SIZE * 2));
+            assertEquals(mnemonicKey[2], Keys.compressPubKey(pubKey));
         }
     }
 
