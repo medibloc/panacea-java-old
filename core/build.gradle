@@ -1,10 +1,32 @@
 apply plugin: 'java-library'
+apply plugin: 'com.jfrog.bintray'
+
+ext {
+    bintrayRepo = "med4j"
+    bintrayName = "com.med4j.core"
+
+    libraryName = "core"
+
+    publishedGroupId = 'com.med4j'
+    artifact = 'core'
+    libraryVersion = '0.0.2'
+
+    libraryDescription = 'com.med4j.core'
+    siteUrl = 'https://github.com/medibloc/med4j'
+    gitUrl = 'https://github.com/medibloc/med4j.git'
+    developerId = 'medibloc'
+    developerName = 'medibloc'
+    developerEmail = 'dev@medibloc.org'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ['Apache-2.0']
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(path: ':crypto')
-    implementation project(path: ':utils')
+    implementation project(':crypto')
+    implementation project(':utils')
     implementation 'com.google.protobuf:protobuf-java:3.6.1'
     implementation 'com.google.protobuf:protobuf-java-util:3.6.1'
     implementation 'com.google.api.grpc:proto-google-common-protos:1.12.0'
@@ -20,3 +42,8 @@ dependencies {
 
 sourceCompatibility = "1.8"
 targetCompatibility = "1.8"
+
+if (project.rootProject.file('local.properties').exists()) {
+    apply from: 'https://raw.githubusercontent.com/brightec/JCenter/master/installv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/brightec/JCenter/master/bintrayv1.gradle'
+}
