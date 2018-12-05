@@ -1,7 +1,28 @@
 apply plugin: 'java-library'
 
+ext {
+    bintrayRepo = "med4j"
+    bintrayName = "com.med4j.crypto"
+
+    libraryName = "crypto"
+
+    publishedGroupId = 'com.med4j'
+    artifact = 'crypto'
+    libraryVersion = '0.0.2'
+
+    libraryDescription = 'com.med4j.crypto'
+    siteUrl = 'https://github.com/medibloc/med4j'
+    gitUrl = 'https://github.com/medibloc/med4j.git'
+    developerId = 'medibloc'
+    developerName = 'medibloc'
+    developerEmail = 'dev@medibloc.org'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ['Apache-2.0']
+}
+
 dependencies {
-    implementation project(path: ':utils')
+    implementation project(':utils')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.bouncycastle:bcprov-jdk15on:$bouncycastleVersion"
     implementation "org.slf4j:slf4j-api:$slf4jVersion"
@@ -13,3 +34,8 @@ dependencies {
 
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
+
+if (project.rootProject.file('local.properties').exists()) {
+    apply from: 'https://raw.githubusercontent.com/brightec/JCenter/master/installv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/brightec/JCenter/master/bintrayv1.gradle'
+}

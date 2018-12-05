@@ -9,7 +9,7 @@ ext {
 
     publishedGroupId = 'com.med4j'
     artifact = 'core'
-    libraryVersion = '0.0.1'
+    libraryVersion = '0.0.2'
 
     libraryDescription = 'com.med4j.core'
     siteUrl = 'https://github.com/medibloc/med4j'
@@ -25,8 +25,8 @@ ext {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(path: ':crypto')
-    implementation project(path: ':utils')
+    implementation project(':crypto')
+    implementation project(':utils')
     implementation 'com.google.protobuf:protobuf-java:3.6.1'
     implementation 'com.google.protobuf:protobuf-java-util:3.6.1'
     implementation 'com.google.api.grpc:proto-google-common-protos:1.12.0'
