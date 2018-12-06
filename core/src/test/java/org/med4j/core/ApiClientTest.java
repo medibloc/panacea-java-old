@@ -8,8 +8,8 @@ import org.med4j.core.protobuf.Rpc.*;
 import io.reactivex.subscribers.TestSubscriber;
 
 public class ApiClientTest {
-    private static final String TESTNET_URL = "https://node.medibloc.org";
-    private static final int TESTNET_CHAIN_ID = 180830;
+    private static final String TESTNET_URL = "https://testnet-node.medibloc.org";
+    private static final int TESTNET_CHAIN_ID = 181112;
 
     private Med4J getMed4J() {
         return Med4J.create(new HttpService(TESTNET_URL));
