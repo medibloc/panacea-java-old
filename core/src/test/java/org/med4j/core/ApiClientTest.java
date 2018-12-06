@@ -1,6 +1,8 @@
 package org.med4j.core;
 
 import static org.junit.Assert.*;
+
+import io.reactivex.functions.Consumer;
 import org.junit.Test;
 import org.med4j.Med4J;
 import org.med4j.core.protobuf.Rpc.*;
@@ -25,7 +27,7 @@ public class ApiClientTest {
     @Test
     public void testGetMedStateFlowable() throws Exception {
         Med4J med4J = getMed4J();
-        TestSubscriber<MedState> subscriber = new TestSubscriber<>();
+        TestSubscriber<MedState> subscriber = new TestSubscriber<MedState>();
         med4J.getMedState().flowable()
                 .subscribe(subscriber);
         subscriber.assertComplete();
@@ -53,14 +55,18 @@ public class ApiClientTest {
     @Test
     public void testHeathCheckAsync() throws Exception {
         Med4J med4J = getMed4J();
-        Health health = med4J.healthCheck().sendAsync().get();
-        assertTrue(health.getOk());
+        med4J.healthCheck().sendAsync().subscribe(new Consumer<Health>() {
+            @Override
+            public void accept(Health health) throws Exception {
+                assertTrue(health.getOk());
+            }
+        });
     }
 
     @Test
     public void testHealthCheckFlowable() throws Exception {
         Med4J med4J = getMed4J();
-        TestSubscriber<Health> subscriber = new TestSubscriber<>();
+        TestSubscriber<Health> subscriber = new TestSubscriber<Health>();
         med4J.healthCheck().flowable().subscribe(subscriber);
 
         subscriber.assertComplete();

@@ -1,13 +1,12 @@
 package org.med4j.core;
 
 import org.med4j.Med4J;
-import org.med4j.core.protobuf.Rpc;
 import org.med4j.core.protobuf.Rpc.*;
 
 import java.io.IOException;
 import java.util.HashMap;
 
-public class Med4JImpl implements Med4J {
+public class Med4JImpl extends Med4J {
     private final ProtobufService protobufService;
 
     public Med4JImpl(ProtobufService protobufService) {
@@ -15,7 +14,7 @@ public class Med4JImpl implements Med4J {
     }
 
     private HashMap<String, String> getHttpParams(String method, String path) {
-        HashMap<String, String> methodAndPath = new HashMap<>();
+        HashMap<String, String> methodAndPath = new HashMap<String, String>();
         methodAndPath.put(HttpService.METHOD_KEY, method);
         methodAndPath.put(HttpService.PATH_KEY, path);
         return methodAndPath;

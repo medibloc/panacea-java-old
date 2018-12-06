@@ -4,7 +4,6 @@ import com.google.protobuf.Message;
 
 import java.io.IOException;
 import java.util.Map;
-import java.util.concurrent.CompletableFuture;
 
 public interface ProtobufService {
 

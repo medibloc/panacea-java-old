@@ -153,10 +153,14 @@ public class Account {
             SecretKeySpec secretKeySpec = new SecretKeySpec(encryptKey, "AES");
             cipher.init(mode, secretKeySpec, ivParameterSpec);
             return cipher.doFinal(text);
-        } catch (NoSuchPaddingException | NoSuchAlgorithmException
-                | InvalidAlgorithmParameterException | InvalidKeyException
-                | BadPaddingException | IllegalBlockSizeException e) {
-            throw new CipherException("Error performing cipher operation", e);
+        } catch (Exception e) {
+            if (e instanceof NoSuchPaddingException || e instanceof NoSuchAlgorithmException
+                    || e instanceof InvalidAlgorithmParameterException || e instanceof InvalidKeyException
+                    || e instanceof BadPaddingException || e instanceof IllegalBlockSizeException) {
+                throw new CipherException("Error performing cipher operation", e);
+            } else {
+                throw new RuntimeException(e);
+            }
         }
     }
 
