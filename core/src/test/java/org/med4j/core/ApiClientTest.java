@@ -55,12 +55,8 @@ public class ApiClientTest {
     @Test
     public void testHeathCheckAsync() throws Exception {
         Med4J med4J = getMed4J();
-        med4J.healthCheck().sendAsync().subscribe(new Consumer<Health>() {
-            @Override
-            public void accept(Health health) throws Exception {
-                assertTrue(health.getOk());
-            }
-        });
+        Health health = med4J.healthCheck().sendAsync().get();
+        assertTrue(health.getOk());
     }
 
     @Test
