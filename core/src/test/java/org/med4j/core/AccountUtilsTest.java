@@ -62,10 +62,12 @@ public class AccountUtilsTest {
             File savedFile = AccountUtils.saveAccountToDefaultPath(createdAccount);
 
             System.out.println("savedFile : " + savedFile.getAbsolutePath());
-
             Account loadedAccount = AccountUtils.loadAccount(savedFile);
 
             assertEquals(createdAccount, loadedAccount);
+
+            //cleanup
+            savedFile.delete();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
