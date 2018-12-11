@@ -1,5 +1,6 @@
 package org.med4j.core;
 
+import com.google.protobuf.Descriptors;
 import com.google.protobuf.Message;
 import com.google.protobuf.util.JsonFormat;
 
@@ -7,6 +8,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
+import okhttp3.HttpUrl;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.RequestBody;
@@ -39,14 +41,17 @@ public class HttpService implements ProtobufService {
         return new Request<T>() {
             @Override
             protected T doSend() throws IOException {
-                RequestBody requestBody = RequestBody.create(MEDIA_TYPE, requestMessage.toByteArray());
+                okhttp3.Request.Builder requestBuilder = new okhttp3.Request.Builder();
                 String method = params.get(METHOD_KEY);
-                okhttp3.Request.Builder requestBuilder = new okhttp3.Request.Builder()
-                        .url(baseUrl + params.get(PATH_KEY));
                 if (method.equals("GET")) {
-                    requestBuilder = requestBuilder.get();
+                    HttpUrl.Builder urlBuilder = HttpUrl.parse(baseUrl + params.get(PATH_KEY)).newBuilder();
+                    for (Map.Entry<Descriptors.FieldDescriptor, Object> pair: requestMessage.getAllFields().entrySet()) {
+                        urlBuilder.addQueryParameter(pair.getKey().getName(), pair.getValue().toString());
+                    }
+                    requestBuilder = requestBuilder.url(urlBuilder.build()).get();
                 } else {
-                    requestBuilder = requestBuilder.method(method, requestBody);
+                    RequestBody requestBody = RequestBody.create(MEDIA_TYPE, requestMessage.toByteArray());
+                    requestBuilder = requestBuilder.url(baseUrl + params.get(PATH_KEY)).method(method, requestBody);
                 }
 
                 okhttp3.Request request = requestBuilder.build();

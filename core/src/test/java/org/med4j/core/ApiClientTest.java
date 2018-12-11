@@ -2,7 +2,6 @@ package org.med4j.core;
 
 import static org.junit.Assert.*;
 
-import io.reactivex.functions.Consumer;
 import org.junit.Test;
 import org.med4j.Med4J;
 import org.med4j.core.protobuf.Rpc.*;
@@ -32,6 +31,25 @@ public class ApiClientTest {
                 .subscribe(subscriber);
         subscriber.assertComplete();
         subscriber.assertNoErrors();
+    }
+
+    @Test
+    public void testGetAccount() throws Exception {
+        Account.Builder expectedResBuilder = Account.newBuilder();
+        expectedResBuilder.setAddress("02dc01a49f2867a44e7a0fd08fb4a3e5a3c628d35ac6c444b1acc48617b4158458");
+        expectedResBuilder.setBalance("0");
+        expectedResBuilder.setVesting("0");
+        expectedResBuilder.setBandwidth("0");
+        expectedResBuilder.setUnstaking("0");
+
+        GetAccountRequest.Builder reqBuilder = GetAccountRequest.newBuilder();
+        reqBuilder.setAddress("02dc01a49f2867a44e7a0fd08fb4a3e5a3c628d35ac6c444b1acc48617b4158458");
+        reqBuilder.setType("tail");
+
+        Account expected = expectedResBuilder.build();
+        Account actual = getMed4J().getAccount(reqBuilder.build()).sendAsync().get();
+
+        assertEquals(expected, actual);
     }
 
     @Test
