@@ -61,6 +61,8 @@ public class AccountUtilsTest {
             Account createdAccount = AccountUtils.createAccount(generateRandomBytes(32), null);
             File savedFile = AccountUtils.saveAccountToDefaultPath(createdAccount);
 
+            System.out.println("savedFile : " + savedFile.getAbsolutePath());
+
             Account loadedAccount = AccountUtils.loadAccount(savedFile);
 
             assertEquals(createdAccount, loadedAccount);

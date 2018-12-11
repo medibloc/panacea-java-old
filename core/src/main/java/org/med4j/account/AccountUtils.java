@@ -7,9 +7,9 @@ import org.med4j.crypto.ECKeyPair;
 import org.med4j.crypto.Keys;
 
 import java.io.File;
-import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class AccountUtils {
     private static final ObjectMapper objectMapper = new ObjectMapper();
@@ -99,10 +99,8 @@ public class AccountUtils {
     }
 
     private static String getAccountFileName(Account account) {
-        DateTimeFormatter format = DateTimeFormatter.ofPattern(
-                "'UTC--'yyyy-MM-dd'T'HH-mm-ss.nVV'--'");
-        ZonedDateTime now = ZonedDateTime.now(ZoneOffset.UTC);
-
-        return now.format(format) + account.getAddress() + ".json";
+        Date today = new Date(Calendar.getInstance().getTimeInMillis());
+        SimpleDateFormat form = new SimpleDateFormat("'UTC--'yyyy-MM-dd'T'HH-mm-ss.SSS'Z--'");
+        return form.format(today) + account.getAddress() + ".json";
     }
 }

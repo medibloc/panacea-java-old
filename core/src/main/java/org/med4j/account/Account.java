@@ -15,13 +15,13 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.Charset;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.UUID;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.med4j.crypto.SecureRandomUtils.secureRandom;
 
 public class Account {
@@ -142,7 +142,7 @@ public class Account {
     }
 
     private byte[] getDerivedKey(String password, byte[] salt, ScryptKdfParams kdfParams) {
-        return SCrypt.generate(password.getBytes(UTF_8), salt, kdfParams.getN(), kdfParams.getR(), kdfParams.getP(), kdfParams.getDklen());
+        return SCrypt.generate(password.getBytes(Charset.forName("UTF-8")), salt, kdfParams.getN(), kdfParams.getR(), kdfParams.getP(), kdfParams.getDklen());
     }
 
     private static byte[] performCipherOperation(int mode, byte[] iv, byte[] encryptKey, byte[] text) throws CipherException {
