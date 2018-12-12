@@ -170,7 +170,7 @@ public class Account {
         System.arraycopy(derivedKey, 16, result, 0, 16);
         System.arraycopy(cipherText, 0, result, 16, cipherText.length);
 
-        return Hash.sha256(result);
+        return Hash.sha3256(result);
     }
 
     private static byte[] generateRandomBytes(int size) {
