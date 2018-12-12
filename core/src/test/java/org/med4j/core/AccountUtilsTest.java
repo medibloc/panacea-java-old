@@ -4,8 +4,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.med4j.account.Account;
 import org.med4j.account.AccountUtils;
+import org.med4j.crypto.ECKeyPair;
 
 import java.io.File;
+import java.math.BigInteger;
 import java.security.SecureRandom;
 
 import static org.junit.Assert.assertEquals;
@@ -71,6 +73,18 @@ public class AccountUtilsTest {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+    @Test
+    public void testLoadAccount() throws Exception {
+        ECKeyPair ecKeyPair = new ECKeyPair(
+                new BigInteger("4627e66cd55fe54500bb0397663254564249b276f3bf81c21a3a06bd72dfcf74", 16)
+                , new BigInteger("cb2bde8309a4bfde8e53be4e96a99082920fdccea0b5fddaf9d782d25a0e454f", 16));
+
+        Account expected = AccountUtils.createAccount("sample", ecKeyPair, null);
+        Account actual = AccountUtils.loadAccount(new File("sampleAccount.json"));
+
+        assertEquals(expected.getAddress(), actual.getAddress());
     }
 
     private static String generateRandomBytes(int size) {

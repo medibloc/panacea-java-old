@@ -97,4 +97,16 @@ public class Keys {
         String pubKeyX = pubKeyHex.substring(0, 64);
         return pubKeyYPrefix + pubKeyX;
     }
+
+    public static void validateECKeyPair(ECKeyPair ecKeyPair) {
+        ECPoint expectedPubKeyPoint = publicPointFromPrivate(ecKeyPair.getPrivKey());
+        byte[] encoded = expectedPubKeyPoint.getEncoded(true);
+        BigInteger expectedPubKey = new BigInteger(1, Arrays.copyOfRange(encoded, 1, encoded.length)); // remove prefix
+
+        if (expectedPubKey.compareTo(ecKeyPair.getPubKey()) != 0) {
+            throw new IllegalArgumentException("The ECKeyPair is invalid.");
+        } else {
+            return;
+        }
+    }
 }

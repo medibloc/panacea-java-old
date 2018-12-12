@@ -7,7 +7,7 @@ public class ECKeyPair {
     private final BigInteger privKey;
     private final BigInteger pubKey;
 
-    ECKeyPair(BigInteger privKey, BigInteger pubKey) {
+    public ECKeyPair(BigInteger privKey, BigInteger pubKey) {
         this.privKey = privKey;
         this.pubKey = pubKey;
     }

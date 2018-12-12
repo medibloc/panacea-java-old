@@ -28,6 +28,7 @@ public class AccountUtils {
     /** Create new Account with the given key pair. */
     public static Account createAccount(String password, ECKeyPair ecKeyPair, AccountOption accountOption) throws Exception {
         validatePassword(password);
+        Keys.validateECKeyPair(ecKeyPair);
 
         if (accountOption == null) accountOption = new AccountOption();
 
