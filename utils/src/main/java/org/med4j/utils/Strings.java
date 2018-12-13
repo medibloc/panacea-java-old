@@ -3,11 +3,11 @@ package org.med4j.utils;
 public class Strings {
     private Strings() {}
 
-    static boolean isEmpty(String s) {
+    public static boolean isEmpty(String s) {
         return s == null || s.length() == 0;
     }
 
-    static String zeros(int n) {
+    public static String zeros(int n) {
         return repeat('0', n);
     }
 

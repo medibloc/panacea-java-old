@@ -4,7 +4,7 @@ import com.google.protobuf.ByteString;
 import org.med4j.account.Account;
 import org.med4j.core.protobuf.BlockChain;
 import org.med4j.core.protobuf.BlockChain.TransactionHashTarget;
-import org.med4j.core.protobuf.Rpc;
+import org.med4j.core.protobuf.Rpc.SendTransactionRequest;
 import org.med4j.crypto.Hash;
 import org.med4j.healthdata.HealthData;
 import org.med4j.utils.Numeric;
@@ -28,7 +28,8 @@ public class Transaction {
         return Numeric.byteArrayToHex(Hash.sha3256(bytes));
     }
 
-    public static void uploadDataHash(byte[] data, Account account, String password, long nonce, int chainId) {
+    public static SendTransactionRequest getSendTransactionRequest(byte[] data, Account account, String password, long timeStamp, long nonce, int chainId) {
+        timeStamp = timeStamp != 0 ? timeStamp : getCurrentTimeInSecond();
         byte[] dataHash = HealthData.hashData(data);
 
         BlockChain.AddRecordPayload payload = BlockChain.AddRecordPayload.newBuilder()
@@ -40,7 +41,7 @@ public class Transaction {
                 .setFrom(ByteString.copyFrom(Numeric.hexStringToByteArray(account.getAddress())))
                 .setTo(ByteString.copyFrom(new byte[33])) // default value
                 .setValue(ByteString.copyFrom(new byte[16])) // default value
-                .setTimestamp(getCurrentTimeInSecond())
+                .setTimestamp(timeStamp)
                 .setNonce(nonce) // TODO : thread safe
                 .setChainId(chainId) // TODO : read from config
                 .setPayload(ByteString.copyFrom(payload.toByteArray()))
@@ -48,29 +49,29 @@ public class Transaction {
 
         String sign = ""; // TODO
 
-        Rpc.SendTransactionRequest request = getTxRequestBuilderWithValuesOf(txHashTarget, hashTx(txHashTarget))
+        return getTxRequestBuilderWithValuesOf(txHashTarget)
+                .setHash(hashTx(txHashTarget))
                 .setHashAlg(Algorithm.SHA3256)
                 .setCryptoAlg(Algorithm.SECP256K1)
                 //.setPayerSign(null)
                 .setSign(sign)
                 .build();
 
-        // TODO - send request
+        // TODO : implement send()
     }
 
     private static long getCurrentTimeInSecond() {
         return Calendar.getInstance().getTimeInMillis() / 1000;
     }
 
-    private static Rpc.SendTransactionRequest.Builder getTxRequestBuilderWithValuesOf(BlockChain.TransactionHashTarget txHashTarget, String hash) {
-        return Rpc.SendTransactionRequest.newBuilder()
-                .setHash(hash)
+    private static SendTransactionRequest.Builder getTxRequestBuilderWithValuesOf(BlockChain.TransactionHashTarget txHashTarget) {
+        return SendTransactionRequest.newBuilder()
                 .setChainId(txHashTarget.getChainId())
                 .setNonce(txHashTarget.getNonce())
                 .setTimestamp(txHashTarget.getTimestamp())
-                .setPayloadBytes(txHashTarget.getPayload())
-                .setTo(txHashTarget.getTo().toString())
+                .setPayload(Numeric.toHexStringNoPrefix(txHashTarget.getPayload().toByteArray()))
+                .setTo(Numeric.toHexStringNoPrefix(txHashTarget.getTo().toByteArray()))
                 .setTxType(txHashTarget.getTxType())
-                .setValueBytes(txHashTarget.getValue());
+                .setValue(Numeric.toHexStringNoPrefix(txHashTarget.getValue().toByteArray()));
     }
 }
