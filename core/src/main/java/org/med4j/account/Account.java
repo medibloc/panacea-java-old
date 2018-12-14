@@ -149,7 +149,7 @@ public class Account {
         return SCrypt.generate(password.getBytes(Charset.forName("UTF-8")), salt, kdfParams.getN(), kdfParams.getR(), kdfParams.getP(), kdfParams.getDklen());
     }
 
-    private static byte[] generateMac(byte[] derivedKey, byte[] cipherText) {
+    static byte[] generateMac(byte[] derivedKey, byte[] cipherText) {
         byte[] result = new byte[16 + cipherText.length];
 
         System.arraycopy(derivedKey, 16, result, 0, 16);

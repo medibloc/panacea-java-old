@@ -14,6 +14,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class AccountUtilsTest {
+    final static String SAMPLE_PASSWORD = "sample";
+
     @Test
     public void testAccountEquals() {
         try {
@@ -81,10 +83,23 @@ public class AccountUtilsTest {
                 new BigInteger("4627e66cd55fe54500bb0397663254564249b276f3bf81c21a3a06bd72dfcf74", 16)
                 , new BigInteger("cb2bde8309a4bfde8e53be4e96a99082920fdccea0b5fddaf9d782d25a0e454f", 16));
 
-        Account expected = AccountUtils.createAccount("sample", ecKeyPair, null);
+        Account expected = AccountUtils.createAccount(SAMPLE_PASSWORD, ecKeyPair, null);
         Account actual = AccountUtils.loadAccount(new File("sampleAccount.json"));
 
         assertEquals(expected.getAddress(), actual.getAddress());
+    }
+
+    @Test
+    public void testGetKeyPair() throws Exception {
+        ECKeyPair expected = new ECKeyPair(
+                new BigInteger("4627e66cd55fe54500bb0397663254564249b276f3bf81c21a3a06bd72dfcf74", 16)
+                , new BigInteger("cb2bde8309a4bfde8e53be4e96a99082920fdccea0b5fddaf9d782d25a0e454f", 16));
+
+        Account account = AccountUtils.createAccount(SAMPLE_PASSWORD, expected, null);
+
+        ECKeyPair actual = AccountUtils.getKeyPair(account, SAMPLE_PASSWORD);
+
+        assertEquals(expected, actual);
     }
 
     private static String generateRandomBytes(int size) {
