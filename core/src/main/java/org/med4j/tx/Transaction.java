@@ -2,10 +2,12 @@ package org.med4j.tx;
 
 import com.google.protobuf.ByteString;
 import org.med4j.account.Account;
+import org.med4j.account.AccountUtils;
 import org.med4j.core.protobuf.BlockChain;
 import org.med4j.core.protobuf.BlockChain.TransactionHashTarget;
 import org.med4j.core.protobuf.Rpc.SendTransactionRequest;
 import org.med4j.crypto.Hash;
+import org.med4j.crypto.Sign;
 import org.med4j.healthdata.HealthData;
 import org.med4j.utils.Numeric;
 
@@ -28,7 +30,8 @@ public class Transaction {
         return Numeric.byteArrayToHex(Hash.sha3256(bytes));
     }
 
-    public static SendTransactionRequest getSendTransactionRequest(byte[] data, Account account, String password, long timeStamp, long nonce, int chainId) {
+    public static SendTransactionRequest getSendTransactionRequest(byte[] data, Account account
+            , String password, long timeStamp, long nonce, int chainId) throws Exception {
         timeStamp = timeStamp != 0 ? timeStamp : getCurrentTimeInSecond();
         byte[] dataHash = HealthData.hashData(data);
 
@@ -41,15 +44,15 @@ public class Transaction {
                 .setFrom(ByteString.copyFrom(Numeric.hexStringToByteArray(account.getAddress())))
                 .setTo(ByteString.copyFrom(new byte[33])) // default value
                 .setValue(ByteString.copyFrom(new byte[16])) // default value
-                .setTimestamp(timeStamp)
+                .setTimestamp(timeStamp) // TODO : read from config
                 .setNonce(nonce) // TODO : thread safe
                 .setChainId(chainId) // TODO : read from config
                 .setPayload(ByteString.copyFrom(payload.toByteArray()))
                 .build();
 
-        String sign = ""; // TODO
+        String sign = Sign.signMessage(data, AccountUtils.getKeyPair(account, password)).toString(); // TODO
 
-        return getTxRequestBuilderWithValuesOf(txHashTarget)
+        return getTxRequestBuilder(txHashTarget)
                 .setHash(hashTx(txHashTarget))
                 .setHashAlg(Algorithm.SHA3256)
                 .setCryptoAlg(Algorithm.SECP256K1)
@@ -64,7 +67,7 @@ public class Transaction {
         return Calendar.getInstance().getTimeInMillis() / 1000;
     }
 
-    private static SendTransactionRequest.Builder getTxRequestBuilderWithValuesOf(BlockChain.TransactionHashTarget txHashTarget) {
+    private static SendTransactionRequest.Builder getTxRequestBuilder(BlockChain.TransactionHashTarget txHashTarget) {
         return SendTransactionRequest.newBuilder()
                 .setChainId(txHashTarget.getChainId())
                 .setNonce(txHashTarget.getNonce())

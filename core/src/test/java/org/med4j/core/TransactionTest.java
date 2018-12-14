@@ -76,7 +76,7 @@ public class TransactionTest {
                 .setTimestamp(1540000000)
                 //.setPayerSign(null)
                 .setPayload("0a206f6f129471590d2c91804c812b5750cd44cbdfb7238541c451e1ea2bc0193177")
-                .setSign("b41027c77b0b41c617a15101ffa23924f29cb9519627162ee4da95db04b975ad412fce876aed3a6c183d678971e6c4dcf3aaafc512311c578bb323d9b5db17fc01")
+                .setSign("dfbba1f28394ca800ed108fcc4e21e5dc4ba18f2601f198095458fb0e4796fea3562398bc76dc0200d201aa92a1d538a124576bc30f0899ebe4211a445834d4801")
                 .setTo(Strings.zeros(33*2)) // default value
                 .setValue(Strings.zeros(16*2)) // default value
                 .setTxType("add_record")
