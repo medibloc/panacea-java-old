@@ -132,7 +132,7 @@ public class Account {
         }
         byte[] encryptKey = Arrays.copyOfRange(derivedKey, 0, 16);
         byte[] privateKeyBytes = Numeric.toBytesPadded(ecKeyPair.getPrivKey(), PRIVATE_KEY_SIZE);
-        byte[] cipherText = performCipherOperation(Cipher.ENCRYPT_MODE, iv, encryptKey, privateKeyBytes);
+        byte[] cipherText = Keys.performCipherOperation(Cipher.ENCRYPT_MODE, iv, encryptKey, privateKeyBytes);
         byte[] mac = generateMac(derivedKey, cipherText);
 
         this.crypto.kdfparams.setSalt(Numeric.toHexStringNoPrefix(salt));
@@ -141,27 +141,12 @@ public class Account {
         this.crypto.mac = Numeric.toHexStringNoPrefix(mac);
     }
 
-    private byte[] getDerivedKey(String password, byte[] salt, ScryptKdfParams kdfParams) {
-        return SCrypt.generate(password.getBytes(Charset.forName("UTF-8")), salt, kdfParams.getN(), kdfParams.getR(), kdfParams.getP(), kdfParams.getDklen());
+    byte[] getDerivedKey(String password, ScryptKdfParams kdfParams) {
+        return SCrypt.generate(password.getBytes(Charset.forName("UTF-8")), Numeric.hexStringToByteArray(kdfParams.getSalt()), kdfParams.getN(), kdfParams.getR(), kdfParams.getP(), kdfParams.getDklen());
     }
 
-    private static byte[] performCipherOperation(int mode, byte[] iv, byte[] encryptKey, byte[] text) throws CipherException {
-        try {
-            IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
-            Cipher cipher = Cipher.getInstance("AES/CTR/NoPadding");
-
-            SecretKeySpec secretKeySpec = new SecretKeySpec(encryptKey, "AES");
-            cipher.init(mode, secretKeySpec, ivParameterSpec);
-            return cipher.doFinal(text);
-        } catch (Exception e) {
-            if (e instanceof NoSuchPaddingException || e instanceof NoSuchAlgorithmException
-                    || e instanceof InvalidAlgorithmParameterException || e instanceof InvalidKeyException
-                    || e instanceof BadPaddingException || e instanceof IllegalBlockSizeException) {
-                throw new CipherException("Error performing cipher operation", e);
-            } else {
-                throw new RuntimeException(e);
-            }
-        }
+    byte[] getDerivedKey(String password, byte[] salt, ScryptKdfParams kdfParams) {
+        return SCrypt.generate(password.getBytes(Charset.forName("UTF-8")), salt, kdfParams.getN(), kdfParams.getR(), kdfParams.getP(), kdfParams.getDklen());
     }
 
     private static byte[] generateMac(byte[] derivedKey, byte[] cipherText) {

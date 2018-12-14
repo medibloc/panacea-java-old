@@ -5,8 +5,11 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.med4j.crypto.ECKeyPair;
 import org.med4j.crypto.Keys;
+import org.med4j.utils.Numeric;
 
 import java.io.File;
+import java.math.BigInteger;
+import java.security.Key;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -60,6 +63,21 @@ public class AccountUtils {
 
     public static Account loadAccount(File accountFile) throws Exception {
         return objectMapper.readValue(accountFile, Account.class);
+    }
+
+    public static ECKeyPair getKeyPair(Account account, String password) throws Exception {
+        byte[] ciphertext = Numeric.hexStringToByteArray(account.getCrypto().getCiphertext());
+        byte[] derivedKey;
+        byte[] iv = Numeric.hexStringToByteArray(account.getCrypto().getCipherparams().getIv());
+
+        if (account.getCrypto().getKdfparams() instanceof Account.ScryptKdfParams) {
+            derivedKey = account.getDerivedKey(password, (Account.ScryptKdfParams)account.getCrypto().getKdfparams());
+        } else {
+            throw new IllegalArgumentException("Unsupported kdf");
+        }
+
+        BigInteger privateKey = new BigInteger(Keys.decryptPrivateKey(ciphertext, derivedKey, iv));
+        return new ECKeyPair(privateKey, Keys.getPublicKeyFromPrivatekey(privateKey));
     }
 
     private static void validatePassword(String password) {
