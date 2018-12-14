@@ -50,14 +50,16 @@ public class Transaction {
                 .setPayload(ByteString.copyFrom(payload.toByteArray()))
                 .build();
 
-        String sign = Sign.signMessage(data, AccountUtils.getKeyPair(account, password)).toString(); // TODO
+        String hash = hashTx(txHashTarget);
+        Sign.SignatureData sign = Sign.signMessage(Numeric.hexStringToByteArray(hash), AccountUtils.getKeyPair(account, password));
+        int recoveryCode = (sign.getV() & 0xFF) - 27;
 
         return getTxRequestBuilder(txHashTarget)
-                .setHash(hashTx(txHashTarget))
+                .setHash(hash)
                 .setHashAlg(Algorithm.SHA3256)
                 .setCryptoAlg(Algorithm.SECP256K1)
                 //.setPayerSign(null)
-                .setSign(sign)
+                .setSign(Numeric.toHexStringNoPrefix(sign.getR()) + Numeric.toHexStringNoPrefix(sign.getS()) + String.format("%02x", recoveryCode & 0xFF))
                 .build();
 
         // TODO : implement send()
