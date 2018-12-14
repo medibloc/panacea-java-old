@@ -63,7 +63,7 @@ public class Keys {
 
     public static BigInteger getPublicKeyFromPrivatekey(BigInteger privateKey) {
         ECPoint pubKeyPoint = publicPointFromPrivate(privateKey);
-        byte[] encoded = pubKeyPoint.getEncoded(true);
+        byte[] encoded = pubKeyPoint.getEncoded(false);
         return new BigInteger(1, Arrays.copyOfRange(encoded, 1, encoded.length)); // remove prefix
     }
 
@@ -84,7 +84,7 @@ public class Keys {
 
     public static void validateECKeyPair(ECKeyPair ecKeyPair) {
         ECPoint expectedPubKeyPoint = publicPointFromPrivate(ecKeyPair.getPrivKey());
-        byte[] encoded = expectedPubKeyPoint.getEncoded(true);
+        byte[] encoded = expectedPubKeyPoint.getEncoded(false);
         BigInteger expectedPubKey = new BigInteger(1, Arrays.copyOfRange(encoded, 1, encoded.length)); // remove prefix
 
         if (expectedPubKey.compareTo(ecKeyPair.getPubKey()) != 0) {

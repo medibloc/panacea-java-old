@@ -81,7 +81,7 @@ public class AccountUtilsTest {
     public void testLoadAccount() throws Exception {
         ECKeyPair ecKeyPair = new ECKeyPair(
                 new BigInteger("4627e66cd55fe54500bb0397663254564249b276f3bf81c21a3a06bd72dfcf74", 16)
-                , new BigInteger("cb2bde8309a4bfde8e53be4e96a99082920fdccea0b5fddaf9d782d25a0e454f", 16));
+                , new BigInteger("cb2bde8309a4bfde8e53be4e96a99082920fdccea0b5fddaf9d782d25a0e454f6cd4bbd19345cc3f3de58a8c11bb45e764bbacad507873e28e33c7f724bca1eb", 16));
 
         Account expected = AccountUtils.createAccount(SAMPLE_PASSWORD, ecKeyPair, null);
         Account actual = AccountUtils.loadAccount(new File("sampleAccount.json"));
@@ -93,7 +93,7 @@ public class AccountUtilsTest {
     public void testGetKeyPair() throws Exception {
         ECKeyPair expected = new ECKeyPair(
                 new BigInteger("4627e66cd55fe54500bb0397663254564249b276f3bf81c21a3a06bd72dfcf74", 16)
-                , new BigInteger("cb2bde8309a4bfde8e53be4e96a99082920fdccea0b5fddaf9d782d25a0e454f", 16));
+                , new BigInteger("cb2bde8309a4bfde8e53be4e96a99082920fdccea0b5fddaf9d782d25a0e454f6cd4bbd19345cc3f3de58a8c11bb45e764bbacad507873e28e33c7f724bca1eb", 16));
 
         Account account = AccountUtils.createAccount(SAMPLE_PASSWORD, expected, null);
 
