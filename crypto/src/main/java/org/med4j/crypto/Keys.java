@@ -6,49 +6,30 @@ import org.bouncycastle.crypto.params.ECDomainParameters;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 import java.math.BigInteger;
 import java.security.InvalidAlgorithmParameterException;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
+import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
-import java.security.spec.ECGenParameterSpec;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Arrays;
-
-import static org.med4j.crypto.SecureRandomUtils.secureRandom;
 
 public class Keys {
     private Keys() {}
 
-    private static final X9ECParameters CURVE_PARAMS = CustomNamedCurves.getByName("secp256k1");
-    private static final ECDomainParameters CURVE = new ECDomainParameters(
+    static final X9ECParameters CURVE_PARAMS = CustomNamedCurves.getByName("secp256k1");
+    static final ECDomainParameters CURVE = new ECDomainParameters(
             CURVE_PARAMS.getCurve(), CURVE_PARAMS.getG(), CURVE_PARAMS.getN(), CURVE_PARAMS.getH());
+    static final BigInteger HALF_CURVE_ORDER = CURVE_PARAMS.getN().shiftRight(1);
 
     private static byte[] PBKDF2_SALT = "medibloc".getBytes();
     private static int PBKDF2_ITERATIONS = 32768;
     static int PBKDF2_KEY_SIZE = 32;
-
-    /**
-     * Create a keypair using SECP-256k1 curve.
-     *
-     * <p>Private keypairs are encoded using PKCS8
-     *
-     * <p>Private keys are encoded using X.509
-     */
-    private static KeyPair createSecp256k1KeyPair() throws NoSuchProviderException,
-            NoSuchAlgorithmException, InvalidAlgorithmParameterException {
-
-        KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("ECDSA", "BC");
-        ECGenParameterSpec ecGenParameterSpec = new ECGenParameterSpec("secp256k1");
-        keyPairGenerator.initialize(ecGenParameterSpec, secureRandom());
-        return keyPairGenerator.generateKeyPair();
-    }
-
-    static KeyPair generateKeys() throws NoSuchProviderException,
-            NoSuchAlgorithmException, InvalidAlgorithmParameterException {
-        return createSecp256k1KeyPair();
-    }
 
     /**
      * Generate private key which is less than 'FFFFFFFF00000000FFFFFFFFFFFFFFFFBCE6FAADA7179E84F3B9CAC2FC632551', according to secp256k1.
@@ -80,13 +61,16 @@ public class Keys {
         return new FixedPointCombMultiplier().multiply(CURVE.getG(), privKey);
     }
 
+    public static BigInteger getPublicKeyFromPrivatekey(BigInteger privateKey) {
+        ECPoint pubKeyPoint = publicPointFromPrivate(privateKey);
+        byte[] encoded = pubKeyPoint.getEncoded(true);
+        return new BigInteger(1, Arrays.copyOfRange(encoded, 1, encoded.length)); // remove prefix
+    }
+
     public static ECKeyPair generateKeysFromPassphrase(String passphrase) throws NoSuchAlgorithmException, InvalidKeySpecException {
         byte[] privKeyBytes = generatePrivateKeyFromPassphrase(passphrase);
         BigInteger privKey = new BigInteger(1, privKeyBytes);
-
-        ECPoint pubKeyPoint = publicPointFromPrivate(privKey);
-        byte[] encoded = pubKeyPoint.getEncoded(true);
-        BigInteger pubKey = new BigInteger(1, Arrays.copyOfRange(encoded, 1, encoded.length)); // remove prefix
+        BigInteger pubKey = getPublicKeyFromPrivatekey(privKey);
 
         return new ECKeyPair(privKey, pubKey);
     }
@@ -107,6 +91,29 @@ public class Keys {
             throw new IllegalArgumentException("The ECKeyPair is invalid.");
         } else {
             return;
+        }
+    }
+
+    public static byte[] decryptPrivateKey(byte[] cipherText, byte[] encryptKey, byte[] iv) throws CipherException {
+        return performCipherOperation(Cipher.DECRYPT_MODE, iv, encryptKey, cipherText);
+    }
+
+    public static byte[] performCipherOperation(int mode, byte[] iv, byte[] encryptKey, byte[] text) throws CipherException {
+        try {
+            IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
+            Cipher cipher = Cipher.getInstance("AES/CTR/NoPadding");
+
+            SecretKeySpec secretKeySpec = new SecretKeySpec(encryptKey, "AES");
+            cipher.init(mode, secretKeySpec, ivParameterSpec);
+            return cipher.doFinal(text);
+        } catch (Exception e) {
+            if (e instanceof NoSuchPaddingException || e instanceof NoSuchAlgorithmException
+                    || e instanceof InvalidAlgorithmParameterException || e instanceof InvalidKeyException
+                    || e instanceof BadPaddingException || e instanceof IllegalBlockSizeException) {
+                throw new CipherException("Error performing cipher operation", e);
+            } else {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
