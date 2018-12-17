@@ -80,7 +80,7 @@ public class TransactionTest {
 
     @Test
     public void testGetSendTransactionRequest() throws Exception {
-        Account account = AccountUtils.loadAccount(new File("sampleAccount.json"));
+        Account account = AccountUtils.loadAccount("sampleAccount.json");
 
         for(String[] txSample: txSamples) {
             String data = txSample[0];

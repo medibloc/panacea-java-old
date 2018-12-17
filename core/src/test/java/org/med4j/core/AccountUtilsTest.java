@@ -66,7 +66,7 @@ public class AccountUtilsTest {
             File savedFile = AccountUtils.saveAccountToDefaultPath(createdAccount);
 
             System.out.println("savedFile : " + savedFile.getAbsolutePath());
-            Account loadedAccount = AccountUtils.loadAccount(savedFile);
+            Account loadedAccount = AccountUtils.loadAccount(savedFile.getPath());
 
             assertEquals(createdAccount, loadedAccount);
 
@@ -84,7 +84,7 @@ public class AccountUtilsTest {
                 , new BigInteger("cb2bde8309a4bfde8e53be4e96a99082920fdccea0b5fddaf9d782d25a0e454f6cd4bbd19345cc3f3de58a8c11bb45e764bbacad507873e28e33c7f724bca1eb", 16));
 
         Account expected = AccountUtils.createAccount(SAMPLE_PASSWORD, ecKeyPair, null);
-        Account actual = AccountUtils.loadAccount(new File("sampleAccount.json"));
+        Account actual = AccountUtils.loadAccount("sampleAccount.json");
 
         assertEquals(expected.getAddress(), actual.getAddress());
     }

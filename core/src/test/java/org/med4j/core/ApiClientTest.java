@@ -75,7 +75,7 @@ public class ApiClientTest {
                 .setHash("ae22802a287a8c3e81076a3455b2f437b3f73f51601ca547e382114cd6cfa06c")
                 .build();
 
-        org.med4j.account.Account account = AccountUtils.loadAccount(new File("sampleAccount.json"));
+        org.med4j.account.Account account = AccountUtils.loadAccount("sampleAccount.json");
         Rpc.SendTransactionRequest txReq = Transaction.getSendTransactionRequest("abc".getBytes(), account, "sample", 1540000000, 1, 181112);
 
         Med4J med4J = getMed4J();

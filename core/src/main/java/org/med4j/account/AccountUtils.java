@@ -62,8 +62,8 @@ public class AccountUtils {
         return destination;
     }
 
-    public static Account loadAccount(File accountFile) throws Exception {
-        return objectMapper.readValue(accountFile, Account.class);
+    public static Account loadAccount(String accountFilePath) throws Exception {
+        return objectMapper.readValue(new File(accountFilePath), Account.class);
     }
 
     public static ECKeyPair getKeyPair(Account account, String password) throws Exception {
