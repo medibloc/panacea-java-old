@@ -61,8 +61,6 @@ public class Transaction {
                 //.setPayerSign(null)
                 .setSign(Numeric.toHexStringNoPrefix(sign.getR()) + Numeric.toHexStringNoPrefix(sign.getS()) + String.format("%02x", recoveryCode & 0xFF))
                 .build();
-
-        // TODO : implement send()
     }
 
     private static long getCurrentTimeInSecond() {
