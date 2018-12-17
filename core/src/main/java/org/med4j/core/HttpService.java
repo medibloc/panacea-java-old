@@ -17,7 +17,7 @@ import okhttp3.ResponseBody;
 
 public class HttpService implements ProtobufService {
     private static final String DEFAULT_URL = "http://localhost:9921";
-    private static final MediaType MEDIA_TYPE = MediaType.parse("application/x-protobuf");
+    private static final MediaType MEDIA_TYPE = MediaType.parse("application/json; charset=utf-8");
     static final String METHOD_KEY = "method";
     static final String PATH_KEY = "path";
 
@@ -50,7 +50,7 @@ public class HttpService implements ProtobufService {
                     }
                     requestBuilder = requestBuilder.url(urlBuilder.build()).get();
                 } else {
-                    RequestBody requestBody = RequestBody.create(MEDIA_TYPE, requestMessage.toByteArray());
+                    RequestBody requestBody = RequestBody.create(MEDIA_TYPE, JsonFormat.printer().print(requestMessage));
                     requestBuilder = requestBuilder.url(baseUrl + params.get(PATH_KEY)).method(method, requestBody);
                 }
 

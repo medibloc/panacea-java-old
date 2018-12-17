@@ -4,9 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.med4j.Med4J;
+import org.med4j.account.AccountUtils;
+import org.med4j.core.protobuf.Rpc;
 import org.med4j.core.protobuf.Rpc.*;
 
 import io.reactivex.subscribers.TestSubscriber;
+import org.med4j.tx.Transaction;
+
+import java.io.File;
 
 public class ApiClientTest {
     private static final String TESTNET_URL = "https://testnet-node.medibloc.org";
@@ -62,6 +67,21 @@ public class ApiClientTest {
     public void testGetDynasty() throws Exception {
         Med4J med4J = getMed4J();
         med4J.getDynasty().send();
+    }
+
+    @Test
+    public void testSendTransaction() throws Exception {
+        Rpc.TransactionHash expected =  Rpc.TransactionHash.newBuilder()
+                .setHash("ae22802a287a8c3e81076a3455b2f437b3f73f51601ca547e382114cd6cfa06c")
+                .build();
+
+        org.med4j.account.Account account = AccountUtils.loadAccount(new File("sampleAccount.json"));
+        Rpc.SendTransactionRequest txReq = Transaction.getSendTransactionRequest("abc".getBytes(), account, "sample", 1540000000, 1, 181112);
+
+        Med4J med4J = getMed4J();
+        Rpc.TransactionHash actual = med4J.sendTransaction(txReq).sendAsync().get();
+
+        assertEquals(expected, actual);
     }
 
     @Test
