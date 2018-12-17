@@ -1,17 +1,16 @@
 apply plugin: 'java-library'
-apply plugin: 'com.jfrog.bintray'
 
 ext {
     bintrayRepo = "med4j"
-    bintrayName = "com.med4j.core"
+    bintrayName = "org.med4j.core"
 
     libraryName = "core"
 
-    publishedGroupId = 'com.med4j'
+    publishedGroupId = 'org.med4j'
     artifact = 'core'
-    libraryVersion = '0.0.2'
+    libraryVersion = '0.0.1'
 
-    libraryDescription = 'com.med4j.core'
+    libraryDescription = 'org.med4j.core'
     siteUrl = 'https://github.com/medibloc/med4j'
     gitUrl = 'https://github.com/medibloc/med4j.git'
     developerId = 'medibloc'
