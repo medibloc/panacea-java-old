@@ -38,8 +38,8 @@ public class ApiClientTest {
         Account.Builder expectedResBuilder = Account.newBuilder();
         expectedResBuilder.setAddress("02dc01a49f2867a44e7a0fd08fb4a3e5a3c628d35ac6c444b1acc48617b4158458");
         expectedResBuilder.setBalance("0");
-        expectedResBuilder.setVesting("0");
-        expectedResBuilder.setBandwidth("0");
+        expectedResBuilder.setStaking("0");
+        expectedResBuilder.setPoints("0");
         expectedResBuilder.setUnstaking("0");
 
         GetAccountRequest.Builder reqBuilder = GetAccountRequest.newBuilder();
