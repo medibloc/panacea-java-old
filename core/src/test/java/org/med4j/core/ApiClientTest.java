@@ -5,13 +5,13 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import org.med4j.Med4J;
 import org.med4j.account.AccountUtils;
+import org.med4j.core.protobuf.BlockChain;
 import org.med4j.core.protobuf.Rpc;
 import org.med4j.core.protobuf.Rpc.*;
 
 import io.reactivex.subscribers.TestSubscriber;
+import org.med4j.data.Data;
 import org.med4j.tx.Transaction;
-
-import java.io.File;
 
 public class ApiClientTest {
     private static final String TESTNET_URL = "https://testnet-node.medibloc.org";
@@ -76,7 +76,11 @@ public class ApiClientTest {
                 .build();
 
         org.med4j.account.Account account = AccountUtils.loadAccount("sampleAccount.json");
-        Rpc.SendTransactionRequest txReq = Transaction.getSendTransactionRequest("abc".getBytes(), account, "sample", 1540000000, 1, 181112);
+        byte[] dataHash = Data.hashRecord("abc");
+        BlockChain.TransactionHashTarget transactionHashTarget
+                = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, 181112, 1540000000);
+        Rpc.SendTransactionRequest txReq = Transaction.getSignedTransactionRequest(transactionHashTarget, account, "sample");
+
 
         Med4J med4J = getMed4J();
         Rpc.TransactionHash actual = med4J.sendTransaction(txReq).sendAsync().get();

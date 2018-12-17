@@ -5,16 +5,17 @@ import org.med4j.account.Account;
 import org.med4j.account.AccountUtils;
 import org.med4j.core.protobuf.BlockChain;
 import org.med4j.core.protobuf.BlockChain.TransactionHashTarget;
+import org.med4j.core.protobuf.Rpc;
 import org.med4j.core.protobuf.Rpc.SendTransactionRequest;
 import org.med4j.crypto.Hash;
 import org.med4j.crypto.Sign;
-import org.med4j.healthdata.HealthData;
 import org.med4j.utils.Numeric;
 
 import java.util.Calendar;
 
 public class Transaction {
     static final int VALUE_SIZE = 16;
+    static final int ADDRESS_SIZE = 16;
 
     private class Type {
         static final String ADD_RECORD = "add_record";
@@ -30,40 +31,39 @@ public class Transaction {
         return Numeric.byteArrayToHex(Hash.sha3256(bytes));
     }
 
-    public static SendTransactionRequest getSendTransactionRequest(String data, Account account
-            , String password, long nonce, int chainId) throws Exception {
-        return getSendTransactionRequest(data.getBytes(), account, password, 0, nonce, chainId);
+    public static BlockChain.TransactionHashTarget getAddRecordTransactionHashTarget(byte[] dataHash, String fromAddress, long nonce, int chainId) {
+        return getAddRecordTransactionHashTarget(dataHash, fromAddress, nonce, chainId, 0);
     }
 
-    public static SendTransactionRequest getSendTransactionRequest(byte[] data, Account account
-            , String password, long timeStamp, long nonce, int chainId) throws Exception {
+    public static BlockChain.TransactionHashTarget getAddRecordTransactionHashTarget(byte[] dataHash, String fromAddress, long nonce, int chainId, long timeStamp) {
         timeStamp = timeStamp != 0 ? timeStamp : getCurrentTimeInSecond();
-        byte[] dataHash = HealthData.hashData(data);
 
         BlockChain.AddRecordPayload payload = BlockChain.AddRecordPayload.newBuilder()
                 .setHash(ByteString.copyFrom(dataHash))
                 .build();
 
-        BlockChain.TransactionHashTarget txHashTarget = BlockChain.TransactionHashTarget.newBuilder()
+        return BlockChain.TransactionHashTarget.newBuilder()
                 .setTxType(Type.ADD_RECORD)
-                .setFrom(ByteString.copyFrom(Numeric.hexStringToByteArray(account.getAddress())))
-                .setTo(ByteString.copyFrom(new byte[33])) // default value
-                .setValue(ByteString.copyFrom(new byte[16])) // default value
+                .setFrom(ByteString.copyFrom(Numeric.hexStringToByteArray(fromAddress)))
+                .setTo(ByteString.copyFrom(new byte[ADDRESS_SIZE])) // default value
+                .setValue(ByteString.copyFrom(new byte[VALUE_SIZE])) // default value
                 .setTimestamp(timeStamp)
                 .setNonce(nonce) // TODO : thread safe
                 .setChainId(chainId)
                 .setPayload(ByteString.copyFrom(payload.toByteArray()))
                 .build();
+    }
 
-        String hash = hashTx(txHashTarget);
+    public static Rpc.SendTransactionRequest getSignedTransactionRequest(BlockChain.TransactionHashTarget transactionHashTarget, Account account
+            , String password) throws Exception {
+        String hash = hashTx(transactionHashTarget);
         Sign.SignatureData sign = Sign.signMessage(Numeric.hexStringToByteArray(hash), AccountUtils.getKeyPair(account, password));
         int recoveryCode = (sign.getV() & 0xFF) - 27;
 
-        return getTxRequestBuilder(txHashTarget)
+        return getTxRequestBuilder(transactionHashTarget)
                 .setHash(hash)
                 .setHashAlg(Algorithm.SHA3256)
                 .setCryptoAlg(Algorithm.SECP256K1)
-                //.setPayerSign(null)
                 .setSign(Numeric.toHexStringNoPrefix(sign.getR()) + Numeric.toHexStringNoPrefix(sign.getS()) + String.format("%02x", recoveryCode & 0xFF))
                 .build();
     }

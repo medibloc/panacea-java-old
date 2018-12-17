@@ -6,6 +6,7 @@ import org.med4j.account.Account;
 import org.med4j.account.AccountUtils;
 import org.med4j.core.protobuf.BlockChain;
 import org.med4j.core.protobuf.Rpc;
+import org.med4j.data.Data;
 import org.med4j.tx.Transaction;
 import org.med4j.utils.Numeric;
 import org.med4j.utils.Strings;
@@ -104,7 +105,11 @@ public class TransactionTest {
                     .setTxType("add_record")
                     .build();
 
-            Rpc.SendTransactionRequest actual = Transaction.getSendTransactionRequest(data.getBytes(), account, "sample", 1540000000, 1, 181112);
+            byte[] dataHash = Data.hashRecord(data);
+            BlockChain.TransactionHashTarget transactionHashTarget
+                    = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, 181112, 1540000000);
+            Rpc.SendTransactionRequest actual = Transaction.getSignedTransactionRequest(transactionHashTarget, account, "sample");
+
 
             assertEquals(expected, actual);
         }
