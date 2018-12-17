@@ -30,6 +30,11 @@ public class Transaction {
         return Numeric.byteArrayToHex(Hash.sha3256(bytes));
     }
 
+    public static SendTransactionRequest getSendTransactionRequest(String data, Account account
+            , String password, long nonce, int chainId) throws Exception {
+        return getSendTransactionRequest(data.getBytes(), account, password, 0, nonce, chainId);
+    }
+
     public static SendTransactionRequest getSendTransactionRequest(byte[] data, Account account
             , String password, long timeStamp, long nonce, int chainId) throws Exception {
         timeStamp = timeStamp != 0 ? timeStamp : getCurrentTimeInSecond();
@@ -44,9 +49,9 @@ public class Transaction {
                 .setFrom(ByteString.copyFrom(Numeric.hexStringToByteArray(account.getAddress())))
                 .setTo(ByteString.copyFrom(new byte[33])) // default value
                 .setValue(ByteString.copyFrom(new byte[16])) // default value
-                .setTimestamp(timeStamp) // TODO : read from config
+                .setTimestamp(timeStamp)
                 .setNonce(nonce) // TODO : thread safe
-                .setChainId(chainId) // TODO : read from config
+                .setChainId(chainId)
                 .setPayload(ByteString.copyFrom(payload.toByteArray()))
                 .build();
 
