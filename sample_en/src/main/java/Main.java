@@ -14,7 +14,7 @@ public class Main {
     private static final String TESTNET_URL = "https://testnet-node.medibloc.org";
     private static final String ACCOUNT_REQUEST_TYPE_TAIL = "tail";
 
-    private static final String ACCOUNT_FILE_PATH = "sample_ko/sample_accounts";
+    private static final String ACCOUNT_FILE_PATH = "sample_en/sample_accounts";
     private static final String PASSWORD = "myPassWord123!";
     private static final String UPLOAD_DATA = "MyHealthDataForHashingAndUploading";
 
