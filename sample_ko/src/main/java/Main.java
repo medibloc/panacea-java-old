@@ -41,14 +41,14 @@ public class Main {
 
         /*** 2. data hash 업로드 ***/
 
-        // BlockChain 에 접근하기 위한 med4j client 를 생성 합니다.
-        // med4j client 를 이용하여 BlockChain 과 통신 할 때에는 Rpc(Remote Procedure Call) 패키지 내의 클래스가 사용 됩니다.
+        // Blockchain 에 접근하기 위한 med4j client 를 생성 합니다.
+        // med4j client 를 이용하여 Blockchain 과 통신 할 때에는 Rpc(Remote Procedure Call) 패키지 내의 클래스가 사용 됩니다.
         Med4J med4J = Med4J.create(new HttpService(TESTNET_URL));
 
-        // BlockChain 에 업로드 할 data hash 값을 구합니다.
+        // Blockchain 에 업로드 할 data hash 값을 구합니다.
         byte[] dataHash = Data.hashRecord(UPLOAD_DATA);
 
-        // BlockChain 에서 account 의 현재 정보를 조회 합니다.
+        // Blockchain 에서 account 의 현재 정보를 조회 합니다.
         Rpc.GetAccountRequest accountRequest = Rpc.GetAccountRequest.newBuilder()
                 .setAddress(account.getAddress())
                 .setType(ACCOUNT_REQUEST_TYPE_TAIL)
@@ -56,11 +56,11 @@ public class Main {
         Rpc.Account accountBCInfo = med4J.getAccount(accountRequest).send();
         long nextNonce = accountBCInfo.getNonce() + 1;
 
-        // BlockChain 의 chainId 를 조회 합니다. 또는, 환경 설정 파일에 저장한 chainId 를 이용 할 수도 있습니다.
+        // Blockchain 의 chainId 를 조회 합니다. 또는, 환경 설정 파일에 저장한 chainId 를 이용 할 수도 있습니다.
         Rpc.MedState medState = med4J.getMedState().send();
         int chainId = medState.getChainId();
 
-        // BlockChain 에 등록 할 transaction 을 생성 합니다. 생성된 transaction 은 hash 및 sign 의 대상이 됩니다.
+        // Blockchain 에 등록 할 transaction 을 생성 합니다. 생성된 transaction 은 hash 및 sign 의 대상이 됩니다.
         BlockChain.TransactionHashTarget transactionHashTarget
                 = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), nextNonce, chainId);
 
@@ -69,11 +69,11 @@ public class Main {
 
         System.out.println("블록체인에 새로운 transaction 을 업로드 합니다.\ntransaction : " + JsonFormat.printer().print(transactionRequest));
 
-        // BlockChain 에 transaction 을 업로드 하고 결과를 반환 받습니다.
+        // Blockchain 에 transaction 을 업로드 하고 결과를 반환 받습니다.
         Rpc.TransactionHash resultHash = med4J.sendTransaction(transactionRequest).send();
 
         if (transactionRequest.getHash().equals(resultHash.getHash())) {
-            System.out.println("요청한 transaction 이 BlockChain transaction pool 에 등록 되었습니다.");
+            System.out.println("요청한 transaction 이 Blockchain transaction pool 에 등록 되었습니다.");
         } else {
             throw new Exception("transaction 업로드 중 오류가 발생 하였습니다.");
         }
