@@ -9,16 +9,8 @@ import org.med4j.crypto.Hash;
 import org.med4j.crypto.Keys;
 import org.med4j.utils.Numeric;
 
-import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.Charset;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.UUID;
 
@@ -47,8 +39,6 @@ public class Account {
     private Crypto crypto; // = encryptedPrivKey in medjs
 
     private String address;
-
-    Account() { }
 
     Account(String password, ECKeyPair ecKeyPair, AccountOption accountOption) throws CipherException {
         setAddress(Keys.compressPubKey(ecKeyPair.getPubKey()));

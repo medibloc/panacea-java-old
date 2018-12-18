@@ -24,10 +24,6 @@ public class HttpService implements ProtobufService {
     private OkHttpClient client = new OkHttpClient();
     private String baseUrl;
 
-    public HttpService() {
-        this(DEFAULT_URL);
-    }
-
     public HttpService(String baseUrl) {
         this.baseUrl = baseUrl;
     }

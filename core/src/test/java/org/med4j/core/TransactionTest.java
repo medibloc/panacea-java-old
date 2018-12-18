@@ -11,7 +11,6 @@ import org.med4j.tx.Transaction;
 import org.med4j.utils.Numeric;
 import org.med4j.utils.Strings;
 
-import java.io.File;
 import java.math.BigInteger;
 
 import static org.junit.Assert.assertEquals;
@@ -81,7 +80,7 @@ public class TransactionTest {
 
     @Test
     public void testGetSendTransactionRequest() throws Exception {
-        Account account = AccountUtils.loadAccount("sampleAccount.json");
+        Account account = AccountUtils.loadAccount(AccountUtilsTest.SAMPLE_ACCOUNT_FILE_PATH);
 
         for(String[] txSample: txSamples) {
             String data = txSample[0];

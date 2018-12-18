@@ -14,13 +14,14 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class AccountUtilsTest {
+    final static String SAMPLE_ACCOUNT_FILE_PATH = "sampleAccount.json";
     final static String SAMPLE_PASSWORD = "sample";
 
     @Test
     public void testAccountEquals() {
         try {
-            Account account1 = AccountUtils.createAccount("account1", null);
-            Account account2 = AccountUtils.createAccount("account2", null);
+            Account account1 = AccountUtils.createAccount(SAMPLE_PASSWORD, null);
+            Account account2 = AccountUtils.createAccount(SAMPLE_PASSWORD, null);
 
             assertNotEquals(account1, account2);
         } catch (Exception ex) {
@@ -84,7 +85,7 @@ public class AccountUtilsTest {
                 , new BigInteger("cb2bde8309a4bfde8e53be4e96a99082920fdccea0b5fddaf9d782d25a0e454f6cd4bbd19345cc3f3de58a8c11bb45e764bbacad507873e28e33c7f724bca1eb", 16));
 
         Account expected = AccountUtils.createAccount(SAMPLE_PASSWORD, ecKeyPair, null);
-        Account actual = AccountUtils.loadAccount("sampleAccount.json");
+        Account actual = AccountUtils.loadAccount(SAMPLE_ACCOUNT_FILE_PATH);
 
         assertEquals(expected.getAddress(), actual.getAddress());
     }

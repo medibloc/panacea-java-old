@@ -14,8 +14,9 @@ import org.med4j.utils.Numeric;
 import java.util.Calendar;
 
 public class Transaction {
-    static final int VALUE_SIZE = 16;
-    static final int ADDRESS_SIZE = 16;
+    private static final int VALUE_SIZE = 16;
+    private static final int ADDRESS_SIZE = 16;
+    private static final long TIMESTAMP_NULL = 0;
 
     private class Type {
         static final String ADD_RECORD = "add_record";
@@ -32,11 +33,11 @@ public class Transaction {
     }
 
     public static BlockChain.TransactionHashTarget getAddRecordTransactionHashTarget(byte[] dataHash, String fromAddress, long nonce, int chainId) {
-        return getAddRecordTransactionHashTarget(dataHash, fromAddress, nonce, chainId, 0);
+        return getAddRecordTransactionHashTarget(dataHash, fromAddress, nonce, chainId, TIMESTAMP_NULL);
     }
 
     public static BlockChain.TransactionHashTarget getAddRecordTransactionHashTarget(byte[] dataHash, String fromAddress, long nonce, int chainId, long timeStamp) {
-        timeStamp = timeStamp != 0 ? timeStamp : getCurrentTimeInSecond();
+        timeStamp = timeStamp != TIMESTAMP_NULL ? timeStamp : getCurrentTimeInSecond();
 
         BlockChain.AddRecordPayload payload = BlockChain.AddRecordPayload.newBuilder()
                 .setHash(ByteString.copyFrom(dataHash))

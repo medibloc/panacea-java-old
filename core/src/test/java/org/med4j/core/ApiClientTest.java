@@ -75,7 +75,7 @@ public class ApiClientTest {
                 .setHash("ae22802a287a8c3e81076a3455b2f437b3f73f51601ca547e382114cd6cfa06c")
                 .build();
 
-        org.med4j.account.Account account = AccountUtils.loadAccount("sampleAccount.json");
+        org.med4j.account.Account account = AccountUtils.loadAccount(AccountUtilsTest.SAMPLE_ACCOUNT_FILE_PATH);
         byte[] dataHash = Data.hashRecord("abc");
         BlockChain.TransactionHashTarget transactionHashTarget
                 = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, 181112, 1540000000);

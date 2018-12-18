@@ -100,6 +100,8 @@ public class AccountUtils {
         if (password.isEmpty()) {
             throw new IllegalArgumentException("Password can not be empty.");
         }
+
+        // TODO - add validation
     }
 
     private static String getDefaultAccountFilePath() {
