@@ -1,3 +1,4 @@
 include ':crypto', ':utils', ':core'
 include 'sample_ko'
+include 'sample_en'
 

@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_6
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    // use jcenter
+    implementation "org.med4j:core:0.0.3"
+
+    // use project
+    //implementation project(':core')
+    //implementation 'com.google.protobuf:protobuf-java-util:3.6.1'
+}
