@@ -8,7 +8,7 @@ ext {
 
     publishedGroupId = 'org.med4j'
     artifact = 'core'
-    libraryVersion = '0.0.3'
+    libraryVersion = '0.0.4'
 
     libraryDescription = 'org.med4j.core'
     siteUrl = 'https://github.com/medibloc/med4j'

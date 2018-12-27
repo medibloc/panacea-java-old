@@ -26,6 +26,12 @@ public final class SecureRandomUtils {
         return SECURE_RANDOM;
     }
 
+    public static byte[] generateRandomBytes(int size) {
+        byte[] bytes = new byte[size];
+        secureRandom().nextBytes(bytes);
+        return bytes;
+    }
+
     // Taken from BitcoinJ implementation
     // https://github.com/bitcoinj/bitcoinj/blob/3cb1f6c6c589f84fe6e1fb56bf26d94cccc85429/core/src/main/java/org/bitcoinj/core/Utils.java#L573
     private static int isAndroid = -1;

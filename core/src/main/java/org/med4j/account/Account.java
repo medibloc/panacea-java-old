@@ -7,14 +7,13 @@ import org.med4j.crypto.CipherException;
 import org.med4j.crypto.ECKeyPair;
 import org.med4j.crypto.Hash;
 import org.med4j.crypto.Keys;
+import org.med4j.crypto.SecureRandomUtils;
 import org.med4j.utils.Numeric;
 
 import javax.crypto.Cipher;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.UUID;
-
-import static org.med4j.crypto.SecureRandomUtils.secureRandom;
 
 public class Account {
     private static final int CURRENT_VERSION = 3;
@@ -111,8 +110,8 @@ public class Account {
 
         this.id = option.getUuid() != null ? option.getUuid() : UUID.randomUUID().toString();
 
-        byte[] salt = option.getSalt() != null ? option.getSalt() : generateRandomBytes(KDFPARAMS_SALT_SIZE);
-        byte[] iv = option.getIv() != null ? option.getIv() : generateRandomBytes(IV_SIZE);
+        byte[] salt = option.getSalt() != null ? option.getSalt() : SecureRandomUtils.generateRandomBytes(KDFPARAMS_SALT_SIZE);
+        byte[] iv = option.getIv() != null ? option.getIv() : SecureRandomUtils.generateRandomBytes(IV_SIZE);
 
         byte[] derivedKey;
         if (this.crypto.kdfparams instanceof ScryptKdfParams) {
@@ -146,12 +145,6 @@ public class Account {
         System.arraycopy(cipherText, 0, result, 16, cipherText.length);
 
         return Hash.sha3256(result);
-    }
-
-    private static byte[] generateRandomBytes(int size) {
-        byte[] bytes = new byte[size];
-        secureRandom().nextBytes(bytes);
-        return bytes;
     }
 
     @Override
