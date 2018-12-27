@@ -36,3 +36,28 @@ subprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task installGradlew(type: Exec) {
+    commandLine "./gradlew"
+    args = ["install"]
+}
+
+task uploadAll(type: Exec) {
+    commandLine "./gradlew"
+    args = ["bintrayUpload"]
+}
+
+task uploadUtils(type: Exec) {
+    commandLine "./gradlew"
+    args = ["utils:bintrayUpload"]
+}
+
+task uploadCrypto(type: Exec) {
+    commandLine "./gradlew"
+    args = ["crypto:bintrayUpload"]
+}
+
+task uploadCore(type: Exec) {
+    commandLine "./gradlew"
+    args = ["core:bintrayUpload"]
+}
