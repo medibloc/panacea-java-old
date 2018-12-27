@@ -49,7 +49,7 @@ public class Transaction {
                 .setTo(ByteString.copyFrom(new byte[ADDRESS_SIZE])) // default value
                 .setValue(ByteString.copyFrom(new byte[VALUE_SIZE])) // default value
                 .setTimestamp(timeStamp)
-                .setNonce(nonce) // TODO : thread safe
+                .setNonce(nonce)
                 .setChainId(chainId)
                 .setPayload(ByteString.copyFrom(payload.toByteArray()))
                 .build();
