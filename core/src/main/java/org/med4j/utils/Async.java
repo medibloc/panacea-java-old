@@ -1,4 +1,4 @@
-package org.med4j.utils;
+package org.medibloc.panacea.utils;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

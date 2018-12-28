@@ -1,17 +1,17 @@
-package org.med4j.core;
+package org.medibloc.panacea.core;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.med4j.Med4J;
-import org.med4j.account.AccountUtils;
-import org.med4j.core.protobuf.BlockChain;
-import org.med4j.core.protobuf.Rpc;
-import org.med4j.core.protobuf.Rpc.*;
+import org.medibloc.panacea.Med4J;
+import org.medibloc.panacea.account.AccountUtils;
+import org.medibloc.panacea.core.protobuf.BlockChain;
+import org.medibloc.panacea.core.protobuf.Rpc;
+import org.medibloc.panacea.core.protobuf.Rpc.*;
 
 import io.reactivex.subscribers.TestSubscriber;
-import org.med4j.data.Data;
-import org.med4j.tx.Transaction;
+import org.medibloc.panacea.data.Data;
+import org.medibloc.panacea.tx.Transaction;
 
 public class ApiClientTest {
     private static final String TESTNET_URL = "https://testnet-node.medibloc.org";
@@ -75,7 +75,7 @@ public class ApiClientTest {
                 .setHash("ae22802a287a8c3e81076a3455b2f437b3f73f51601ca547e382114cd6cfa06c")
                 .build();
 
-        org.med4j.account.Account account = AccountUtils.loadAccount(AccountUtilsTest.SAMPLE_ACCOUNT_FILE_PATH);
+        org.medibloc.panacea.account.Account account = AccountUtils.loadAccount(AccountUtilsTest.SAMPLE_ACCOUNT_FILE_PATH);
         byte[] dataHash = Data.hashRecord("abc");
         BlockChain.TransactionHashTarget transactionHashTarget
                 = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, 181112);

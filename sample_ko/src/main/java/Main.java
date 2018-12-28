@@ -1,12 +1,12 @@
 import com.google.protobuf.util.JsonFormat;
-import org.med4j.Med4J;
-import org.med4j.account.Account;
-import org.med4j.account.AccountUtils;
-import org.med4j.core.HttpService;
-import org.med4j.core.protobuf.BlockChain;
-import org.med4j.core.protobuf.Rpc;
-import org.med4j.data.Data;
-import org.med4j.tx.Transaction;
+import org.medibloc.panacea.Med4J;
+import org.medibloc.panacea.account.Account;
+import org.medibloc.panacea.account.AccountUtils;
+import org.medibloc.panacea.core.HttpService;
+import org.medibloc.panacea.core.protobuf.BlockChain;
+import org.medibloc.panacea.core.protobuf.Rpc;
+import org.medibloc.panacea.data.Data;
+import org.medibloc.panacea.tx.Transaction;
 
 import java.io.File;
 

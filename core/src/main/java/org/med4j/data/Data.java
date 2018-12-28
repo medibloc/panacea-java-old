@@ -1,6 +1,6 @@
-package org.med4j.data;
+package org.medibloc.panacea.data;
 
-import org.med4j.crypto.Hash;
+import org.medibloc.panacea.crypto.Hash;
 
 public class Data {
     // TODO: replace this class with PHR module

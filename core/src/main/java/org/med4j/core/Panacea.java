@@ -1,6 +1,6 @@
-package org.med4j.core;
+package org.medibloc.panacea.core;
 
-import org.med4j.core.protobuf.Rpc.*;
+import org.medibloc.panacea.core.protobuf.Rpc.*;
 
 public interface Panacea {
     Request<Account> getAccount(GetAccountRequest request);

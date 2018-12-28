@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.med4j.crypto;
+package org.medibloc.panacea.crypto;
 
 import java.io.DataInputStream;
 import java.io.File;

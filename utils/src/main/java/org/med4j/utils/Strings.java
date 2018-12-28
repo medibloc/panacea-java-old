@@ -1,4 +1,4 @@
-package org.med4j.utils;
+package org.medibloc.panacea.utils;
 
 public class Strings {
     private Strings() {}

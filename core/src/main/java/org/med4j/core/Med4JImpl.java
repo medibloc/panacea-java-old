@@ -1,7 +1,7 @@
-package org.med4j.core;
+package org.medibloc.panacea.core;
 
-import org.med4j.Med4J;
-import org.med4j.core.protobuf.Rpc.*;
+import org.medibloc.panacea.Med4J;
+import org.medibloc.panacea.core.protobuf.Rpc.*;
 
 import java.io.IOException;
 import java.util.HashMap;

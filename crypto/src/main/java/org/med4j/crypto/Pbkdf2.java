@@ -1,4 +1,4 @@
-package org.med4j.crypto;
+package org.medibloc.panacea.crypto;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;

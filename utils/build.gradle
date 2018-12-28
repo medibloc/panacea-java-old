@@ -2,15 +2,15 @@ apply plugin: 'java-library'
 
 ext {
     bintrayRepo = "med4j"
-    bintrayName = "org.med4j.utils"
+    bintrayName = "org.medibloc.panacea.utils"
 
     libraryName = "utils"
 
-    publishedGroupId = 'org.med4j'
+    publishedGroupId = 'org.medibloc.panacea'
     artifact = 'utils'
     libraryVersion = '0.0.4'
 
-    libraryDescription = 'org.med4j.utils'
+    libraryDescription = 'org.medibloc.panacea.utils'
     siteUrl = 'https://github.com/medibloc/med4j'
     gitUrl = 'https://github.com/medibloc/med4j.git'
     developerId = 'medibloc'

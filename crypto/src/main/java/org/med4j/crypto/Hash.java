@@ -1,4 +1,4 @@
-package org.med4j.crypto;
+package org.medibloc.panacea.crypto;
 
 import org.bouncycastle.jcajce.provider.digest.SHA3;
 

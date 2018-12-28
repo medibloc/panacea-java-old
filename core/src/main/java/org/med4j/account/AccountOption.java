@@ -1,4 +1,4 @@
-package org.med4j.account;
+package org.medibloc.panacea.account;
 
 public class AccountOption {
     private String uuid = null;

@@ -1,13 +1,13 @@
-package org.med4j.crypto;
+package org.medibloc.panacea.crypto;
 
 import org.junit.Test;
-import org.med4j.utils.Numeric;
+import org.medibloc.panacea.utils.Numeric;
 
 import java.math.BigInteger;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
-import static org.med4j.crypto.Keys.PBKDF2_KEY_SIZE;
+import static org.medibloc.panacea.crypto.Keys.PBKDF2_KEY_SIZE;
 
 public class KeysTest {
 

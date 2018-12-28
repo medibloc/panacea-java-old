@@ -3,7 +3,7 @@
 Official client-side Java library for the [medibloc blockchain](https://github.com/medibloc/go-medibloc).
 
 ## Install
-You can download org.med4j.core library from jcenter.   
+You can download org.medibloc.panacea.core library from jcenter.   
 
 ### Maven
 ```bash
@@ -15,7 +15,7 @@ You can download org.med4j.core library from jcenter.
 </repositories>
 
 <dependency>
-  <groupId>org.med4j</groupId>
+  <groupId>org.medibloc.panacea</groupId>
   <artifactId>core</artifactId>
   <version>0.1.0</version>
   <type>pom</type>
@@ -29,7 +29,7 @@ repositories {
 }
 
 dependencies {
-    implementation "org.med4j:core:0.1.0"
+    implementation "org.medibloc.panacea:core:0.1.0"
 }
 ```
 

@@ -1,4 +1,4 @@
-package org.med4j.crypto;
+package org.medibloc.panacea.crypto;
 
 import org.bouncycastle.crypto.digests.SHA256Digest;
 import org.bouncycastle.crypto.params.ECPrivateKeyParameters;

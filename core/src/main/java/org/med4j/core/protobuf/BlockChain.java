@@ -2,7 +2,7 @@
 // source: core/pb/block.proto
 // compile(protoc) from https://github.com/Medibloc/go-medibloc.git#7f078563
 
-package org.med4j.core.protobuf;
+package org.medibloc.panacea.core.protobuf;
 
 public final class BlockChain {
   private BlockChain() {}
@@ -244,15 +244,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_BlockHeader_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_BlockHeader_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_BlockHeader_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_BlockHeader_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.BlockHeader.class, org.med4j.core.protobuf.BlockChain.BlockHeader.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.class, org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -528,10 +528,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.BlockHeader)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.BlockHeader other = (org.med4j.core.protobuf.BlockChain.BlockHeader) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader other = (org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -613,69 +613,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -688,7 +688,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.BlockHeader prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -709,21 +709,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.BlockHeader)
-            org.med4j.core.protobuf.BlockChain.BlockHeaderOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.BlockHeaderOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_BlockHeader_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_BlockHeader_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_BlockHeader_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_BlockHeader_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.BlockHeader.class, org.med4j.core.protobuf.BlockChain.BlockHeader.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.class, org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.BlockHeader.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -777,17 +777,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_BlockHeader_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_BlockHeader_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.BlockHeader getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.BlockHeader.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.BlockHeader build() {
-        org.med4j.core.protobuf.BlockChain.BlockHeader result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -795,8 +795,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.BlockHeader buildPartial() {
-        org.med4j.core.protobuf.BlockChain.BlockHeader result = new org.med4j.core.protobuf.BlockChain.BlockHeader(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader result = new org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader(this);
         result.hash_ = hash_;
         result.parentHash_ = parentHash_;
         result.coinbase_ = coinbase_;
@@ -850,16 +850,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.BlockHeader) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.BlockHeader)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.BlockHeader other) {
-        if (other == org.med4j.core.protobuf.BlockChain.BlockHeader.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.getDefaultInstance()) return this;
         if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
           setHash(other.getHash());
         }
@@ -920,11 +920,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.BlockHeader parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.BlockHeader) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1373,12 +1373,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.BlockHeader)
-    private static final org.med4j.core.protobuf.BlockChain.BlockHeader DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.BlockHeader();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.BlockHeader getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1403,7 +1403,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.BlockHeader getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1420,21 +1420,21 @@ public final class BlockChain {
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
-    org.med4j.core.protobuf.BlockChain.BlockHeader getHeader();
+    org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader getHeader();
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
-    org.med4j.core.protobuf.BlockChain.BlockHeaderOrBuilder getHeaderOrBuilder();
+    org.medibloc.panacea.core.protobuf.BlockChain.BlockHeaderOrBuilder getHeaderOrBuilder();
 
     /**
      * <code>repeated .corepb.Transaction transactions = 2;</code>
      */
-    java.util.List<org.med4j.core.protobuf.BlockChain.Transaction>
+    java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction>
     getTransactionsList();
     /**
      * <code>repeated .corepb.Transaction transactions = 2;</code>
      */
-    org.med4j.core.protobuf.BlockChain.Transaction getTransactions(int index);
+    org.medibloc.panacea.core.protobuf.BlockChain.Transaction getTransactions(int index);
     /**
      * <code>repeated .corepb.Transaction transactions = 2;</code>
      */
@@ -1442,12 +1442,12 @@ public final class BlockChain {
     /**
      * <code>repeated .corepb.Transaction transactions = 2;</code>
      */
-    java.util.List<? extends org.med4j.core.protobuf.BlockChain.TransactionOrBuilder>
+    java.util.List<? extends org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder>
     getTransactionsOrBuilderList();
     /**
      * <code>repeated .corepb.Transaction transactions = 2;</code>
      */
-    org.med4j.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
+    org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
             int index);
 
     /**
@@ -1497,11 +1497,11 @@ public final class BlockChain {
               done = true;
               break;
             case 10: {
-              org.med4j.core.protobuf.BlockChain.BlockHeader.Builder subBuilder = null;
+              org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.Builder subBuilder = null;
               if (header_ != null) {
                 subBuilder = header_.toBuilder();
               }
-              header_ = input.readMessage(org.med4j.core.protobuf.BlockChain.BlockHeader.parser(), extensionRegistry);
+              header_ = input.readMessage(org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(header_);
                 header_ = subBuilder.buildPartial();
@@ -1511,11 +1511,11 @@ public final class BlockChain {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                transactions_ = new java.util.ArrayList<org.med4j.core.protobuf.BlockChain.Transaction>();
+                transactions_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.BlockChain.Transaction>();
                 mutable_bitField0_ |= 0x00000002;
               }
               transactions_.add(
-                      input.readMessage(org.med4j.core.protobuf.BlockChain.Transaction.parser(), extensionRegistry));
+                      input.readMessage(org.medibloc.panacea.core.protobuf.BlockChain.Transaction.parser(), extensionRegistry));
               break;
             }
             case 24: {
@@ -1547,20 +1547,20 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Block_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Block_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Block_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Block_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.Block.class, org.med4j.core.protobuf.BlockChain.Block.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.Block.class, org.medibloc.panacea.core.protobuf.BlockChain.Block.Builder.class);
     }
 
     private int bitField0_;
     public static final int HEADER_FIELD_NUMBER = 1;
-    private org.med4j.core.protobuf.BlockChain.BlockHeader header_;
+    private org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader header_;
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
@@ -1570,28 +1570,28 @@ public final class BlockChain {
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.BlockHeader getHeader() {
-      return header_ == null ? org.med4j.core.protobuf.BlockChain.BlockHeader.getDefaultInstance() : header_;
+    public org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader getHeader() {
+      return header_ == null ? org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.getDefaultInstance() : header_;
     }
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.BlockHeaderOrBuilder getHeaderOrBuilder() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.BlockHeaderOrBuilder getHeaderOrBuilder() {
       return getHeader();
     }
 
     public static final int TRANSACTIONS_FIELD_NUMBER = 2;
-    private java.util.List<org.med4j.core.protobuf.BlockChain.Transaction> transactions_;
+    private java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction> transactions_;
     /**
      * <code>repeated .corepb.Transaction transactions = 2;</code>
      */
-    public java.util.List<org.med4j.core.protobuf.BlockChain.Transaction> getTransactionsList() {
+    public java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction> getTransactionsList() {
       return transactions_;
     }
     /**
      * <code>repeated .corepb.Transaction transactions = 2;</code>
      */
-    public java.util.List<? extends org.med4j.core.protobuf.BlockChain.TransactionOrBuilder>
+    public java.util.List<? extends org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder>
     getTransactionsOrBuilderList() {
       return transactions_;
     }
@@ -1604,13 +1604,13 @@ public final class BlockChain {
     /**
      * <code>repeated .corepb.Transaction transactions = 2;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.Transaction getTransactions(int index) {
+    public org.medibloc.panacea.core.protobuf.BlockChain.Transaction getTransactions(int index) {
       return transactions_.get(index);
     }
     /**
      * <code>repeated .corepb.Transaction transactions = 2;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
+    public org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
             int index) {
       return transactions_.get(index);
     }
@@ -1678,10 +1678,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.Block)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.Block)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.Block other = (org.med4j.core.protobuf.BlockChain.Block) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.Block other = (org.medibloc.panacea.core.protobuf.BlockChain.Block) obj;
 
       boolean result = true;
       result = result && (hasHeader() == other.hasHeader());
@@ -1720,69 +1720,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -1795,7 +1795,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.Block prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.Block prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1816,21 +1816,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.Block)
-            org.med4j.core.protobuf.BlockChain.BlockOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.BlockOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Block_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Block_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Block_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Block_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.Block.class, org.med4j.core.protobuf.BlockChain.Block.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.Block.class, org.medibloc.panacea.core.protobuf.BlockChain.Block.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.Block.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.Block.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1869,17 +1869,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Block_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Block_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Block getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.Block.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.Block getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.Block.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Block build() {
-        org.med4j.core.protobuf.BlockChain.Block result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.Block build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.Block result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1887,8 +1887,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Block buildPartial() {
-        org.med4j.core.protobuf.BlockChain.Block result = new org.med4j.core.protobuf.BlockChain.Block(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.Block buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.Block result = new org.medibloc.panacea.core.protobuf.BlockChain.Block(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (headerBuilder_ == null) {
@@ -1945,16 +1945,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.Block) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.Block)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.Block) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.Block)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.Block other) {
-        if (other == org.med4j.core.protobuf.BlockChain.Block.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.Block other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.Block.getDefaultInstance()) return this;
         if (other.hasHeader()) {
           mergeHeader(other.getHeader());
         }
@@ -2002,11 +2002,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.Block parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.Block parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.Block) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.Block) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2017,9 +2017,9 @@ public final class BlockChain {
       }
       private int bitField0_;
 
-      private org.med4j.core.protobuf.BlockChain.BlockHeader header_ = null;
+      private org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader header_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.BlockHeader, org.med4j.core.protobuf.BlockChain.BlockHeader.Builder, org.med4j.core.protobuf.BlockChain.BlockHeaderOrBuilder> headerBuilder_;
+              org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader, org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.Builder, org.medibloc.panacea.core.protobuf.BlockChain.BlockHeaderOrBuilder> headerBuilder_;
       /**
        * <code>.corepb.BlockHeader header = 1;</code>
        */
@@ -2029,9 +2029,9 @@ public final class BlockChain {
       /**
        * <code>.corepb.BlockHeader header = 1;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.BlockHeader getHeader() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader getHeader() {
         if (headerBuilder_ == null) {
-          return header_ == null ? org.med4j.core.protobuf.BlockChain.BlockHeader.getDefaultInstance() : header_;
+          return header_ == null ? org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.getDefaultInstance() : header_;
         } else {
           return headerBuilder_.getMessage();
         }
@@ -2039,7 +2039,7 @@ public final class BlockChain {
       /**
        * <code>.corepb.BlockHeader header = 1;</code>
        */
-      public Builder setHeader(org.med4j.core.protobuf.BlockChain.BlockHeader value) {
+      public Builder setHeader(org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader value) {
         if (headerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2056,7 +2056,7 @@ public final class BlockChain {
        * <code>.corepb.BlockHeader header = 1;</code>
        */
       public Builder setHeader(
-              org.med4j.core.protobuf.BlockChain.BlockHeader.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.Builder builderForValue) {
         if (headerBuilder_ == null) {
           header_ = builderForValue.build();
           onChanged();
@@ -2069,11 +2069,11 @@ public final class BlockChain {
       /**
        * <code>.corepb.BlockHeader header = 1;</code>
        */
-      public Builder mergeHeader(org.med4j.core.protobuf.BlockChain.BlockHeader value) {
+      public Builder mergeHeader(org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader value) {
         if (headerBuilder_ == null) {
           if (header_ != null) {
             header_ =
-                    org.med4j.core.protobuf.BlockChain.BlockHeader.newBuilder(header_).mergeFrom(value).buildPartial();
+                    org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.newBuilder(header_).mergeFrom(value).buildPartial();
           } else {
             header_ = value;
           }
@@ -2101,7 +2101,7 @@ public final class BlockChain {
       /**
        * <code>.corepb.BlockHeader header = 1;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.BlockHeader.Builder getHeaderBuilder() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.Builder getHeaderBuilder() {
 
         onChanged();
         return getHeaderFieldBuilder().getBuilder();
@@ -2109,23 +2109,23 @@ public final class BlockChain {
       /**
        * <code>.corepb.BlockHeader header = 1;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.BlockHeaderOrBuilder getHeaderOrBuilder() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.BlockHeaderOrBuilder getHeaderOrBuilder() {
         if (headerBuilder_ != null) {
           return headerBuilder_.getMessageOrBuilder();
         } else {
           return header_ == null ?
-                  org.med4j.core.protobuf.BlockChain.BlockHeader.getDefaultInstance() : header_;
+                  org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.getDefaultInstance() : header_;
         }
       }
       /**
        * <code>.corepb.BlockHeader header = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.BlockHeader, org.med4j.core.protobuf.BlockChain.BlockHeader.Builder, org.med4j.core.protobuf.BlockChain.BlockHeaderOrBuilder>
+              org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader, org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.Builder, org.medibloc.panacea.core.protobuf.BlockChain.BlockHeaderOrBuilder>
       getHeaderFieldBuilder() {
         if (headerBuilder_ == null) {
           headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  org.med4j.core.protobuf.BlockChain.BlockHeader, org.med4j.core.protobuf.BlockChain.BlockHeader.Builder, org.med4j.core.protobuf.BlockChain.BlockHeaderOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader, org.medibloc.panacea.core.protobuf.BlockChain.BlockHeader.Builder, org.medibloc.panacea.core.protobuf.BlockChain.BlockHeaderOrBuilder>(
                   getHeader(),
                   getParentForChildren(),
                   isClean());
@@ -2134,22 +2134,22 @@ public final class BlockChain {
         return headerBuilder_;
       }
 
-      private java.util.List<org.med4j.core.protobuf.BlockChain.Transaction> transactions_ =
+      private java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction> transactions_ =
               java.util.Collections.emptyList();
       private void ensureTransactionsIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          transactions_ = new java.util.ArrayList<org.med4j.core.protobuf.BlockChain.Transaction>(transactions_);
+          transactions_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.BlockChain.Transaction>(transactions_);
           bitField0_ |= 0x00000002;
         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.Transaction, org.med4j.core.protobuf.BlockChain.Transaction.Builder, org.med4j.core.protobuf.BlockChain.TransactionOrBuilder> transactionsBuilder_;
+              org.medibloc.panacea.core.protobuf.BlockChain.Transaction, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder, org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder> transactionsBuilder_;
 
       /**
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.BlockChain.Transaction> getTransactionsList() {
+      public java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction> getTransactionsList() {
         if (transactionsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(transactions_);
         } else {
@@ -2169,7 +2169,7 @@ public final class BlockChain {
       /**
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.Transaction getTransactions(int index) {
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction getTransactions(int index) {
         if (transactionsBuilder_ == null) {
           return transactions_.get(index);
         } else {
@@ -2180,7 +2180,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
       public Builder setTransactions(
-              int index, org.med4j.core.protobuf.BlockChain.Transaction value) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2197,7 +2197,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
       public Builder setTransactions(
-              int index, org.med4j.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.set(index, builderForValue.build());
@@ -2210,7 +2210,7 @@ public final class BlockChain {
       /**
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
-      public Builder addTransactions(org.med4j.core.protobuf.BlockChain.Transaction value) {
+      public Builder addTransactions(org.medibloc.panacea.core.protobuf.BlockChain.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2227,7 +2227,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
       public Builder addTransactions(
-              int index, org.med4j.core.protobuf.BlockChain.Transaction value) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2244,7 +2244,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
       public Builder addTransactions(
-              org.med4j.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.add(builderForValue.build());
@@ -2258,7 +2258,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
       public Builder addTransactions(
-              int index, org.med4j.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.add(index, builderForValue.build());
@@ -2272,7 +2272,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
       public Builder addAllTransactions(
-              java.lang.Iterable<? extends org.med4j.core.protobuf.BlockChain.Transaction> values) {
+              java.lang.Iterable<? extends org.medibloc.panacea.core.protobuf.BlockChain.Transaction> values) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2312,14 +2312,14 @@ public final class BlockChain {
       /**
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.Transaction.Builder getTransactionsBuilder(
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder getTransactionsBuilder(
               int index) {
         return getTransactionsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
+      public org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
               int index) {
         if (transactionsBuilder_ == null) {
           return transactions_.get(index);  } else {
@@ -2329,7 +2329,7 @@ public final class BlockChain {
       /**
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
-      public java.util.List<? extends org.med4j.core.protobuf.BlockChain.TransactionOrBuilder>
+      public java.util.List<? extends org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder>
       getTransactionsOrBuilderList() {
         if (transactionsBuilder_ != null) {
           return transactionsBuilder_.getMessageOrBuilderList();
@@ -2340,31 +2340,31 @@ public final class BlockChain {
       /**
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.Transaction.Builder addTransactionsBuilder() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder addTransactionsBuilder() {
         return getTransactionsFieldBuilder().addBuilder(
-                org.med4j.core.protobuf.BlockChain.Transaction.getDefaultInstance());
+                org.medibloc.panacea.core.protobuf.BlockChain.Transaction.getDefaultInstance());
       }
       /**
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.Transaction.Builder addTransactionsBuilder(
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder addTransactionsBuilder(
               int index) {
         return getTransactionsFieldBuilder().addBuilder(
-                index, org.med4j.core.protobuf.BlockChain.Transaction.getDefaultInstance());
+                index, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.getDefaultInstance());
       }
       /**
        * <code>repeated .corepb.Transaction transactions = 2;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.BlockChain.Transaction.Builder>
+      public java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder>
       getTransactionsBuilderList() {
         return getTransactionsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.Transaction, org.med4j.core.protobuf.BlockChain.Transaction.Builder, org.med4j.core.protobuf.BlockChain.TransactionOrBuilder>
+              org.medibloc.panacea.core.protobuf.BlockChain.Transaction, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder, org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder>
       getTransactionsFieldBuilder() {
         if (transactionsBuilder_ == null) {
           transactionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  org.med4j.core.protobuf.BlockChain.Transaction, org.med4j.core.protobuf.BlockChain.Transaction.Builder, org.med4j.core.protobuf.BlockChain.TransactionOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.BlockChain.Transaction, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder, org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder>(
                   transactions_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
@@ -2416,12 +2416,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.Block)
-    private static final org.med4j.core.protobuf.BlockChain.Block DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.Block DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.Block();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.Block();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.Block getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Block getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2446,7 +2446,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.Block getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.Block getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2538,15 +2538,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_DownloadParentBlock_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_DownloadParentBlock_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_DownloadParentBlock_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_DownloadParentBlock_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.DownloadParentBlock.class, org.med4j.core.protobuf.BlockChain.DownloadParentBlock.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock.class, org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -2614,10 +2614,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.DownloadParentBlock)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.DownloadParentBlock other = (org.med4j.core.protobuf.BlockChain.DownloadParentBlock) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock other = (org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -2644,69 +2644,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -2719,7 +2719,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.DownloadParentBlock prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2740,21 +2740,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.DownloadParentBlock)
-            org.med4j.core.protobuf.BlockChain.DownloadParentBlockOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlockOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_DownloadParentBlock_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_DownloadParentBlock_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_DownloadParentBlock_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_DownloadParentBlock_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.DownloadParentBlock.class, org.med4j.core.protobuf.BlockChain.DownloadParentBlock.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock.class, org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.DownloadParentBlock.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2782,17 +2782,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_DownloadParentBlock_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_DownloadParentBlock_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.DownloadParentBlock getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.DownloadParentBlock.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.DownloadParentBlock build() {
-        org.med4j.core.protobuf.BlockChain.DownloadParentBlock result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2800,8 +2800,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.DownloadParentBlock buildPartial() {
-        org.med4j.core.protobuf.BlockChain.DownloadParentBlock result = new org.med4j.core.protobuf.BlockChain.DownloadParentBlock(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock result = new org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock(this);
         result.hash_ = hash_;
         result.sign_ = sign_;
         onBuilt();
@@ -2842,16 +2842,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.DownloadParentBlock) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.DownloadParentBlock)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.DownloadParentBlock other) {
-        if (other == org.med4j.core.protobuf.BlockChain.DownloadParentBlock.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock.getDefaultInstance()) return this;
         if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
           setHash(other.getHash());
         }
@@ -2873,11 +2873,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.DownloadParentBlock parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.DownloadParentBlock) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2961,12 +2961,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.DownloadParentBlock)
-    private static final org.med4j.core.protobuf.BlockChain.DownloadParentBlock DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.DownloadParentBlock();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.DownloadParentBlock getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2991,7 +2991,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.DownloadParentBlock getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.DownloadParentBlock getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3229,15 +3229,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_BlockHashTarget_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_BlockHashTarget_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_BlockHashTarget_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_BlockHashTarget_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.BlockHashTarget.class, org.med4j.core.protobuf.BlockChain.BlockHashTarget.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget.class, org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget.Builder.class);
     }
 
     private int bitField0_;
@@ -3516,10 +3516,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.BlockHashTarget)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.BlockHashTarget other = (org.med4j.core.protobuf.BlockChain.BlockHashTarget) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget other = (org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget) obj;
 
       boolean result = true;
       result = result && getParentHash()
@@ -3599,69 +3599,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -3674,7 +3674,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.BlockHashTarget prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3695,21 +3695,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.BlockHashTarget)
-            org.med4j.core.protobuf.BlockChain.BlockHashTargetOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTargetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_BlockHashTarget_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_BlockHashTarget_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_BlockHashTarget_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_BlockHashTarget_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.BlockHashTarget.class, org.med4j.core.protobuf.BlockChain.BlockHashTarget.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget.class, org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.BlockHashTarget.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3761,17 +3761,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_BlockHashTarget_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_BlockHashTarget_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.BlockHashTarget getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.BlockHashTarget.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.BlockHashTarget build() {
-        org.med4j.core.protobuf.BlockChain.BlockHashTarget result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3779,8 +3779,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.BlockHashTarget buildPartial() {
-        org.med4j.core.protobuf.BlockChain.BlockHashTarget result = new org.med4j.core.protobuf.BlockChain.BlockHashTarget(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget result = new org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.parentHash_ = parentHash_;
@@ -3840,16 +3840,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.BlockHashTarget) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.BlockHashTarget)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.BlockHashTarget other) {
-        if (other == org.med4j.core.protobuf.BlockChain.BlockHashTarget.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget.getDefaultInstance()) return this;
         if (other.getParentHash() != com.google.protobuf.ByteString.EMPTY) {
           setParentHash(other.getParentHash());
         }
@@ -3914,11 +3914,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.BlockHashTarget parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.BlockHashTarget) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4382,12 +4382,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.BlockHashTarget)
-    private static final org.med4j.core.protobuf.BlockChain.BlockHashTarget DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.BlockHashTarget();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.BlockHashTarget getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4412,7 +4412,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.BlockHashTarget getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.BlockHashTarget getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4479,11 +4479,11 @@ public final class BlockChain {
     /**
      * <code>.corepb.Receipt receipt = 30;</code>
      */
-    org.med4j.core.protobuf.BlockChain.Receipt getReceipt();
+    org.medibloc.panacea.core.protobuf.BlockChain.Receipt getReceipt();
     /**
      * <code>.corepb.Receipt receipt = 30;</code>
      */
-    org.med4j.core.protobuf.BlockChain.ReceiptOrBuilder getReceiptOrBuilder();
+    org.medibloc.panacea.core.protobuf.BlockChain.ReceiptOrBuilder getReceiptOrBuilder();
   }
   /**
    * Protobuf type {@code corepb.Transaction}
@@ -4580,11 +4580,11 @@ public final class BlockChain {
               break;
             }
             case 242: {
-              org.med4j.core.protobuf.BlockChain.Receipt.Builder subBuilder = null;
+              org.medibloc.panacea.core.protobuf.BlockChain.Receipt.Builder subBuilder = null;
               if (receipt_ != null) {
                 subBuilder = receipt_.toBuilder();
               }
-              receipt_ = input.readMessage(org.med4j.core.protobuf.BlockChain.Receipt.parser(), extensionRegistry);
+              receipt_ = input.readMessage(org.medibloc.panacea.core.protobuf.BlockChain.Receipt.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(receipt_);
                 receipt_ = subBuilder.buildPartial();
@@ -4613,15 +4613,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Transaction_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Transaction_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Transaction_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Transaction_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.Transaction.class, org.med4j.core.protobuf.BlockChain.Transaction.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.Transaction.class, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -4731,7 +4731,7 @@ public final class BlockChain {
     }
 
     public static final int RECEIPT_FIELD_NUMBER = 30;
-    private org.med4j.core.protobuf.BlockChain.Receipt receipt_;
+    private org.medibloc.panacea.core.protobuf.BlockChain.Receipt receipt_;
     /**
      * <code>.corepb.Receipt receipt = 30;</code>
      */
@@ -4741,13 +4741,13 @@ public final class BlockChain {
     /**
      * <code>.corepb.Receipt receipt = 30;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.Receipt getReceipt() {
-      return receipt_ == null ? org.med4j.core.protobuf.BlockChain.Receipt.getDefaultInstance() : receipt_;
+    public org.medibloc.panacea.core.protobuf.BlockChain.Receipt getReceipt() {
+      return receipt_ == null ? org.medibloc.panacea.core.protobuf.BlockChain.Receipt.getDefaultInstance() : receipt_;
     }
     /**
      * <code>.corepb.Receipt receipt = 30;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.ReceiptOrBuilder getReceiptOrBuilder() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.ReceiptOrBuilder getReceiptOrBuilder() {
       return getReceipt();
     }
 
@@ -4853,10 +4853,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.Transaction)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.Transaction)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.Transaction other = (org.med4j.core.protobuf.BlockChain.Transaction) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.Transaction other = (org.medibloc.panacea.core.protobuf.BlockChain.Transaction) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -4921,69 +4921,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -4996,7 +4996,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.Transaction prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.Transaction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5017,21 +5017,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.Transaction)
-            org.med4j.core.protobuf.BlockChain.TransactionOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Transaction_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Transaction_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Transaction_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Transaction_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.Transaction.class, org.med4j.core.protobuf.BlockChain.Transaction.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.Transaction.class, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.Transaction.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.Transaction.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5079,17 +5079,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Transaction_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Transaction_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Transaction getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.Transaction.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.Transaction.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Transaction build() {
-        org.med4j.core.protobuf.BlockChain.Transaction result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.Transaction result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5097,8 +5097,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Transaction buildPartial() {
-        org.med4j.core.protobuf.BlockChain.Transaction result = new org.med4j.core.protobuf.BlockChain.Transaction(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.Transaction result = new org.medibloc.panacea.core.protobuf.BlockChain.Transaction(this);
         result.hash_ = hash_;
         result.txType_ = txType_;
         result.to_ = to_;
@@ -5151,16 +5151,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.Transaction) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.Transaction)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.Transaction) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.Transaction)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.Transaction other) {
-        if (other == org.med4j.core.protobuf.BlockChain.Transaction.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.Transaction other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.Transaction.getDefaultInstance()) return this;
         if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
           setHash(other.getHash());
         }
@@ -5207,11 +5207,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.Transaction parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.Transaction parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.Transaction) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.Transaction) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5516,9 +5516,9 @@ public final class BlockChain {
         return this;
       }
 
-      private org.med4j.core.protobuf.BlockChain.Receipt receipt_ = null;
+      private org.medibloc.panacea.core.protobuf.BlockChain.Receipt receipt_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.Receipt, org.med4j.core.protobuf.BlockChain.Receipt.Builder, org.med4j.core.protobuf.BlockChain.ReceiptOrBuilder> receiptBuilder_;
+              org.medibloc.panacea.core.protobuf.BlockChain.Receipt, org.medibloc.panacea.core.protobuf.BlockChain.Receipt.Builder, org.medibloc.panacea.core.protobuf.BlockChain.ReceiptOrBuilder> receiptBuilder_;
       /**
        * <code>.corepb.Receipt receipt = 30;</code>
        */
@@ -5528,9 +5528,9 @@ public final class BlockChain {
       /**
        * <code>.corepb.Receipt receipt = 30;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.Receipt getReceipt() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.Receipt getReceipt() {
         if (receiptBuilder_ == null) {
-          return receipt_ == null ? org.med4j.core.protobuf.BlockChain.Receipt.getDefaultInstance() : receipt_;
+          return receipt_ == null ? org.medibloc.panacea.core.protobuf.BlockChain.Receipt.getDefaultInstance() : receipt_;
         } else {
           return receiptBuilder_.getMessage();
         }
@@ -5538,7 +5538,7 @@ public final class BlockChain {
       /**
        * <code>.corepb.Receipt receipt = 30;</code>
        */
-      public Builder setReceipt(org.med4j.core.protobuf.BlockChain.Receipt value) {
+      public Builder setReceipt(org.medibloc.panacea.core.protobuf.BlockChain.Receipt value) {
         if (receiptBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5555,7 +5555,7 @@ public final class BlockChain {
        * <code>.corepb.Receipt receipt = 30;</code>
        */
       public Builder setReceipt(
-              org.med4j.core.protobuf.BlockChain.Receipt.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.BlockChain.Receipt.Builder builderForValue) {
         if (receiptBuilder_ == null) {
           receipt_ = builderForValue.build();
           onChanged();
@@ -5568,11 +5568,11 @@ public final class BlockChain {
       /**
        * <code>.corepb.Receipt receipt = 30;</code>
        */
-      public Builder mergeReceipt(org.med4j.core.protobuf.BlockChain.Receipt value) {
+      public Builder mergeReceipt(org.medibloc.panacea.core.protobuf.BlockChain.Receipt value) {
         if (receiptBuilder_ == null) {
           if (receipt_ != null) {
             receipt_ =
-                    org.med4j.core.protobuf.BlockChain.Receipt.newBuilder(receipt_).mergeFrom(value).buildPartial();
+                    org.medibloc.panacea.core.protobuf.BlockChain.Receipt.newBuilder(receipt_).mergeFrom(value).buildPartial();
           } else {
             receipt_ = value;
           }
@@ -5600,7 +5600,7 @@ public final class BlockChain {
       /**
        * <code>.corepb.Receipt receipt = 30;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.Receipt.Builder getReceiptBuilder() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.Receipt.Builder getReceiptBuilder() {
 
         onChanged();
         return getReceiptFieldBuilder().getBuilder();
@@ -5608,23 +5608,23 @@ public final class BlockChain {
       /**
        * <code>.corepb.Receipt receipt = 30;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.ReceiptOrBuilder getReceiptOrBuilder() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.ReceiptOrBuilder getReceiptOrBuilder() {
         if (receiptBuilder_ != null) {
           return receiptBuilder_.getMessageOrBuilder();
         } else {
           return receipt_ == null ?
-                  org.med4j.core.protobuf.BlockChain.Receipt.getDefaultInstance() : receipt_;
+                  org.medibloc.panacea.core.protobuf.BlockChain.Receipt.getDefaultInstance() : receipt_;
         }
       }
       /**
        * <code>.corepb.Receipt receipt = 30;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.Receipt, org.med4j.core.protobuf.BlockChain.Receipt.Builder, org.med4j.core.protobuf.BlockChain.ReceiptOrBuilder>
+              org.medibloc.panacea.core.protobuf.BlockChain.Receipt, org.medibloc.panacea.core.protobuf.BlockChain.Receipt.Builder, org.medibloc.panacea.core.protobuf.BlockChain.ReceiptOrBuilder>
       getReceiptFieldBuilder() {
         if (receiptBuilder_ == null) {
           receiptBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  org.med4j.core.protobuf.BlockChain.Receipt, org.med4j.core.protobuf.BlockChain.Receipt.Builder, org.med4j.core.protobuf.BlockChain.ReceiptOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.BlockChain.Receipt, org.medibloc.panacea.core.protobuf.BlockChain.Receipt.Builder, org.medibloc.panacea.core.protobuf.BlockChain.ReceiptOrBuilder>(
                   getReceipt(),
                   getParentForChildren(),
                   isClean());
@@ -5649,12 +5649,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.Transaction)
-    private static final org.med4j.core.protobuf.BlockChain.Transaction DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.Transaction DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.Transaction();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.Transaction();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.Transaction getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Transaction getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5679,7 +5679,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.Transaction getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.Transaction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5826,15 +5826,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Receipt_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Receipt_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Receipt_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Receipt_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.Receipt.class, org.med4j.core.protobuf.BlockChain.Receipt.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.Receipt.class, org.medibloc.panacea.core.protobuf.BlockChain.Receipt.Builder.class);
     }
 
     public static final int EXECUTED_FIELD_NUMBER = 1;
@@ -5982,10 +5982,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.Receipt)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.Receipt)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.Receipt other = (org.med4j.core.protobuf.BlockChain.Receipt) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.Receipt other = (org.medibloc.panacea.core.protobuf.BlockChain.Receipt) obj;
 
       boolean result = true;
       result = result && (getExecuted()
@@ -6037,69 +6037,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Receipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -6112,7 +6112,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.Receipt prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.Receipt prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6133,21 +6133,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.Receipt)
-            org.med4j.core.protobuf.BlockChain.ReceiptOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.ReceiptOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Receipt_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Receipt_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Receipt_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Receipt_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.Receipt.class, org.med4j.core.protobuf.BlockChain.Receipt.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.Receipt.class, org.medibloc.panacea.core.protobuf.BlockChain.Receipt.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.Receipt.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.Receipt.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6185,17 +6185,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Receipt_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Receipt_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Receipt getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.Receipt.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.Receipt getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.Receipt.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Receipt build() {
-        org.med4j.core.protobuf.BlockChain.Receipt result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.Receipt build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.Receipt result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6203,8 +6203,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Receipt buildPartial() {
-        org.med4j.core.protobuf.BlockChain.Receipt result = new org.med4j.core.protobuf.BlockChain.Receipt(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.Receipt buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.Receipt result = new org.medibloc.panacea.core.protobuf.BlockChain.Receipt(this);
         result.executed_ = executed_;
         result.timestamp_ = timestamp_;
         result.height_ = height_;
@@ -6250,16 +6250,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.Receipt) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.Receipt)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.Receipt) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.Receipt)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.Receipt other) {
-        if (other == org.med4j.core.protobuf.BlockChain.Receipt.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.Receipt other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.Receipt.getDefaultInstance()) return this;
         if (other.getExecuted() != false) {
           setExecuted(other.getExecuted());
         }
@@ -6296,11 +6296,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.Receipt parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.Receipt parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.Receipt) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.Receipt) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6514,12 +6514,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.Receipt)
-    private static final org.med4j.core.protobuf.BlockChain.Receipt DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.Receipt DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.Receipt();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.Receipt();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.Receipt getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Receipt getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6544,7 +6544,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.Receipt getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.Receipt getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6697,15 +6697,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_TransactionHashTarget_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_TransactionHashTarget_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_TransactionHashTarget_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_TransactionHashTarget_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.TransactionHashTarget.class, org.med4j.core.protobuf.BlockChain.TransactionHashTarget.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget.class, org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget.Builder.class);
     }
 
     public static final int TX_TYPE_FIELD_NUMBER = 1;
@@ -6877,10 +6877,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.TransactionHashTarget)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.TransactionHashTarget other = (org.med4j.core.protobuf.BlockChain.TransactionHashTarget) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget other = (org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget) obj;
 
       boolean result = true;
       result = result && getTxType()
@@ -6928,69 +6928,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -7003,7 +7003,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.TransactionHashTarget prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7024,21 +7024,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.TransactionHashTarget)
-            org.med4j.core.protobuf.BlockChain.TransactionHashTargetOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTargetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_TransactionHashTarget_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_TransactionHashTarget_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_TransactionHashTarget_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_TransactionHashTarget_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.TransactionHashTarget.class, org.med4j.core.protobuf.BlockChain.TransactionHashTarget.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget.class, org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.TransactionHashTarget.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7076,17 +7076,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_TransactionHashTarget_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_TransactionHashTarget_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.TransactionHashTarget getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.TransactionHashTarget.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.TransactionHashTarget build() {
-        org.med4j.core.protobuf.BlockChain.TransactionHashTarget result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7094,8 +7094,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.TransactionHashTarget buildPartial() {
-        org.med4j.core.protobuf.BlockChain.TransactionHashTarget result = new org.med4j.core.protobuf.BlockChain.TransactionHashTarget(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget result = new org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget(this);
         result.txType_ = txType_;
         result.from_ = from_;
         result.to_ = to_;
@@ -7141,16 +7141,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.TransactionHashTarget) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.TransactionHashTarget)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.TransactionHashTarget other) {
-        if (other == org.med4j.core.protobuf.BlockChain.TransactionHashTarget.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget.getDefaultInstance()) return this;
         if (!other.getTxType().isEmpty()) {
           txType_ = other.txType_;
           onChanged();
@@ -7188,11 +7188,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.TransactionHashTarget parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.TransactionHashTarget) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7455,12 +7455,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.TransactionHashTarget)
-    private static final org.med4j.core.protobuf.BlockChain.TransactionHashTarget DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.TransactionHashTarget();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.TransactionHashTarget getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7485,7 +7485,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.TransactionHashTarget getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.TransactionHashTarget getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7577,15 +7577,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_TransactionPayerSignTarget_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_TransactionPayerSignTarget_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_TransactionPayerSignTarget_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_TransactionPayerSignTarget_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget.class, org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget.class, org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -7653,10 +7653,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget other = (org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget other = (org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -7683,69 +7683,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -7758,7 +7758,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7779,21 +7779,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.TransactionPayerSignTarget)
-            org.med4j.core.protobuf.BlockChain.TransactionPayerSignTargetOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTargetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_TransactionPayerSignTarget_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_TransactionPayerSignTarget_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_TransactionPayerSignTarget_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_TransactionPayerSignTarget_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget.class, org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget.class, org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7821,17 +7821,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_TransactionPayerSignTarget_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_TransactionPayerSignTarget_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget build() {
-        org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7839,8 +7839,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget buildPartial() {
-        org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget result = new org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget result = new org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget(this);
         result.hash_ = hash_;
         result.sign_ = sign_;
         onBuilt();
@@ -7881,16 +7881,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget other) {
-        if (other == org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget.getDefaultInstance()) return this;
         if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
           setHash(other.getHash());
         }
@@ -7912,11 +7912,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8000,12 +8000,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.TransactionPayerSignTarget)
-    private static final org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8030,7 +8030,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.TransactionPayerSignTarget getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.TransactionPayerSignTarget getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8117,15 +8117,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_DefaultPayload_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_DefaultPayload_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_DefaultPayload_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_DefaultPayload_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.DefaultPayload.class, org.med4j.core.protobuf.BlockChain.DefaultPayload.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload.class, org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload.Builder.class);
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 1;
@@ -8201,10 +8201,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.DefaultPayload)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.DefaultPayload other = (org.med4j.core.protobuf.BlockChain.DefaultPayload) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload other = (org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload) obj;
 
       boolean result = true;
       result = result && getMessage()
@@ -8227,69 +8227,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -8302,7 +8302,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.DefaultPayload prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8323,21 +8323,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.DefaultPayload)
-            org.med4j.core.protobuf.BlockChain.DefaultPayloadOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_DefaultPayload_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_DefaultPayload_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_DefaultPayload_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_DefaultPayload_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.DefaultPayload.class, org.med4j.core.protobuf.BlockChain.DefaultPayload.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload.class, org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.DefaultPayload.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8363,17 +8363,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_DefaultPayload_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_DefaultPayload_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.DefaultPayload getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.DefaultPayload.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.DefaultPayload build() {
-        org.med4j.core.protobuf.BlockChain.DefaultPayload result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8381,8 +8381,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.DefaultPayload buildPartial() {
-        org.med4j.core.protobuf.BlockChain.DefaultPayload result = new org.med4j.core.protobuf.BlockChain.DefaultPayload(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload result = new org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload(this);
         result.message_ = message_;
         onBuilt();
         return result;
@@ -8422,16 +8422,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.DefaultPayload) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.DefaultPayload)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.DefaultPayload other) {
-        if (other == org.med4j.core.protobuf.BlockChain.DefaultPayload.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload.getDefaultInstance()) return this;
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
           onChanged();
@@ -8451,11 +8451,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.DefaultPayload parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.DefaultPayload) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8550,12 +8550,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.DefaultPayload)
-    private static final org.med4j.core.protobuf.BlockChain.DefaultPayload DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.DefaultPayload();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.DefaultPayload getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8580,7 +8580,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.DefaultPayload getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.DefaultPayload getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8683,15 +8683,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_AddCertificationPayload_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_AddCertificationPayload_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_AddCertificationPayload_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_AddCertificationPayload_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.AddCertificationPayload.class, org.med4j.core.protobuf.BlockChain.AddCertificationPayload.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload.class, org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload.Builder.class);
     }
 
     public static final int ISSUE_TIME_FIELD_NUMBER = 1;
@@ -8775,10 +8775,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.AddCertificationPayload)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.AddCertificationPayload other = (org.med4j.core.protobuf.BlockChain.AddCertificationPayload) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload other = (org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload) obj;
 
       boolean result = true;
       result = result && (getIssueTime()
@@ -8811,69 +8811,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -8886,7 +8886,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.AddCertificationPayload prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8907,21 +8907,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.AddCertificationPayload)
-            org.med4j.core.protobuf.BlockChain.AddCertificationPayloadOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_AddCertificationPayload_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_AddCertificationPayload_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_AddCertificationPayload_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_AddCertificationPayload_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.AddCertificationPayload.class, org.med4j.core.protobuf.BlockChain.AddCertificationPayload.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload.class, org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.AddCertificationPayload.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8951,17 +8951,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_AddCertificationPayload_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_AddCertificationPayload_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.AddCertificationPayload getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.AddCertificationPayload.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.AddCertificationPayload build() {
-        org.med4j.core.protobuf.BlockChain.AddCertificationPayload result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8969,8 +8969,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.AddCertificationPayload buildPartial() {
-        org.med4j.core.protobuf.BlockChain.AddCertificationPayload result = new org.med4j.core.protobuf.BlockChain.AddCertificationPayload(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload result = new org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload(this);
         result.issueTime_ = issueTime_;
         result.expirationTime_ = expirationTime_;
         result.hash_ = hash_;
@@ -9012,16 +9012,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.AddCertificationPayload) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.AddCertificationPayload)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.AddCertificationPayload other) {
-        if (other == org.med4j.core.protobuf.BlockChain.AddCertificationPayload.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload.getDefaultInstance()) return this;
         if (other.getIssueTime() != 0L) {
           setIssueTime(other.getIssueTime());
         }
@@ -9046,11 +9046,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.AddCertificationPayload parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.AddCertificationPayload) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9157,12 +9157,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.AddCertificationPayload)
-    private static final org.med4j.core.protobuf.BlockChain.AddCertificationPayload DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.AddCertificationPayload();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.AddCertificationPayload getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9187,7 +9187,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.AddCertificationPayload getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.AddCertificationPayload getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9268,15 +9268,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_RevokeCertificationPayload_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_RevokeCertificationPayload_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_RevokeCertificationPayload_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_RevokeCertificationPayload_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload.class, org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload.class, org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -9328,10 +9328,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload other = (org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload other = (org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -9354,69 +9354,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -9429,7 +9429,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9450,21 +9450,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.RevokeCertificationPayload)
-            org.med4j.core.protobuf.BlockChain.RevokeCertificationPayloadOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_RevokeCertificationPayload_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_RevokeCertificationPayload_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_RevokeCertificationPayload_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_RevokeCertificationPayload_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload.class, org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload.class, org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9490,17 +9490,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_RevokeCertificationPayload_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_RevokeCertificationPayload_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload build() {
-        org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9508,8 +9508,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload buildPartial() {
-        org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload result = new org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload result = new org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload(this);
         result.hash_ = hash_;
         onBuilt();
         return result;
@@ -9549,16 +9549,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload other) {
-        if (other == org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload.getDefaultInstance()) return this;
         if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
           setHash(other.getHash());
         }
@@ -9577,11 +9577,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9636,12 +9636,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.RevokeCertificationPayload)
-    private static final org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9666,7 +9666,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.RevokeCertificationPayload getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.RevokeCertificationPayload getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9747,15 +9747,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_AddRecordPayload_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_AddRecordPayload_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_AddRecordPayload_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_AddRecordPayload_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.AddRecordPayload.class, org.med4j.core.protobuf.BlockChain.AddRecordPayload.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload.class, org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -9807,10 +9807,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.AddRecordPayload)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.AddRecordPayload other = (org.med4j.core.protobuf.BlockChain.AddRecordPayload) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload other = (org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -9833,69 +9833,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -9908,7 +9908,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.AddRecordPayload prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9929,21 +9929,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.AddRecordPayload)
-            org.med4j.core.protobuf.BlockChain.AddRecordPayloadOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_AddRecordPayload_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_AddRecordPayload_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_AddRecordPayload_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_AddRecordPayload_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.AddRecordPayload.class, org.med4j.core.protobuf.BlockChain.AddRecordPayload.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload.class, org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.AddRecordPayload.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9969,17 +9969,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_AddRecordPayload_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_AddRecordPayload_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.AddRecordPayload getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.AddRecordPayload.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.AddRecordPayload build() {
-        org.med4j.core.protobuf.BlockChain.AddRecordPayload result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9987,8 +9987,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.AddRecordPayload buildPartial() {
-        org.med4j.core.protobuf.BlockChain.AddRecordPayload result = new org.med4j.core.protobuf.BlockChain.AddRecordPayload(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload result = new org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload(this);
         result.hash_ = hash_;
         onBuilt();
         return result;
@@ -10028,16 +10028,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.AddRecordPayload) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.AddRecordPayload)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.AddRecordPayload other) {
-        if (other == org.med4j.core.protobuf.BlockChain.AddRecordPayload.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload.getDefaultInstance()) return this;
         if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
           setHash(other.getHash());
         }
@@ -10056,11 +10056,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.AddRecordPayload parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.AddRecordPayload) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -10115,12 +10115,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.AddRecordPayload)
-    private static final org.med4j.core.protobuf.BlockChain.AddRecordPayload DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.AddRecordPayload();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.AddRecordPayload getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10145,7 +10145,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.AddRecordPayload getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.AddRecordPayload getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10232,15 +10232,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_RegisterAliasPayload_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_RegisterAliasPayload_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_RegisterAliasPayload_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_RegisterAliasPayload_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.RegisterAliasPayload.class, org.med4j.core.protobuf.BlockChain.RegisterAliasPayload.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload.class, org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload.Builder.class);
     }
 
     public static final int ALIAS_NAME_FIELD_NUMBER = 1;
@@ -10316,10 +10316,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.RegisterAliasPayload)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.RegisterAliasPayload other = (org.med4j.core.protobuf.BlockChain.RegisterAliasPayload) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload other = (org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload) obj;
 
       boolean result = true;
       result = result && getAliasName()
@@ -10342,69 +10342,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -10417,7 +10417,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.RegisterAliasPayload prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10438,21 +10438,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.RegisterAliasPayload)
-            org.med4j.core.protobuf.BlockChain.RegisterAliasPayloadOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_RegisterAliasPayload_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_RegisterAliasPayload_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_RegisterAliasPayload_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_RegisterAliasPayload_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.RegisterAliasPayload.class, org.med4j.core.protobuf.BlockChain.RegisterAliasPayload.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload.class, org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.RegisterAliasPayload.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -10478,17 +10478,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_RegisterAliasPayload_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_RegisterAliasPayload_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.RegisterAliasPayload getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.RegisterAliasPayload.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.RegisterAliasPayload build() {
-        org.med4j.core.protobuf.BlockChain.RegisterAliasPayload result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10496,8 +10496,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.RegisterAliasPayload buildPartial() {
-        org.med4j.core.protobuf.BlockChain.RegisterAliasPayload result = new org.med4j.core.protobuf.BlockChain.RegisterAliasPayload(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload result = new org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload(this);
         result.aliasName_ = aliasName_;
         onBuilt();
         return result;
@@ -10537,16 +10537,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.RegisterAliasPayload) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.RegisterAliasPayload)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.RegisterAliasPayload other) {
-        if (other == org.med4j.core.protobuf.BlockChain.RegisterAliasPayload.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload.getDefaultInstance()) return this;
         if (!other.getAliasName().isEmpty()) {
           aliasName_ = other.aliasName_;
           onChanged();
@@ -10566,11 +10566,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.RegisterAliasPayload parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.RegisterAliasPayload) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -10665,12 +10665,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.RegisterAliasPayload)
-    private static final org.med4j.core.protobuf.BlockChain.RegisterAliasPayload DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.RegisterAliasPayload();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.RegisterAliasPayload getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10695,7 +10695,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.RegisterAliasPayload getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.RegisterAliasPayload getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10720,7 +10720,7 @@ public final class BlockChain {
      *
      * <code>.corepb.GenesisMeta meta = 1;</code>
      */
-    org.med4j.core.protobuf.BlockChain.GenesisMeta getMeta();
+    org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta getMeta();
     /**
      * <pre>
      * genesis meta
@@ -10728,7 +10728,7 @@ public final class BlockChain {
      *
      * <code>.corepb.GenesisMeta meta = 1;</code>
      */
-    org.med4j.core.protobuf.BlockChain.GenesisMetaOrBuilder getMetaOrBuilder();
+    org.medibloc.panacea.core.protobuf.BlockChain.GenesisMetaOrBuilder getMetaOrBuilder();
 
     /**
      * <pre>
@@ -10737,7 +10737,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
      */
-    java.util.List<org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution>
+    java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution>
     getTokenDistributionList();
     /**
      * <pre>
@@ -10746,7 +10746,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
      */
-    org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution getTokenDistribution(int index);
+    org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution getTokenDistribution(int index);
     /**
      * <pre>
      * genesis token distribution address
@@ -10762,7 +10762,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
      */
-    java.util.List<? extends org.med4j.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder>
+    java.util.List<? extends org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder>
     getTokenDistributionOrBuilderList();
     /**
      * <pre>
@@ -10771,7 +10771,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
      */
-    org.med4j.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder getTokenDistributionOrBuilder(
+    org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder getTokenDistributionOrBuilder(
             int index);
 
     /**
@@ -10781,7 +10781,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.Transaction transactions = 3;</code>
      */
-    java.util.List<org.med4j.core.protobuf.BlockChain.Transaction>
+    java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction>
     getTransactionsList();
     /**
      * <pre>
@@ -10790,7 +10790,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.Transaction transactions = 3;</code>
      */
-    org.med4j.core.protobuf.BlockChain.Transaction getTransactions(int index);
+    org.medibloc.panacea.core.protobuf.BlockChain.Transaction getTransactions(int index);
     /**
      * <pre>
      * genesis transactions
@@ -10806,7 +10806,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.Transaction transactions = 3;</code>
      */
-    java.util.List<? extends org.med4j.core.protobuf.BlockChain.TransactionOrBuilder>
+    java.util.List<? extends org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder>
     getTransactionsOrBuilderList();
     /**
      * <pre>
@@ -10815,7 +10815,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.Transaction transactions = 3;</code>
      */
-    org.med4j.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
+    org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
             int index);
   }
   /**
@@ -10860,11 +10860,11 @@ public final class BlockChain {
               done = true;
               break;
             case 10: {
-              org.med4j.core.protobuf.BlockChain.GenesisMeta.Builder subBuilder = null;
+              org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.Builder subBuilder = null;
               if (meta_ != null) {
                 subBuilder = meta_.toBuilder();
               }
-              meta_ = input.readMessage(org.med4j.core.protobuf.BlockChain.GenesisMeta.parser(), extensionRegistry);
+              meta_ = input.readMessage(org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(meta_);
                 meta_ = subBuilder.buildPartial();
@@ -10874,20 +10874,20 @@ public final class BlockChain {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                tokenDistribution_ = new java.util.ArrayList<org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution>();
+                tokenDistribution_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution>();
                 mutable_bitField0_ |= 0x00000002;
               }
               tokenDistribution_.add(
-                      input.readMessage(org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.parser(), extensionRegistry));
+                      input.readMessage(org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.parser(), extensionRegistry));
               break;
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                transactions_ = new java.util.ArrayList<org.med4j.core.protobuf.BlockChain.Transaction>();
+                transactions_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.BlockChain.Transaction>();
                 mutable_bitField0_ |= 0x00000004;
               }
               transactions_.add(
-                      input.readMessage(org.med4j.core.protobuf.BlockChain.Transaction.parser(), extensionRegistry));
+                      input.readMessage(org.medibloc.panacea.core.protobuf.BlockChain.Transaction.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -10917,20 +10917,20 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Genesis_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Genesis_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Genesis_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Genesis_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.Genesis.class, org.med4j.core.protobuf.BlockChain.Genesis.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.Genesis.class, org.medibloc.panacea.core.protobuf.BlockChain.Genesis.Builder.class);
     }
 
     private int bitField0_;
     public static final int META_FIELD_NUMBER = 1;
-    private org.med4j.core.protobuf.BlockChain.GenesisMeta meta_;
+    private org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta meta_;
     /**
      * <pre>
      * genesis meta
@@ -10948,8 +10948,8 @@ public final class BlockChain {
      *
      * <code>.corepb.GenesisMeta meta = 1;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.GenesisMeta getMeta() {
-      return meta_ == null ? org.med4j.core.protobuf.BlockChain.GenesisMeta.getDefaultInstance() : meta_;
+    public org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta getMeta() {
+      return meta_ == null ? org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.getDefaultInstance() : meta_;
     }
     /**
      * <pre>
@@ -10958,12 +10958,12 @@ public final class BlockChain {
      *
      * <code>.corepb.GenesisMeta meta = 1;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.GenesisMetaOrBuilder getMetaOrBuilder() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.GenesisMetaOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
 
     public static final int TOKEN_DISTRIBUTION_FIELD_NUMBER = 2;
-    private java.util.List<org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution> tokenDistribution_;
+    private java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution> tokenDistribution_;
     /**
      * <pre>
      * genesis token distribution address
@@ -10971,7 +10971,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
      */
-    public java.util.List<org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution> getTokenDistributionList() {
+    public java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution> getTokenDistributionList() {
       return tokenDistribution_;
     }
     /**
@@ -10981,7 +10981,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
      */
-    public java.util.List<? extends org.med4j.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder>
+    public java.util.List<? extends org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder>
     getTokenDistributionOrBuilderList() {
       return tokenDistribution_;
     }
@@ -11002,7 +11002,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution getTokenDistribution(int index) {
+    public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution getTokenDistribution(int index) {
       return tokenDistribution_.get(index);
     }
     /**
@@ -11012,13 +11012,13 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder getTokenDistributionOrBuilder(
+    public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder getTokenDistributionOrBuilder(
             int index) {
       return tokenDistribution_.get(index);
     }
 
     public static final int TRANSACTIONS_FIELD_NUMBER = 3;
-    private java.util.List<org.med4j.core.protobuf.BlockChain.Transaction> transactions_;
+    private java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction> transactions_;
     /**
      * <pre>
      * genesis transactions
@@ -11026,7 +11026,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.Transaction transactions = 3;</code>
      */
-    public java.util.List<org.med4j.core.protobuf.BlockChain.Transaction> getTransactionsList() {
+    public java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction> getTransactionsList() {
       return transactions_;
     }
     /**
@@ -11036,7 +11036,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.Transaction transactions = 3;</code>
      */
-    public java.util.List<? extends org.med4j.core.protobuf.BlockChain.TransactionOrBuilder>
+    public java.util.List<? extends org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder>
     getTransactionsOrBuilderList() {
       return transactions_;
     }
@@ -11057,7 +11057,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.Transaction transactions = 3;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.Transaction getTransactions(int index) {
+    public org.medibloc.panacea.core.protobuf.BlockChain.Transaction getTransactions(int index) {
       return transactions_.get(index);
     }
     /**
@@ -11067,7 +11067,7 @@ public final class BlockChain {
      *
      * <code>repeated .corepb.Transaction transactions = 3;</code>
      */
-    public org.med4j.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
+    public org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
             int index) {
       return transactions_.get(index);
     }
@@ -11126,10 +11126,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.Genesis)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.Genesis)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.Genesis other = (org.med4j.core.protobuf.BlockChain.Genesis) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.Genesis other = (org.medibloc.panacea.core.protobuf.BlockChain.Genesis) obj;
 
       boolean result = true;
       result = result && (hasMeta() == other.hasMeta());
@@ -11169,69 +11169,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.Genesis parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -11244,7 +11244,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.Genesis prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.Genesis prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -11265,21 +11265,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.Genesis)
-            org.med4j.core.protobuf.BlockChain.GenesisOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.GenesisOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Genesis_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Genesis_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Genesis_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Genesis_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.Genesis.class, org.med4j.core.protobuf.BlockChain.Genesis.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.Genesis.class, org.medibloc.panacea.core.protobuf.BlockChain.Genesis.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.Genesis.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.Genesis.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -11323,17 +11323,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_Genesis_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_Genesis_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Genesis getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.Genesis.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.Genesis getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.Genesis.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Genesis build() {
-        org.med4j.core.protobuf.BlockChain.Genesis result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.Genesis build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.Genesis result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -11341,8 +11341,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.Genesis buildPartial() {
-        org.med4j.core.protobuf.BlockChain.Genesis result = new org.med4j.core.protobuf.BlockChain.Genesis(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.Genesis buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.Genesis result = new org.medibloc.panacea.core.protobuf.BlockChain.Genesis(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (metaBuilder_ == null) {
@@ -11407,16 +11407,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.Genesis) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.Genesis)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.Genesis) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.Genesis)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.Genesis other) {
-        if (other == org.med4j.core.protobuf.BlockChain.Genesis.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.Genesis other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.Genesis.getDefaultInstance()) return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -11487,11 +11487,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.Genesis parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.Genesis parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.Genesis) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.Genesis) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -11502,9 +11502,9 @@ public final class BlockChain {
       }
       private int bitField0_;
 
-      private org.med4j.core.protobuf.BlockChain.GenesisMeta meta_ = null;
+      private org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta meta_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.GenesisMeta, org.med4j.core.protobuf.BlockChain.GenesisMeta.Builder, org.med4j.core.protobuf.BlockChain.GenesisMetaOrBuilder> metaBuilder_;
+              org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta, org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.Builder, org.medibloc.panacea.core.protobuf.BlockChain.GenesisMetaOrBuilder> metaBuilder_;
       /**
        * <pre>
        * genesis meta
@@ -11522,9 +11522,9 @@ public final class BlockChain {
        *
        * <code>.corepb.GenesisMeta meta = 1;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.GenesisMeta getMeta() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? org.med4j.core.protobuf.BlockChain.GenesisMeta.getDefaultInstance() : meta_;
+          return meta_ == null ? org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.getDefaultInstance() : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
@@ -11536,7 +11536,7 @@ public final class BlockChain {
        *
        * <code>.corepb.GenesisMeta meta = 1;</code>
        */
-      public Builder setMeta(org.med4j.core.protobuf.BlockChain.GenesisMeta value) {
+      public Builder setMeta(org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta value) {
         if (metaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11557,7 +11557,7 @@ public final class BlockChain {
        * <code>.corepb.GenesisMeta meta = 1;</code>
        */
       public Builder setMeta(
-              org.med4j.core.protobuf.BlockChain.GenesisMeta.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.Builder builderForValue) {
         if (metaBuilder_ == null) {
           meta_ = builderForValue.build();
           onChanged();
@@ -11574,11 +11574,11 @@ public final class BlockChain {
        *
        * <code>.corepb.GenesisMeta meta = 1;</code>
        */
-      public Builder mergeMeta(org.med4j.core.protobuf.BlockChain.GenesisMeta value) {
+      public Builder mergeMeta(org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta value) {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-                    org.med4j.core.protobuf.BlockChain.GenesisMeta.newBuilder(meta_).mergeFrom(value).buildPartial();
+                    org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.newBuilder(meta_).mergeFrom(value).buildPartial();
           } else {
             meta_ = value;
           }
@@ -11614,7 +11614,7 @@ public final class BlockChain {
        *
        * <code>.corepb.GenesisMeta meta = 1;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.GenesisMeta.Builder getMetaBuilder() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.Builder getMetaBuilder() {
 
         onChanged();
         return getMetaFieldBuilder().getBuilder();
@@ -11626,12 +11626,12 @@ public final class BlockChain {
        *
        * <code>.corepb.GenesisMeta meta = 1;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.GenesisMetaOrBuilder getMetaOrBuilder() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisMetaOrBuilder getMetaOrBuilder() {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
           return meta_ == null ?
-                  org.med4j.core.protobuf.BlockChain.GenesisMeta.getDefaultInstance() : meta_;
+                  org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.getDefaultInstance() : meta_;
         }
       }
       /**
@@ -11642,11 +11642,11 @@ public final class BlockChain {
        * <code>.corepb.GenesisMeta meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.GenesisMeta, org.med4j.core.protobuf.BlockChain.GenesisMeta.Builder, org.med4j.core.protobuf.BlockChain.GenesisMetaOrBuilder>
+              org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta, org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.Builder, org.medibloc.panacea.core.protobuf.BlockChain.GenesisMetaOrBuilder>
       getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
           metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  org.med4j.core.protobuf.BlockChain.GenesisMeta, org.med4j.core.protobuf.BlockChain.GenesisMeta.Builder, org.med4j.core.protobuf.BlockChain.GenesisMetaOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta, org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.Builder, org.medibloc.panacea.core.protobuf.BlockChain.GenesisMetaOrBuilder>(
                   getMeta(),
                   getParentForChildren(),
                   isClean());
@@ -11655,17 +11655,17 @@ public final class BlockChain {
         return metaBuilder_;
       }
 
-      private java.util.List<org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution> tokenDistribution_ =
+      private java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution> tokenDistribution_ =
               java.util.Collections.emptyList();
       private void ensureTokenDistributionIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          tokenDistribution_ = new java.util.ArrayList<org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution>(tokenDistribution_);
+          tokenDistribution_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution>(tokenDistribution_);
           bitField0_ |= 0x00000002;
         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution, org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder, org.med4j.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder> tokenDistributionBuilder_;
+              org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder> tokenDistributionBuilder_;
 
       /**
        * <pre>
@@ -11674,7 +11674,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution> getTokenDistributionList() {
+      public java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution> getTokenDistributionList() {
         if (tokenDistributionBuilder_ == null) {
           return java.util.Collections.unmodifiableList(tokenDistribution_);
         } else {
@@ -11702,7 +11702,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution getTokenDistribution(int index) {
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution getTokenDistribution(int index) {
         if (tokenDistributionBuilder_ == null) {
           return tokenDistribution_.get(index);
         } else {
@@ -11717,7 +11717,7 @@ public final class BlockChain {
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
       public Builder setTokenDistribution(
-              int index, org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution value) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution value) {
         if (tokenDistributionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11738,7 +11738,7 @@ public final class BlockChain {
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
       public Builder setTokenDistribution(
-              int index, org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder builderForValue) {
         if (tokenDistributionBuilder_ == null) {
           ensureTokenDistributionIsMutable();
           tokenDistribution_.set(index, builderForValue.build());
@@ -11755,7 +11755,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
-      public Builder addTokenDistribution(org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution value) {
+      public Builder addTokenDistribution(org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution value) {
         if (tokenDistributionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11776,7 +11776,7 @@ public final class BlockChain {
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
       public Builder addTokenDistribution(
-              int index, org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution value) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution value) {
         if (tokenDistributionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11797,7 +11797,7 @@ public final class BlockChain {
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
       public Builder addTokenDistribution(
-              org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder builderForValue) {
         if (tokenDistributionBuilder_ == null) {
           ensureTokenDistributionIsMutable();
           tokenDistribution_.add(builderForValue.build());
@@ -11815,7 +11815,7 @@ public final class BlockChain {
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
       public Builder addTokenDistribution(
-              int index, org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder builderForValue) {
         if (tokenDistributionBuilder_ == null) {
           ensureTokenDistributionIsMutable();
           tokenDistribution_.add(index, builderForValue.build());
@@ -11833,7 +11833,7 @@ public final class BlockChain {
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
       public Builder addAllTokenDistribution(
-              java.lang.Iterable<? extends org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution> values) {
+              java.lang.Iterable<? extends org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution> values) {
         if (tokenDistributionBuilder_ == null) {
           ensureTokenDistributionIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -11885,7 +11885,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder getTokenDistributionBuilder(
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder getTokenDistributionBuilder(
               int index) {
         return getTokenDistributionFieldBuilder().getBuilder(index);
       }
@@ -11896,7 +11896,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder getTokenDistributionOrBuilder(
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder getTokenDistributionOrBuilder(
               int index) {
         if (tokenDistributionBuilder_ == null) {
           return tokenDistribution_.get(index);  } else {
@@ -11910,7 +11910,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
-      public java.util.List<? extends org.med4j.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder>
+      public java.util.List<? extends org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder>
       getTokenDistributionOrBuilderList() {
         if (tokenDistributionBuilder_ != null) {
           return tokenDistributionBuilder_.getMessageOrBuilderList();
@@ -11925,9 +11925,9 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder addTokenDistributionBuilder() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder addTokenDistributionBuilder() {
         return getTokenDistributionFieldBuilder().addBuilder(
-                org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.getDefaultInstance());
+                org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.getDefaultInstance());
       }
       /**
        * <pre>
@@ -11936,10 +11936,10 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder addTokenDistributionBuilder(
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder addTokenDistributionBuilder(
               int index) {
         return getTokenDistributionFieldBuilder().addBuilder(
-                index, org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.getDefaultInstance());
+                index, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.getDefaultInstance());
       }
       /**
        * <pre>
@@ -11948,16 +11948,16 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.GenesisTokenDistribution token_distribution = 2;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder>
+      public java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder>
       getTokenDistributionBuilderList() {
         return getTokenDistributionFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution, org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder, org.med4j.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder>
+              org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder>
       getTokenDistributionFieldBuilder() {
         if (tokenDistributionBuilder_ == null) {
           tokenDistributionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution, org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder, org.med4j.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder>(
                   tokenDistribution_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
@@ -11967,17 +11967,17 @@ public final class BlockChain {
         return tokenDistributionBuilder_;
       }
 
-      private java.util.List<org.med4j.core.protobuf.BlockChain.Transaction> transactions_ =
+      private java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction> transactions_ =
               java.util.Collections.emptyList();
       private void ensureTransactionsIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          transactions_ = new java.util.ArrayList<org.med4j.core.protobuf.BlockChain.Transaction>(transactions_);
+          transactions_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.BlockChain.Transaction>(transactions_);
           bitField0_ |= 0x00000004;
         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.Transaction, org.med4j.core.protobuf.BlockChain.Transaction.Builder, org.med4j.core.protobuf.BlockChain.TransactionOrBuilder> transactionsBuilder_;
+              org.medibloc.panacea.core.protobuf.BlockChain.Transaction, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder, org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder> transactionsBuilder_;
 
       /**
        * <pre>
@@ -11986,7 +11986,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.BlockChain.Transaction> getTransactionsList() {
+      public java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction> getTransactionsList() {
         if (transactionsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(transactions_);
         } else {
@@ -12014,7 +12014,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.Transaction getTransactions(int index) {
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction getTransactions(int index) {
         if (transactionsBuilder_ == null) {
           return transactions_.get(index);
         } else {
@@ -12029,7 +12029,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
       public Builder setTransactions(
-              int index, org.med4j.core.protobuf.BlockChain.Transaction value) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12050,7 +12050,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
       public Builder setTransactions(
-              int index, org.med4j.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.set(index, builderForValue.build());
@@ -12067,7 +12067,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
-      public Builder addTransactions(org.med4j.core.protobuf.BlockChain.Transaction value) {
+      public Builder addTransactions(org.medibloc.panacea.core.protobuf.BlockChain.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12088,7 +12088,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
       public Builder addTransactions(
-              int index, org.med4j.core.protobuf.BlockChain.Transaction value) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12109,7 +12109,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
       public Builder addTransactions(
-              org.med4j.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.add(builderForValue.build());
@@ -12127,7 +12127,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
       public Builder addTransactions(
-              int index, org.med4j.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.add(index, builderForValue.build());
@@ -12145,7 +12145,7 @@ public final class BlockChain {
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
       public Builder addAllTransactions(
-              java.lang.Iterable<? extends org.med4j.core.protobuf.BlockChain.Transaction> values) {
+              java.lang.Iterable<? extends org.medibloc.panacea.core.protobuf.BlockChain.Transaction> values) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -12197,7 +12197,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.Transaction.Builder getTransactionsBuilder(
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder getTransactionsBuilder(
               int index) {
         return getTransactionsFieldBuilder().getBuilder(index);
       }
@@ -12208,7 +12208,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
+      public org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder getTransactionsOrBuilder(
               int index) {
         if (transactionsBuilder_ == null) {
           return transactions_.get(index);  } else {
@@ -12222,7 +12222,7 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
-      public java.util.List<? extends org.med4j.core.protobuf.BlockChain.TransactionOrBuilder>
+      public java.util.List<? extends org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder>
       getTransactionsOrBuilderList() {
         if (transactionsBuilder_ != null) {
           return transactionsBuilder_.getMessageOrBuilderList();
@@ -12237,9 +12237,9 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.Transaction.Builder addTransactionsBuilder() {
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder addTransactionsBuilder() {
         return getTransactionsFieldBuilder().addBuilder(
-                org.med4j.core.protobuf.BlockChain.Transaction.getDefaultInstance());
+                org.medibloc.panacea.core.protobuf.BlockChain.Transaction.getDefaultInstance());
       }
       /**
        * <pre>
@@ -12248,10 +12248,10 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
-      public org.med4j.core.protobuf.BlockChain.Transaction.Builder addTransactionsBuilder(
+      public org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder addTransactionsBuilder(
               int index) {
         return getTransactionsFieldBuilder().addBuilder(
-                index, org.med4j.core.protobuf.BlockChain.Transaction.getDefaultInstance());
+                index, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.getDefaultInstance());
       }
       /**
        * <pre>
@@ -12260,16 +12260,16 @@ public final class BlockChain {
        *
        * <code>repeated .corepb.Transaction transactions = 3;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.BlockChain.Transaction.Builder>
+      public java.util.List<org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder>
       getTransactionsBuilderList() {
         return getTransactionsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.BlockChain.Transaction, org.med4j.core.protobuf.BlockChain.Transaction.Builder, org.med4j.core.protobuf.BlockChain.TransactionOrBuilder>
+              org.medibloc.panacea.core.protobuf.BlockChain.Transaction, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder, org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder>
       getTransactionsFieldBuilder() {
         if (transactionsBuilder_ == null) {
           transactionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  org.med4j.core.protobuf.BlockChain.Transaction, org.med4j.core.protobuf.BlockChain.Transaction.Builder, org.med4j.core.protobuf.BlockChain.TransactionOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.BlockChain.Transaction, org.medibloc.panacea.core.protobuf.BlockChain.Transaction.Builder, org.medibloc.panacea.core.protobuf.BlockChain.TransactionOrBuilder>(
                   transactions_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
@@ -12295,12 +12295,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.Genesis)
-    private static final org.med4j.core.protobuf.BlockChain.Genesis DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.Genesis DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.Genesis();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.Genesis();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.Genesis getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.Genesis getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12325,7 +12325,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.Genesis getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.Genesis getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12425,15 +12425,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_GenesisMeta_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_GenesisMeta_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_GenesisMeta_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_GenesisMeta_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.GenesisMeta.class, org.med4j.core.protobuf.BlockChain.GenesisMeta.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.class, org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.Builder.class);
     }
 
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
@@ -12509,10 +12509,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.GenesisMeta)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.GenesisMeta other = (org.med4j.core.protobuf.BlockChain.GenesisMeta) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta other = (org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta) obj;
 
       boolean result = true;
       result = result && (getChainId()
@@ -12539,69 +12539,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -12614,7 +12614,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.GenesisMeta prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -12635,21 +12635,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.GenesisMeta)
-            org.med4j.core.protobuf.BlockChain.GenesisMetaOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.GenesisMetaOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_GenesisMeta_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_GenesisMeta_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_GenesisMeta_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_GenesisMeta_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.GenesisMeta.class, org.med4j.core.protobuf.BlockChain.GenesisMeta.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.class, org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.GenesisMeta.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -12677,17 +12677,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_GenesisMeta_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_GenesisMeta_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.GenesisMeta getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.GenesisMeta.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.GenesisMeta build() {
-        org.med4j.core.protobuf.BlockChain.GenesisMeta result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -12695,8 +12695,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.GenesisMeta buildPartial() {
-        org.med4j.core.protobuf.BlockChain.GenesisMeta result = new org.med4j.core.protobuf.BlockChain.GenesisMeta(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta result = new org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta(this);
         result.chainId_ = chainId_;
         result.dynastySize_ = dynastySize_;
         onBuilt();
@@ -12737,16 +12737,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.GenesisMeta) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.GenesisMeta)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.GenesisMeta other) {
-        if (other == org.med4j.core.protobuf.BlockChain.GenesisMeta.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta.getDefaultInstance()) return this;
         if (other.getChainId() != 0) {
           setChainId(other.getChainId());
         }
@@ -12768,11 +12768,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.GenesisMeta parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.GenesisMeta) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -12874,12 +12874,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.GenesisMeta)
-    private static final org.med4j.core.protobuf.BlockChain.GenesisMeta DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.GenesisMeta();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.GenesisMeta getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12904,7 +12904,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.GenesisMeta getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.GenesisMeta getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -13008,15 +13008,15 @@ public final class BlockChain {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_GenesisTokenDistribution_descriptor;
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_GenesisTokenDistribution_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.BlockChain.internal_static_corepb_GenesisTokenDistribution_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_GenesisTokenDistribution_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.class, org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder.class);
+                      org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.class, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder.class);
     }
 
     public static final int ADDRESS_FIELD_NUMBER = 1;
@@ -13132,10 +13132,10 @@ public final class BlockChain {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution other = (org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution) obj;
+      org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution other = (org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution) obj;
 
       boolean result = true;
       result = result && getAddress()
@@ -13162,69 +13162,69 @@ public final class BlockChain {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -13237,7 +13237,7 @@ public final class BlockChain {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -13258,21 +13258,21 @@ public final class BlockChain {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:corepb.GenesisTokenDistribution)
-            org.med4j.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder {
+            org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistributionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_GenesisTokenDistribution_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_GenesisTokenDistribution_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_GenesisTokenDistribution_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_GenesisTokenDistribution_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.class, org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.Builder.class);
+                        org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.class, org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -13300,17 +13300,17 @@ public final class BlockChain {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.BlockChain.internal_static_corepb_GenesisTokenDistribution_descriptor;
+        return org.medibloc.panacea.core.protobuf.BlockChain.internal_static_corepb_GenesisTokenDistribution_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution build() {
-        org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution build() {
+        org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -13318,8 +13318,8 @@ public final class BlockChain {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution buildPartial() {
-        org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution result = new org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution(this);
+      public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution buildPartial() {
+        org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution result = new org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution(this);
         result.address_ = address_;
         result.balance_ = balance_;
         onBuilt();
@@ -13360,16 +13360,16 @@ public final class BlockChain {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution) {
-          return mergeFrom((org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution other) {
-        if (other == org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution other) {
+        if (other == org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution.getDefaultInstance()) return this;
         if (!other.getAddress().isEmpty()) {
           address_ = other.address_;
           onChanged();
@@ -13393,11 +13393,11 @@ public final class BlockChain {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -13561,12 +13561,12 @@ public final class BlockChain {
     }
 
     // @@protoc_insertion_point(class_scope:corepb.GenesisTokenDistribution)
-    private static final org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution();
     }
 
-    public static org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -13591,7 +13591,7 @@ public final class BlockChain {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.BlockChain.GenesisTokenDistribution getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.BlockChain.GenesisTokenDistribution getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 

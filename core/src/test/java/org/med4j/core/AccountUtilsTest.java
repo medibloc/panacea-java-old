@@ -1,10 +1,10 @@
-package org.med4j.core;
+package org.medibloc.panacea.core;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
-import org.med4j.account.Account;
-import org.med4j.account.AccountUtils;
-import org.med4j.crypto.ECKeyPair;
+import org.medibloc.panacea.account.Account;
+import org.medibloc.panacea.account.AccountUtils;
+import org.medibloc.panacea.crypto.ECKeyPair;
 
 import java.io.File;
 import java.math.BigInteger;

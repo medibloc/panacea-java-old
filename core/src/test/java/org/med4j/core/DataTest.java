@@ -1,8 +1,8 @@
-package org.med4j.core;
+package org.medibloc.panacea.core;
 
 import org.junit.Test;
-import org.med4j.data.Data;
-import org.med4j.utils.Numeric;
+import org.medibloc.panacea.data.Data;
+import org.medibloc.panacea.utils.Numeric;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;

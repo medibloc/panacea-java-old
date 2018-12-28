@@ -1,8 +1,8 @@
-package org.med4j;
+package org.medibloc.panacea;
 
-import org.med4j.core.Med4JImpl;
-import org.med4j.core.Panacea;
-import org.med4j.core.ProtobufService;
+import org.medibloc.panacea.core.Med4JImpl;
+import org.medibloc.panacea.core.Panacea;
+import org.medibloc.panacea.core.ProtobufService;
 
 public abstract class Med4J implements Panacea {
 

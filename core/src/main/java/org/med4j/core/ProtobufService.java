@@ -1,4 +1,4 @@
-package org.med4j.core;
+package org.medibloc.panacea.core;
 
 import com.google.protobuf.Message;
 

@@ -1,12 +1,12 @@
-package org.med4j.account;
+package org.medibloc.panacea.account;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.med4j.crypto.CipherException;
-import org.med4j.crypto.ECKeyPair;
-import org.med4j.crypto.Keys;
-import org.med4j.utils.Numeric;
+import org.medibloc.panacea.crypto.CipherException;
+import org.medibloc.panacea.crypto.ECKeyPair;
+import org.medibloc.panacea.crypto.Keys;
+import org.medibloc.panacea.utils.Numeric;
 
 import java.io.File;
 import java.math.BigInteger;

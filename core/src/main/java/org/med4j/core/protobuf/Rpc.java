@@ -2,7 +2,7 @@
 // source: rpc/pb/rpc.proto
 // compile(protoc) from https://github.com/Medibloc/go-medibloc.git#7f078563
 
-package org.med4j.core.protobuf;
+package org.medibloc.panacea.core.protobuf;
 
 public final class Rpc {
   private Rpc() {}
@@ -173,15 +173,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetAccountRequest_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetAccountRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetAccountRequest_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetAccountRequest_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.GetAccountRequest.class, org.med4j.core.protobuf.Rpc.GetAccountRequest.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest.class, org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest.Builder.class);
     }
 
     public static final int ADDRESS_FIELD_NUMBER = 1;
@@ -385,10 +385,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.GetAccountRequest)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.GetAccountRequest other = (org.med4j.core.protobuf.Rpc.GetAccountRequest) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest other = (org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest) obj;
 
       boolean result = true;
       result = result && getAddress()
@@ -424,69 +424,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -499,7 +499,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.GetAccountRequest prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -520,21 +520,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.GetAccountRequest)
-            org.med4j.core.protobuf.Rpc.GetAccountRequestOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetAccountRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetAccountRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetAccountRequest_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetAccountRequest_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.GetAccountRequest.class, org.med4j.core.protobuf.Rpc.GetAccountRequest.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest.class, org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.GetAccountRequest.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -566,17 +566,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetAccountRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetAccountRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetAccountRequest getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.GetAccountRequest.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetAccountRequest build() {
-        org.med4j.core.protobuf.Rpc.GetAccountRequest result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest build() {
+        org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -584,8 +584,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetAccountRequest buildPartial() {
-        org.med4j.core.protobuf.Rpc.GetAccountRequest result = new org.med4j.core.protobuf.Rpc.GetAccountRequest(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest result = new org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest(this);
         result.address_ = address_;
         result.alias_ = alias_;
         result.type_ = type_;
@@ -628,16 +628,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.GetAccountRequest) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.GetAccountRequest)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.GetAccountRequest other) {
-        if (other == org.med4j.core.protobuf.Rpc.GetAccountRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest.getDefaultInstance()) return this;
         if (!other.getAddress().isEmpty()) {
           address_ = other.address_;
           onChanged();
@@ -668,11 +668,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.GetAccountRequest parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.GetAccountRequest) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1013,12 +1013,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.GetAccountRequest)
-    private static final org.med4j.core.protobuf.Rpc.GetAccountRequest DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.GetAccountRequest();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest();
     }
 
-    public static org.med4j.core.protobuf.Rpc.GetAccountRequest getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1043,7 +1043,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.GetAccountRequest getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.GetAccountRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1319,15 +1319,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Account_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Account_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Account_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Account_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.Account.class, org.med4j.core.protobuf.Rpc.Account.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.Account.class, org.medibloc.panacea.core.protobuf.Rpc.Account.Builder.class);
     }
 
     private int bitField0_;
@@ -1744,10 +1744,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.Account)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.Account)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.Account other = (org.med4j.core.protobuf.Rpc.Account) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.Account other = (org.medibloc.panacea.core.protobuf.Rpc.Account) obj;
 
       boolean result = true;
       result = result && getAddress()
@@ -1805,69 +1805,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.Account parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Account parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -1880,7 +1880,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.Account prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.Account prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1901,21 +1901,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.Account)
-            org.med4j.core.protobuf.Rpc.AccountOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.AccountOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Account_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Account_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Account_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Account_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.Account.class, org.med4j.core.protobuf.Rpc.Account.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.Account.class, org.medibloc.panacea.core.protobuf.Rpc.Account.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.Account.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.Account.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1957,17 +1957,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Account_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Account_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Account getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.Account.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.Account getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.Account.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Account build() {
-        org.med4j.core.protobuf.Rpc.Account result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.Account build() {
+        org.medibloc.panacea.core.protobuf.Rpc.Account result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1975,8 +1975,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Account buildPartial() {
-        org.med4j.core.protobuf.Rpc.Account result = new org.med4j.core.protobuf.Rpc.Account(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.Account buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.Account result = new org.medibloc.panacea.core.protobuf.Rpc.Account(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.address_ = address_;
@@ -2031,16 +2031,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.Account) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.Account)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.Account) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.Account)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.Account other) {
-        if (other == org.med4j.core.protobuf.Rpc.Account.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.Account other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.Account.getDefaultInstance()) return this;
         if (!other.getAddress().isEmpty()) {
           address_ = other.address_;
           onChanged();
@@ -2097,11 +2097,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.Account parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.Account parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.Account) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.Account) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2839,12 +2839,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.Account)
-    private static final org.med4j.core.protobuf.Rpc.Account DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.Account DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.Account();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.Account();
     }
 
-    public static org.med4j.core.protobuf.Rpc.Account getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.Account getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2869,7 +2869,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.Account getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.Account getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2956,15 +2956,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Data_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Data_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Data_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Data_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.Data.class, org.med4j.core.protobuf.Rpc.Data.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.Data.class, org.medibloc.panacea.core.protobuf.Rpc.Data.Builder.class);
     }
 
     public static final int ALIAS_FIELD_NUMBER = 1;
@@ -3040,10 +3040,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.Data)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.Data)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.Data other = (org.med4j.core.protobuf.Rpc.Data) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.Data other = (org.medibloc.panacea.core.protobuf.Rpc.Data) obj;
 
       boolean result = true;
       result = result && getAlias()
@@ -3066,69 +3066,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.Data parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Data parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -3141,7 +3141,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.Data prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.Data prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3162,21 +3162,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.Data)
-            org.med4j.core.protobuf.Rpc.DataOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.DataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Data_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Data_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Data_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Data_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.Data.class, org.med4j.core.protobuf.Rpc.Data.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.Data.class, org.medibloc.panacea.core.protobuf.Rpc.Data.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.Data.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.Data.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3202,17 +3202,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Data_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Data_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Data getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.Data.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.Data getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.Data.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Data build() {
-        org.med4j.core.protobuf.Rpc.Data result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.Data build() {
+        org.medibloc.panacea.core.protobuf.Rpc.Data result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3220,8 +3220,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Data buildPartial() {
-        org.med4j.core.protobuf.Rpc.Data result = new org.med4j.core.protobuf.Rpc.Data(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.Data buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.Data result = new org.medibloc.panacea.core.protobuf.Rpc.Data(this);
         result.alias_ = alias_;
         onBuilt();
         return result;
@@ -3261,16 +3261,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.Data) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.Data)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.Data) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.Data)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.Data other) {
-        if (other == org.med4j.core.protobuf.Rpc.Data.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.Data other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.Data.getDefaultInstance()) return this;
         if (!other.getAlias().isEmpty()) {
           alias_ = other.alias_;
           onChanged();
@@ -3290,11 +3290,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.Data parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.Data parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.Data) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.Data) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3389,12 +3389,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.Data)
-    private static final org.med4j.core.protobuf.Rpc.Data DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.Data DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.Data();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.Data();
     }
 
-    public static org.med4j.core.protobuf.Rpc.Data getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.Data getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3419,7 +3419,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.Data getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.Data getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3556,15 +3556,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetBlockRequest_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetBlockRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetBlockRequest_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetBlockRequest_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.GetBlockRequest.class, org.med4j.core.protobuf.Rpc.GetBlockRequest.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest.class, org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -3718,10 +3718,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.GetBlockRequest)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.GetBlockRequest other = (org.med4j.core.protobuf.Rpc.GetBlockRequest) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest other = (org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -3753,69 +3753,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -3828,7 +3828,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.GetBlockRequest prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3849,21 +3849,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.GetBlockRequest)
-            org.med4j.core.protobuf.Rpc.GetBlockRequestOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetBlockRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetBlockRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetBlockRequest_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetBlockRequest_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.GetBlockRequest.class, org.med4j.core.protobuf.Rpc.GetBlockRequest.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest.class, org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.GetBlockRequest.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3893,17 +3893,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetBlockRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetBlockRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetBlockRequest getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.GetBlockRequest.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetBlockRequest build() {
-        org.med4j.core.protobuf.Rpc.GetBlockRequest result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest build() {
+        org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3911,8 +3911,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetBlockRequest buildPartial() {
-        org.med4j.core.protobuf.Rpc.GetBlockRequest result = new org.med4j.core.protobuf.Rpc.GetBlockRequest(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest result = new org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest(this);
         result.hash_ = hash_;
         result.type_ = type_;
         result.height_ = height_;
@@ -3954,16 +3954,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.GetBlockRequest) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.GetBlockRequest)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.GetBlockRequest other) {
-        if (other == org.med4j.core.protobuf.Rpc.GetBlockRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest.getDefaultInstance()) return this;
         if (!other.getHash().isEmpty()) {
           hash_ = other.hash_;
           onChanged();
@@ -3990,11 +3990,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.GetBlockRequest parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.GetBlockRequest) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4241,12 +4241,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.GetBlockRequest)
-    private static final org.med4j.core.protobuf.Rpc.GetBlockRequest DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.GetBlockRequest();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest();
     }
 
-    public static org.med4j.core.protobuf.Rpc.GetBlockRequest getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4271,7 +4271,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.GetBlockRequest getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.GetBlockRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4531,7 +4531,7 @@ public final class Rpc {
      *
      * <code>repeated .rpcpb.Transaction transactions = 30;</code>
      */
-    java.util.List<org.med4j.core.protobuf.Rpc.Transaction>
+    java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction>
     getTransactionsList();
     /**
      * <pre>
@@ -4540,7 +4540,7 @@ public final class Rpc {
      *
      * <code>repeated .rpcpb.Transaction transactions = 30;</code>
      */
-    org.med4j.core.protobuf.Rpc.Transaction getTransactions(int index);
+    org.medibloc.panacea.core.protobuf.Rpc.Transaction getTransactions(int index);
     /**
      * <pre>
      * Transactions in block
@@ -4556,7 +4556,7 @@ public final class Rpc {
      *
      * <code>repeated .rpcpb.Transaction transactions = 30;</code>
      */
-    java.util.List<? extends org.med4j.core.protobuf.Rpc.TransactionOrBuilder>
+    java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder>
     getTransactionsOrBuilderList();
     /**
      * <pre>
@@ -4565,7 +4565,7 @@ public final class Rpc {
      *
      * <code>repeated .rpcpb.Transaction transactions = 30;</code>
      */
-    org.med4j.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
+    org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
             int index);
 
     /**
@@ -4737,11 +4737,11 @@ public final class Rpc {
             }
             case 242: {
               if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
-                transactions_ = new java.util.ArrayList<org.med4j.core.protobuf.Rpc.Transaction>();
+                transactions_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.Rpc.Transaction>();
                 mutable_bitField0_ |= 0x00010000;
               }
               transactions_.add(
-                      input.readMessage(org.med4j.core.protobuf.Rpc.Transaction.parser(), extensionRegistry));
+                      input.readMessage(org.medibloc.panacea.core.protobuf.Rpc.Transaction.parser(), extensionRegistry));
               break;
             }
             case 250: {
@@ -4780,15 +4780,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Block_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Block_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Block_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Block_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.Block.class, org.med4j.core.protobuf.Rpc.Block.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.Block.class, org.medibloc.panacea.core.protobuf.Rpc.Block.Builder.class);
     }
 
     private int bitField0_;
@@ -5320,7 +5320,7 @@ public final class Rpc {
     }
 
     public static final int TRANSACTIONS_FIELD_NUMBER = 30;
-    private java.util.List<org.med4j.core.protobuf.Rpc.Transaction> transactions_;
+    private java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction> transactions_;
     /**
      * <pre>
      * Transactions in block
@@ -5328,7 +5328,7 @@ public final class Rpc {
      *
      * <code>repeated .rpcpb.Transaction transactions = 30;</code>
      */
-    public java.util.List<org.med4j.core.protobuf.Rpc.Transaction> getTransactionsList() {
+    public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction> getTransactionsList() {
       return transactions_;
     }
     /**
@@ -5338,7 +5338,7 @@ public final class Rpc {
      *
      * <code>repeated .rpcpb.Transaction transactions = 30;</code>
      */
-    public java.util.List<? extends org.med4j.core.protobuf.Rpc.TransactionOrBuilder>
+    public java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder>
     getTransactionsOrBuilderList() {
       return transactions_;
     }
@@ -5359,7 +5359,7 @@ public final class Rpc {
      *
      * <code>repeated .rpcpb.Transaction transactions = 30;</code>
      */
-    public org.med4j.core.protobuf.Rpc.Transaction getTransactions(int index) {
+    public org.medibloc.panacea.core.protobuf.Rpc.Transaction getTransactions(int index) {
       return transactions_.get(index);
     }
     /**
@@ -5369,7 +5369,7 @@ public final class Rpc {
      *
      * <code>repeated .rpcpb.Transaction transactions = 30;</code>
      */
-    public org.med4j.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
+    public org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
             int index) {
       return transactions_.get(index);
     }
@@ -5555,10 +5555,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.Block)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.Block)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.Block other = (org.med4j.core.protobuf.Rpc.Block) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.Block other = (org.medibloc.panacea.core.protobuf.Rpc.Block) obj;
 
       boolean result = true;
       result = result && (getHeight()
@@ -5657,69 +5657,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Block parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -5732,7 +5732,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.Block prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.Block prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5753,21 +5753,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.Block)
-            org.med4j.core.protobuf.Rpc.BlockOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.BlockOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Block_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Block_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Block_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Block_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.Block.class, org.med4j.core.protobuf.Rpc.Block.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.Block.class, org.medibloc.panacea.core.protobuf.Rpc.Block.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.Block.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.Block.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5832,17 +5832,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Block_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Block_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Block getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.Block.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.Block getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.Block.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Block build() {
-        org.med4j.core.protobuf.Rpc.Block result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.Block build() {
+        org.medibloc.panacea.core.protobuf.Rpc.Block result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5850,8 +5850,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Block buildPartial() {
-        org.med4j.core.protobuf.Rpc.Block result = new org.med4j.core.protobuf.Rpc.Block(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.Block buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.Block result = new org.medibloc.panacea.core.protobuf.Rpc.Block(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.height_ = height_;
@@ -5923,16 +5923,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.Block) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.Block)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.Block) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.Block)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.Block other) {
-        if (other == org.med4j.core.protobuf.Rpc.Block.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.Block other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.Block.getDefaultInstance()) return this;
         if (other.getHeight() != 0L) {
           setHeight(other.getHeight());
         }
@@ -6043,11 +6043,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.Block parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.Block parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.Block) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.Block) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7227,17 +7227,17 @@ public final class Rpc {
         return this;
       }
 
-      private java.util.List<org.med4j.core.protobuf.Rpc.Transaction> transactions_ =
+      private java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction> transactions_ =
               java.util.Collections.emptyList();
       private void ensureTransactionsIsMutable() {
         if (!((bitField0_ & 0x00010000) == 0x00010000)) {
-          transactions_ = new java.util.ArrayList<org.med4j.core.protobuf.Rpc.Transaction>(transactions_);
+          transactions_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.Rpc.Transaction>(transactions_);
           bitField0_ |= 0x00010000;
         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.Rpc.Transaction, org.med4j.core.protobuf.Rpc.Transaction.Builder, org.med4j.core.protobuf.Rpc.TransactionOrBuilder> transactionsBuilder_;
+              org.medibloc.panacea.core.protobuf.Rpc.Transaction, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder, org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder> transactionsBuilder_;
 
       /**
        * <pre>
@@ -7246,7 +7246,7 @@ public final class Rpc {
        *
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.Rpc.Transaction> getTransactionsList() {
+      public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction> getTransactionsList() {
         if (transactionsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(transactions_);
         } else {
@@ -7274,7 +7274,7 @@ public final class Rpc {
        *
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Transaction getTransactions(int index) {
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction getTransactions(int index) {
         if (transactionsBuilder_ == null) {
           return transactions_.get(index);
         } else {
@@ -7289,7 +7289,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
       public Builder setTransactions(
-              int index, org.med4j.core.protobuf.Rpc.Transaction value) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7310,7 +7310,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
       public Builder setTransactions(
-              int index, org.med4j.core.protobuf.Rpc.Transaction.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.set(index, builderForValue.build());
@@ -7327,7 +7327,7 @@ public final class Rpc {
        *
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
-      public Builder addTransactions(org.med4j.core.protobuf.Rpc.Transaction value) {
+      public Builder addTransactions(org.medibloc.panacea.core.protobuf.Rpc.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7348,7 +7348,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
       public Builder addTransactions(
-              int index, org.med4j.core.protobuf.Rpc.Transaction value) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7369,7 +7369,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
       public Builder addTransactions(
-              org.med4j.core.protobuf.Rpc.Transaction.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.add(builderForValue.build());
@@ -7387,7 +7387,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
       public Builder addTransactions(
-              int index, org.med4j.core.protobuf.Rpc.Transaction.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.add(index, builderForValue.build());
@@ -7405,7 +7405,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
       public Builder addAllTransactions(
-              java.lang.Iterable<? extends org.med4j.core.protobuf.Rpc.Transaction> values) {
+              java.lang.Iterable<? extends org.medibloc.panacea.core.protobuf.Rpc.Transaction> values) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -7457,7 +7457,7 @@ public final class Rpc {
        *
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Transaction.Builder getTransactionsBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder getTransactionsBuilder(
               int index) {
         return getTransactionsFieldBuilder().getBuilder(index);
       }
@@ -7468,7 +7468,7 @@ public final class Rpc {
        *
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
-      public org.med4j.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
               int index) {
         if (transactionsBuilder_ == null) {
           return transactions_.get(index);  } else {
@@ -7482,7 +7482,7 @@ public final class Rpc {
        *
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
-      public java.util.List<? extends org.med4j.core.protobuf.Rpc.TransactionOrBuilder>
+      public java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder>
       getTransactionsOrBuilderList() {
         if (transactionsBuilder_ != null) {
           return transactionsBuilder_.getMessageOrBuilderList();
@@ -7497,9 +7497,9 @@ public final class Rpc {
        *
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Transaction.Builder addTransactionsBuilder() {
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder addTransactionsBuilder() {
         return getTransactionsFieldBuilder().addBuilder(
-                org.med4j.core.protobuf.Rpc.Transaction.getDefaultInstance());
+                org.medibloc.panacea.core.protobuf.Rpc.Transaction.getDefaultInstance());
       }
       /**
        * <pre>
@@ -7508,10 +7508,10 @@ public final class Rpc {
        *
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Transaction.Builder addTransactionsBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder addTransactionsBuilder(
               int index) {
         return getTransactionsFieldBuilder().addBuilder(
-                index, org.med4j.core.protobuf.Rpc.Transaction.getDefaultInstance());
+                index, org.medibloc.panacea.core.protobuf.Rpc.Transaction.getDefaultInstance());
       }
       /**
        * <pre>
@@ -7520,16 +7520,16 @@ public final class Rpc {
        *
        * <code>repeated .rpcpb.Transaction transactions = 30;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.Rpc.Transaction.Builder>
+      public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder>
       getTransactionsBuilderList() {
         return getTransactionsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.Rpc.Transaction, org.med4j.core.protobuf.Rpc.Transaction.Builder, org.med4j.core.protobuf.Rpc.TransactionOrBuilder>
+              org.medibloc.panacea.core.protobuf.Rpc.Transaction, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder, org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder>
       getTransactionsFieldBuilder() {
         if (transactionsBuilder_ == null) {
           transactionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  org.med4j.core.protobuf.Rpc.Transaction, org.med4j.core.protobuf.Rpc.Transaction.Builder, org.med4j.core.protobuf.Rpc.TransactionOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.Rpc.Transaction, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder, org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder>(
                   transactions_,
                   ((bitField0_ & 0x00010000) == 0x00010000),
                   getParentForChildren(),
@@ -7649,12 +7649,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.Block)
-    private static final org.med4j.core.protobuf.Rpc.Block DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.Block DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.Block();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.Block();
     }
 
-    public static org.med4j.core.protobuf.Rpc.Block getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.Block getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7679,7 +7679,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.Block getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.Block getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7771,15 +7771,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetBlocksRequest_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetBlocksRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetBlocksRequest_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetBlocksRequest_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.GetBlocksRequest.class, org.med4j.core.protobuf.Rpc.GetBlocksRequest.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest.class, org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest.Builder.class);
     }
 
     public static final int FROM_FIELD_NUMBER = 1;
@@ -7847,10 +7847,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.GetBlocksRequest)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.GetBlocksRequest other = (org.med4j.core.protobuf.Rpc.GetBlocksRequest) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest other = (org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest) obj;
 
       boolean result = true;
       result = result && (getFrom()
@@ -7879,69 +7879,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -7954,7 +7954,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.GetBlocksRequest prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7975,21 +7975,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.GetBlocksRequest)
-            org.med4j.core.protobuf.Rpc.GetBlocksRequestOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetBlocksRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetBlocksRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetBlocksRequest_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetBlocksRequest_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.GetBlocksRequest.class, org.med4j.core.protobuf.Rpc.GetBlocksRequest.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest.class, org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.GetBlocksRequest.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8017,17 +8017,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetBlocksRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetBlocksRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetBlocksRequest getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.GetBlocksRequest.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetBlocksRequest build() {
-        org.med4j.core.protobuf.Rpc.GetBlocksRequest result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest build() {
+        org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8035,8 +8035,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetBlocksRequest buildPartial() {
-        org.med4j.core.protobuf.Rpc.GetBlocksRequest result = new org.med4j.core.protobuf.Rpc.GetBlocksRequest(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest result = new org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest(this);
         result.from_ = from_;
         result.to_ = to_;
         onBuilt();
@@ -8077,16 +8077,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.GetBlocksRequest) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.GetBlocksRequest)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.GetBlocksRequest other) {
-        if (other == org.med4j.core.protobuf.Rpc.GetBlocksRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest.getDefaultInstance()) return this;
         if (other.getFrom() != 0L) {
           setFrom(other.getFrom());
         }
@@ -8108,11 +8108,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.GetBlocksRequest parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.GetBlocksRequest) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8190,12 +8190,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.GetBlocksRequest)
-    private static final org.med4j.core.protobuf.Rpc.GetBlocksRequest DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.GetBlocksRequest();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest();
     }
 
-    public static org.med4j.core.protobuf.Rpc.GetBlocksRequest getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8220,7 +8220,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.GetBlocksRequest getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.GetBlocksRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8233,12 +8233,12 @@ public final class Rpc {
     /**
      * <code>repeated .rpcpb.Block blocks = 1;</code>
      */
-    java.util.List<org.med4j.core.protobuf.Rpc.Block>
+    java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Block>
     getBlocksList();
     /**
      * <code>repeated .rpcpb.Block blocks = 1;</code>
      */
-    org.med4j.core.protobuf.Rpc.Block getBlocks(int index);
+    org.medibloc.panacea.core.protobuf.Rpc.Block getBlocks(int index);
     /**
      * <code>repeated .rpcpb.Block blocks = 1;</code>
      */
@@ -8246,12 +8246,12 @@ public final class Rpc {
     /**
      * <code>repeated .rpcpb.Block blocks = 1;</code>
      */
-    java.util.List<? extends org.med4j.core.protobuf.Rpc.BlockOrBuilder>
+    java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.BlockOrBuilder>
     getBlocksOrBuilderList();
     /**
      * <code>repeated .rpcpb.Block blocks = 1;</code>
      */
-    org.med4j.core.protobuf.Rpc.BlockOrBuilder getBlocksOrBuilder(
+    org.medibloc.panacea.core.protobuf.Rpc.BlockOrBuilder getBlocksOrBuilder(
             int index);
   }
   /**
@@ -8296,11 +8296,11 @@ public final class Rpc {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                blocks_ = new java.util.ArrayList<org.med4j.core.protobuf.Rpc.Block>();
+                blocks_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.Rpc.Block>();
                 mutable_bitField0_ |= 0x00000001;
               }
               blocks_.add(
-                      input.readMessage(org.med4j.core.protobuf.Rpc.Block.parser(), extensionRegistry));
+                      input.readMessage(org.medibloc.panacea.core.protobuf.Rpc.Block.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -8327,29 +8327,29 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Blocks_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Blocks_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Blocks_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Blocks_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.Blocks.class, org.med4j.core.protobuf.Rpc.Blocks.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.Blocks.class, org.medibloc.panacea.core.protobuf.Rpc.Blocks.Builder.class);
     }
 
     public static final int BLOCKS_FIELD_NUMBER = 1;
-    private java.util.List<org.med4j.core.protobuf.Rpc.Block> blocks_;
+    private java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Block> blocks_;
     /**
      * <code>repeated .rpcpb.Block blocks = 1;</code>
      */
-    public java.util.List<org.med4j.core.protobuf.Rpc.Block> getBlocksList() {
+    public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Block> getBlocksList() {
       return blocks_;
     }
     /**
      * <code>repeated .rpcpb.Block blocks = 1;</code>
      */
-    public java.util.List<? extends org.med4j.core.protobuf.Rpc.BlockOrBuilder>
+    public java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.BlockOrBuilder>
     getBlocksOrBuilderList() {
       return blocks_;
     }
@@ -8362,13 +8362,13 @@ public final class Rpc {
     /**
      * <code>repeated .rpcpb.Block blocks = 1;</code>
      */
-    public org.med4j.core.protobuf.Rpc.Block getBlocks(int index) {
+    public org.medibloc.panacea.core.protobuf.Rpc.Block getBlocks(int index) {
       return blocks_.get(index);
     }
     /**
      * <code>repeated .rpcpb.Block blocks = 1;</code>
      */
-    public org.med4j.core.protobuf.Rpc.BlockOrBuilder getBlocksOrBuilder(
+    public org.medibloc.panacea.core.protobuf.Rpc.BlockOrBuilder getBlocksOrBuilder(
             int index) {
       return blocks_.get(index);
     }
@@ -8413,10 +8413,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.Blocks)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.Blocks)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.Blocks other = (org.med4j.core.protobuf.Rpc.Blocks) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.Blocks other = (org.medibloc.panacea.core.protobuf.Rpc.Blocks) obj;
 
       boolean result = true;
       result = result && getBlocksList()
@@ -8441,69 +8441,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.Blocks parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Blocks parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -8516,7 +8516,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.Blocks prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.Blocks prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8537,21 +8537,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.Blocks)
-            org.med4j.core.protobuf.Rpc.BlocksOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.BlocksOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Blocks_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Blocks_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Blocks_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Blocks_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.Blocks.class, org.med4j.core.protobuf.Rpc.Blocks.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.Blocks.class, org.medibloc.panacea.core.protobuf.Rpc.Blocks.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.Blocks.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.Blocks.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8582,17 +8582,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Blocks_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Blocks_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Blocks getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.Blocks.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.Blocks getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.Blocks.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Blocks build() {
-        org.med4j.core.protobuf.Rpc.Blocks result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.Blocks build() {
+        org.medibloc.panacea.core.protobuf.Rpc.Blocks result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8600,8 +8600,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Blocks buildPartial() {
-        org.med4j.core.protobuf.Rpc.Blocks result = new org.med4j.core.protobuf.Rpc.Blocks(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.Blocks buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.Blocks result = new org.medibloc.panacea.core.protobuf.Rpc.Blocks(this);
         int from_bitField0_ = bitField0_;
         if (blocksBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8650,16 +8650,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.Blocks) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.Blocks)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.Blocks) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.Blocks)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.Blocks other) {
-        if (other == org.med4j.core.protobuf.Rpc.Blocks.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.Blocks other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.Blocks.getDefaultInstance()) return this;
         if (blocksBuilder_ == null) {
           if (!other.blocks_.isEmpty()) {
             if (blocks_.isEmpty()) {
@@ -8701,11 +8701,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.Blocks parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.Blocks parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.Blocks) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.Blocks) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8716,22 +8716,22 @@ public final class Rpc {
       }
       private int bitField0_;
 
-      private java.util.List<org.med4j.core.protobuf.Rpc.Block> blocks_ =
+      private java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Block> blocks_ =
               java.util.Collections.emptyList();
       private void ensureBlocksIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          blocks_ = new java.util.ArrayList<org.med4j.core.protobuf.Rpc.Block>(blocks_);
+          blocks_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.Rpc.Block>(blocks_);
           bitField0_ |= 0x00000001;
         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.Rpc.Block, org.med4j.core.protobuf.Rpc.Block.Builder, org.med4j.core.protobuf.Rpc.BlockOrBuilder> blocksBuilder_;
+              org.medibloc.panacea.core.protobuf.Rpc.Block, org.medibloc.panacea.core.protobuf.Rpc.Block.Builder, org.medibloc.panacea.core.protobuf.Rpc.BlockOrBuilder> blocksBuilder_;
 
       /**
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.Rpc.Block> getBlocksList() {
+      public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Block> getBlocksList() {
         if (blocksBuilder_ == null) {
           return java.util.Collections.unmodifiableList(blocks_);
         } else {
@@ -8751,7 +8751,7 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Block getBlocks(int index) {
+      public org.medibloc.panacea.core.protobuf.Rpc.Block getBlocks(int index) {
         if (blocksBuilder_ == null) {
           return blocks_.get(index);
         } else {
@@ -8762,7 +8762,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
       public Builder setBlocks(
-              int index, org.med4j.core.protobuf.Rpc.Block value) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Block value) {
         if (blocksBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8779,7 +8779,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
       public Builder setBlocks(
-              int index, org.med4j.core.protobuf.Rpc.Block.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Block.Builder builderForValue) {
         if (blocksBuilder_ == null) {
           ensureBlocksIsMutable();
           blocks_.set(index, builderForValue.build());
@@ -8792,7 +8792,7 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
-      public Builder addBlocks(org.med4j.core.protobuf.Rpc.Block value) {
+      public Builder addBlocks(org.medibloc.panacea.core.protobuf.Rpc.Block value) {
         if (blocksBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8809,7 +8809,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
       public Builder addBlocks(
-              int index, org.med4j.core.protobuf.Rpc.Block value) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Block value) {
         if (blocksBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8826,7 +8826,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
       public Builder addBlocks(
-              org.med4j.core.protobuf.Rpc.Block.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.Rpc.Block.Builder builderForValue) {
         if (blocksBuilder_ == null) {
           ensureBlocksIsMutable();
           blocks_.add(builderForValue.build());
@@ -8840,7 +8840,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
       public Builder addBlocks(
-              int index, org.med4j.core.protobuf.Rpc.Block.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Block.Builder builderForValue) {
         if (blocksBuilder_ == null) {
           ensureBlocksIsMutable();
           blocks_.add(index, builderForValue.build());
@@ -8854,7 +8854,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
       public Builder addAllBlocks(
-              java.lang.Iterable<? extends org.med4j.core.protobuf.Rpc.Block> values) {
+              java.lang.Iterable<? extends org.medibloc.panacea.core.protobuf.Rpc.Block> values) {
         if (blocksBuilder_ == null) {
           ensureBlocksIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -8894,14 +8894,14 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Block.Builder getBlocksBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.Block.Builder getBlocksBuilder(
               int index) {
         return getBlocksFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.BlockOrBuilder getBlocksOrBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.BlockOrBuilder getBlocksOrBuilder(
               int index) {
         if (blocksBuilder_ == null) {
           return blocks_.get(index);  } else {
@@ -8911,7 +8911,7 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
-      public java.util.List<? extends org.med4j.core.protobuf.Rpc.BlockOrBuilder>
+      public java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.BlockOrBuilder>
       getBlocksOrBuilderList() {
         if (blocksBuilder_ != null) {
           return blocksBuilder_.getMessageOrBuilderList();
@@ -8922,31 +8922,31 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Block.Builder addBlocksBuilder() {
+      public org.medibloc.panacea.core.protobuf.Rpc.Block.Builder addBlocksBuilder() {
         return getBlocksFieldBuilder().addBuilder(
-                org.med4j.core.protobuf.Rpc.Block.getDefaultInstance());
+                org.medibloc.panacea.core.protobuf.Rpc.Block.getDefaultInstance());
       }
       /**
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Block.Builder addBlocksBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.Block.Builder addBlocksBuilder(
               int index) {
         return getBlocksFieldBuilder().addBuilder(
-                index, org.med4j.core.protobuf.Rpc.Block.getDefaultInstance());
+                index, org.medibloc.panacea.core.protobuf.Rpc.Block.getDefaultInstance());
       }
       /**
        * <code>repeated .rpcpb.Block blocks = 1;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.Rpc.Block.Builder>
+      public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Block.Builder>
       getBlocksBuilderList() {
         return getBlocksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.Rpc.Block, org.med4j.core.protobuf.Rpc.Block.Builder, org.med4j.core.protobuf.Rpc.BlockOrBuilder>
+              org.medibloc.panacea.core.protobuf.Rpc.Block, org.medibloc.panacea.core.protobuf.Rpc.Block.Builder, org.medibloc.panacea.core.protobuf.Rpc.BlockOrBuilder>
       getBlocksFieldBuilder() {
         if (blocksBuilder_ == null) {
           blocksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  org.med4j.core.protobuf.Rpc.Block, org.med4j.core.protobuf.Rpc.Block.Builder, org.med4j.core.protobuf.Rpc.BlockOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.Rpc.Block, org.medibloc.panacea.core.protobuf.Rpc.Block.Builder, org.medibloc.panacea.core.protobuf.Rpc.BlockOrBuilder>(
                   blocks_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -8972,12 +8972,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.Blocks)
-    private static final org.med4j.core.protobuf.Rpc.Blocks DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.Blocks DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.Blocks();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.Blocks();
     }
 
-    public static org.med4j.core.protobuf.Rpc.Blocks getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.Blocks getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9002,7 +9002,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.Blocks getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.Blocks getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9071,15 +9071,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_NonParamRequest_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_NonParamRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_NonParamRequest_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_NonParamRequest_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.NonParamRequest.class, org.med4j.core.protobuf.Rpc.NonParamRequest.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest.class, org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9115,10 +9115,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.NonParamRequest)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.NonParamRequest other = (org.med4j.core.protobuf.Rpc.NonParamRequest) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest other = (org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest) obj;
 
       boolean result = true;
       result = result && unknownFields.equals(other.unknownFields);
@@ -9137,69 +9137,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -9212,7 +9212,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.NonParamRequest prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9233,21 +9233,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.NonParamRequest)
-            org.med4j.core.protobuf.Rpc.NonParamRequestOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.NonParamRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_NonParamRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_NonParamRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_NonParamRequest_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_NonParamRequest_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.NonParamRequest.class, org.med4j.core.protobuf.Rpc.NonParamRequest.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest.class, org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.NonParamRequest.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9271,17 +9271,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_NonParamRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_NonParamRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.NonParamRequest getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.NonParamRequest.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.NonParamRequest build() {
-        org.med4j.core.protobuf.Rpc.NonParamRequest result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest build() {
+        org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9289,8 +9289,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.NonParamRequest buildPartial() {
-        org.med4j.core.protobuf.Rpc.NonParamRequest result = new org.med4j.core.protobuf.Rpc.NonParamRequest(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest result = new org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest(this);
         onBuilt();
         return result;
       }
@@ -9329,16 +9329,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.NonParamRequest) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.NonParamRequest)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.NonParamRequest other) {
-        if (other == org.med4j.core.protobuf.Rpc.NonParamRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9354,11 +9354,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.NonParamRequest parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.NonParamRequest) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9384,12 +9384,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.NonParamRequest)
-    private static final org.med4j.core.protobuf.Rpc.NonParamRequest DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.NonParamRequest();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest();
     }
 
-    public static org.med4j.core.protobuf.Rpc.NonParamRequest getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9414,7 +9414,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.NonParamRequest getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.NonParamRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9501,15 +9501,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetCandidateRequest_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetCandidateRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetCandidateRequest_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetCandidateRequest_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.GetCandidateRequest.class, org.med4j.core.protobuf.Rpc.GetCandidateRequest.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest.class, org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest.Builder.class);
     }
 
     public static final int CANDIDATE_ID_FIELD_NUMBER = 1;
@@ -9585,10 +9585,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.GetCandidateRequest)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.GetCandidateRequest other = (org.med4j.core.protobuf.Rpc.GetCandidateRequest) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest other = (org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest) obj;
 
       boolean result = true;
       result = result && getCandidateId()
@@ -9611,69 +9611,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -9686,7 +9686,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.GetCandidateRequest prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9707,21 +9707,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.GetCandidateRequest)
-            org.med4j.core.protobuf.Rpc.GetCandidateRequestOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetCandidateRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetCandidateRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetCandidateRequest_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetCandidateRequest_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.GetCandidateRequest.class, org.med4j.core.protobuf.Rpc.GetCandidateRequest.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest.class, org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.GetCandidateRequest.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9747,17 +9747,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetCandidateRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetCandidateRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetCandidateRequest getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.GetCandidateRequest.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetCandidateRequest build() {
-        org.med4j.core.protobuf.Rpc.GetCandidateRequest result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest build() {
+        org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9765,8 +9765,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetCandidateRequest buildPartial() {
-        org.med4j.core.protobuf.Rpc.GetCandidateRequest result = new org.med4j.core.protobuf.Rpc.GetCandidateRequest(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest result = new org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest(this);
         result.candidateId_ = candidateId_;
         onBuilt();
         return result;
@@ -9806,16 +9806,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.GetCandidateRequest) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.GetCandidateRequest)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.GetCandidateRequest other) {
-        if (other == org.med4j.core.protobuf.Rpc.GetCandidateRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest.getDefaultInstance()) return this;
         if (!other.getCandidateId().isEmpty()) {
           candidateId_ = other.candidateId_;
           onChanged();
@@ -9835,11 +9835,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.GetCandidateRequest parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.GetCandidateRequest) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9934,12 +9934,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.GetCandidateRequest)
-    private static final org.med4j.core.protobuf.Rpc.GetCandidateRequest DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.GetCandidateRequest();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest();
     }
 
-    public static org.med4j.core.protobuf.Rpc.GetCandidateRequest getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9964,7 +9964,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.GetCandidateRequest getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.GetCandidateRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10119,15 +10119,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Candidate_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Candidate_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Candidate_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Candidate_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.Candidate.class, org.med4j.core.protobuf.Rpc.Candidate.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.Candidate.class, org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder.class);
     }
 
     public static final int CANDIDATE_ID_FIELD_NUMBER = 1;
@@ -10363,10 +10363,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.Candidate)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.Candidate)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.Candidate other = (org.med4j.core.protobuf.Rpc.Candidate) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.Candidate other = (org.medibloc.panacea.core.protobuf.Rpc.Candidate) obj;
 
       boolean result = true;
       result = result && getCandidateId()
@@ -10405,69 +10405,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.Candidate parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidate parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -10480,7 +10480,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.Candidate prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.Candidate prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10501,21 +10501,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.Candidate)
-            org.med4j.core.protobuf.Rpc.CandidateOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.CandidateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Candidate_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Candidate_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Candidate_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Candidate_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.Candidate.class, org.med4j.core.protobuf.Rpc.Candidate.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.Candidate.class, org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.Candidate.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.Candidate.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -10549,17 +10549,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Candidate_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Candidate_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Candidate getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.Candidate.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.Candidate getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.Candidate.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Candidate build() {
-        org.med4j.core.protobuf.Rpc.Candidate result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.Candidate build() {
+        org.medibloc.panacea.core.protobuf.Rpc.Candidate result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10567,8 +10567,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Candidate buildPartial() {
-        org.med4j.core.protobuf.Rpc.Candidate result = new org.med4j.core.protobuf.Rpc.Candidate(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.Candidate buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.Candidate result = new org.medibloc.panacea.core.protobuf.Rpc.Candidate(this);
         result.candidateId_ = candidateId_;
         result.address_ = address_;
         result.url_ = url_;
@@ -10612,16 +10612,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.Candidate) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.Candidate)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.Candidate) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.Candidate)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.Candidate other) {
-        if (other == org.med4j.core.protobuf.Rpc.Candidate.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.Candidate other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.Candidate.getDefaultInstance()) return this;
         if (!other.getCandidateId().isEmpty()) {
           candidateId_ = other.candidateId_;
           onChanged();
@@ -10657,11 +10657,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.Candidate parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.Candidate parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.Candidate) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.Candidate) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -11032,12 +11032,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.Candidate)
-    private static final org.med4j.core.protobuf.Rpc.Candidate DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.Candidate DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.Candidate();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.Candidate();
     }
 
-    public static org.med4j.core.protobuf.Rpc.Candidate getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidate getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11062,7 +11062,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.Candidate getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.Candidate getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11075,12 +11075,12 @@ public final class Rpc {
     /**
      * <code>repeated .rpcpb.Candidate candidates = 1;</code>
      */
-    java.util.List<org.med4j.core.protobuf.Rpc.Candidate>
+    java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Candidate>
     getCandidatesList();
     /**
      * <code>repeated .rpcpb.Candidate candidates = 1;</code>
      */
-    org.med4j.core.protobuf.Rpc.Candidate getCandidates(int index);
+    org.medibloc.panacea.core.protobuf.Rpc.Candidate getCandidates(int index);
     /**
      * <code>repeated .rpcpb.Candidate candidates = 1;</code>
      */
@@ -11088,12 +11088,12 @@ public final class Rpc {
     /**
      * <code>repeated .rpcpb.Candidate candidates = 1;</code>
      */
-    java.util.List<? extends org.med4j.core.protobuf.Rpc.CandidateOrBuilder>
+    java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.CandidateOrBuilder>
     getCandidatesOrBuilderList();
     /**
      * <code>repeated .rpcpb.Candidate candidates = 1;</code>
      */
-    org.med4j.core.protobuf.Rpc.CandidateOrBuilder getCandidatesOrBuilder(
+    org.medibloc.panacea.core.protobuf.Rpc.CandidateOrBuilder getCandidatesOrBuilder(
             int index);
   }
   /**
@@ -11138,11 +11138,11 @@ public final class Rpc {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                candidates_ = new java.util.ArrayList<org.med4j.core.protobuf.Rpc.Candidate>();
+                candidates_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.Rpc.Candidate>();
                 mutable_bitField0_ |= 0x00000001;
               }
               candidates_.add(
-                      input.readMessage(org.med4j.core.protobuf.Rpc.Candidate.parser(), extensionRegistry));
+                      input.readMessage(org.medibloc.panacea.core.protobuf.Rpc.Candidate.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -11169,29 +11169,29 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Candidates_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Candidates_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Candidates_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Candidates_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.Candidates.class, org.med4j.core.protobuf.Rpc.Candidates.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.Candidates.class, org.medibloc.panacea.core.protobuf.Rpc.Candidates.Builder.class);
     }
 
     public static final int CANDIDATES_FIELD_NUMBER = 1;
-    private java.util.List<org.med4j.core.protobuf.Rpc.Candidate> candidates_;
+    private java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Candidate> candidates_;
     /**
      * <code>repeated .rpcpb.Candidate candidates = 1;</code>
      */
-    public java.util.List<org.med4j.core.protobuf.Rpc.Candidate> getCandidatesList() {
+    public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Candidate> getCandidatesList() {
       return candidates_;
     }
     /**
      * <code>repeated .rpcpb.Candidate candidates = 1;</code>
      */
-    public java.util.List<? extends org.med4j.core.protobuf.Rpc.CandidateOrBuilder>
+    public java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.CandidateOrBuilder>
     getCandidatesOrBuilderList() {
       return candidates_;
     }
@@ -11204,13 +11204,13 @@ public final class Rpc {
     /**
      * <code>repeated .rpcpb.Candidate candidates = 1;</code>
      */
-    public org.med4j.core.protobuf.Rpc.Candidate getCandidates(int index) {
+    public org.medibloc.panacea.core.protobuf.Rpc.Candidate getCandidates(int index) {
       return candidates_.get(index);
     }
     /**
      * <code>repeated .rpcpb.Candidate candidates = 1;</code>
      */
-    public org.med4j.core.protobuf.Rpc.CandidateOrBuilder getCandidatesOrBuilder(
+    public org.medibloc.panacea.core.protobuf.Rpc.CandidateOrBuilder getCandidatesOrBuilder(
             int index) {
       return candidates_.get(index);
     }
@@ -11255,10 +11255,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.Candidates)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.Candidates)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.Candidates other = (org.med4j.core.protobuf.Rpc.Candidates) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.Candidates other = (org.medibloc.panacea.core.protobuf.Rpc.Candidates) obj;
 
       boolean result = true;
       result = result && getCandidatesList()
@@ -11283,69 +11283,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.Candidates parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Candidates parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -11358,7 +11358,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.Candidates prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.Candidates prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -11379,21 +11379,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.Candidates)
-            org.med4j.core.protobuf.Rpc.CandidatesOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.CandidatesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Candidates_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Candidates_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Candidates_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Candidates_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.Candidates.class, org.med4j.core.protobuf.Rpc.Candidates.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.Candidates.class, org.medibloc.panacea.core.protobuf.Rpc.Candidates.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.Candidates.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.Candidates.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -11424,17 +11424,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Candidates_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Candidates_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Candidates getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.Candidates.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.Candidates getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.Candidates.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Candidates build() {
-        org.med4j.core.protobuf.Rpc.Candidates result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.Candidates build() {
+        org.medibloc.panacea.core.protobuf.Rpc.Candidates result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -11442,8 +11442,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Candidates buildPartial() {
-        org.med4j.core.protobuf.Rpc.Candidates result = new org.med4j.core.protobuf.Rpc.Candidates(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.Candidates buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.Candidates result = new org.medibloc.panacea.core.protobuf.Rpc.Candidates(this);
         int from_bitField0_ = bitField0_;
         if (candidatesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -11492,16 +11492,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.Candidates) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.Candidates)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.Candidates) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.Candidates)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.Candidates other) {
-        if (other == org.med4j.core.protobuf.Rpc.Candidates.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.Candidates other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.Candidates.getDefaultInstance()) return this;
         if (candidatesBuilder_ == null) {
           if (!other.candidates_.isEmpty()) {
             if (candidates_.isEmpty()) {
@@ -11543,11 +11543,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.Candidates parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.Candidates parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.Candidates) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.Candidates) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -11558,22 +11558,22 @@ public final class Rpc {
       }
       private int bitField0_;
 
-      private java.util.List<org.med4j.core.protobuf.Rpc.Candidate> candidates_ =
+      private java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Candidate> candidates_ =
               java.util.Collections.emptyList();
       private void ensureCandidatesIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          candidates_ = new java.util.ArrayList<org.med4j.core.protobuf.Rpc.Candidate>(candidates_);
+          candidates_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.Rpc.Candidate>(candidates_);
           bitField0_ |= 0x00000001;
         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.Rpc.Candidate, org.med4j.core.protobuf.Rpc.Candidate.Builder, org.med4j.core.protobuf.Rpc.CandidateOrBuilder> candidatesBuilder_;
+              org.medibloc.panacea.core.protobuf.Rpc.Candidate, org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder, org.medibloc.panacea.core.protobuf.Rpc.CandidateOrBuilder> candidatesBuilder_;
 
       /**
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.Rpc.Candidate> getCandidatesList() {
+      public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Candidate> getCandidatesList() {
         if (candidatesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(candidates_);
         } else {
@@ -11593,7 +11593,7 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Candidate getCandidates(int index) {
+      public org.medibloc.panacea.core.protobuf.Rpc.Candidate getCandidates(int index) {
         if (candidatesBuilder_ == null) {
           return candidates_.get(index);
         } else {
@@ -11604,7 +11604,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
       public Builder setCandidates(
-              int index, org.med4j.core.protobuf.Rpc.Candidate value) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Candidate value) {
         if (candidatesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11621,7 +11621,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
       public Builder setCandidates(
-              int index, org.med4j.core.protobuf.Rpc.Candidate.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder builderForValue) {
         if (candidatesBuilder_ == null) {
           ensureCandidatesIsMutable();
           candidates_.set(index, builderForValue.build());
@@ -11634,7 +11634,7 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
-      public Builder addCandidates(org.med4j.core.protobuf.Rpc.Candidate value) {
+      public Builder addCandidates(org.medibloc.panacea.core.protobuf.Rpc.Candidate value) {
         if (candidatesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11651,7 +11651,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
       public Builder addCandidates(
-              int index, org.med4j.core.protobuf.Rpc.Candidate value) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Candidate value) {
         if (candidatesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11668,7 +11668,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
       public Builder addCandidates(
-              org.med4j.core.protobuf.Rpc.Candidate.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder builderForValue) {
         if (candidatesBuilder_ == null) {
           ensureCandidatesIsMutable();
           candidates_.add(builderForValue.build());
@@ -11682,7 +11682,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
       public Builder addCandidates(
-              int index, org.med4j.core.protobuf.Rpc.Candidate.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder builderForValue) {
         if (candidatesBuilder_ == null) {
           ensureCandidatesIsMutable();
           candidates_.add(index, builderForValue.build());
@@ -11696,7 +11696,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
       public Builder addAllCandidates(
-              java.lang.Iterable<? extends org.med4j.core.protobuf.Rpc.Candidate> values) {
+              java.lang.Iterable<? extends org.medibloc.panacea.core.protobuf.Rpc.Candidate> values) {
         if (candidatesBuilder_ == null) {
           ensureCandidatesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -11736,14 +11736,14 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Candidate.Builder getCandidatesBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder getCandidatesBuilder(
               int index) {
         return getCandidatesFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.CandidateOrBuilder getCandidatesOrBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.CandidateOrBuilder getCandidatesOrBuilder(
               int index) {
         if (candidatesBuilder_ == null) {
           return candidates_.get(index);  } else {
@@ -11753,7 +11753,7 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
-      public java.util.List<? extends org.med4j.core.protobuf.Rpc.CandidateOrBuilder>
+      public java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.CandidateOrBuilder>
       getCandidatesOrBuilderList() {
         if (candidatesBuilder_ != null) {
           return candidatesBuilder_.getMessageOrBuilderList();
@@ -11764,31 +11764,31 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Candidate.Builder addCandidatesBuilder() {
+      public org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder addCandidatesBuilder() {
         return getCandidatesFieldBuilder().addBuilder(
-                org.med4j.core.protobuf.Rpc.Candidate.getDefaultInstance());
+                org.medibloc.panacea.core.protobuf.Rpc.Candidate.getDefaultInstance());
       }
       /**
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Candidate.Builder addCandidatesBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder addCandidatesBuilder(
               int index) {
         return getCandidatesFieldBuilder().addBuilder(
-                index, org.med4j.core.protobuf.Rpc.Candidate.getDefaultInstance());
+                index, org.medibloc.panacea.core.protobuf.Rpc.Candidate.getDefaultInstance());
       }
       /**
        * <code>repeated .rpcpb.Candidate candidates = 1;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.Rpc.Candidate.Builder>
+      public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder>
       getCandidatesBuilderList() {
         return getCandidatesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.Rpc.Candidate, org.med4j.core.protobuf.Rpc.Candidate.Builder, org.med4j.core.protobuf.Rpc.CandidateOrBuilder>
+              org.medibloc.panacea.core.protobuf.Rpc.Candidate, org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder, org.medibloc.panacea.core.protobuf.Rpc.CandidateOrBuilder>
       getCandidatesFieldBuilder() {
         if (candidatesBuilder_ == null) {
           candidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  org.med4j.core.protobuf.Rpc.Candidate, org.med4j.core.protobuf.Rpc.Candidate.Builder, org.med4j.core.protobuf.Rpc.CandidateOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.Rpc.Candidate, org.medibloc.panacea.core.protobuf.Rpc.Candidate.Builder, org.medibloc.panacea.core.protobuf.Rpc.CandidateOrBuilder>(
                   candidates_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -11814,12 +11814,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.Candidates)
-    private static final org.med4j.core.protobuf.Rpc.Candidates DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.Candidates DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.Candidates();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.Candidates();
     }
 
-    public static org.med4j.core.protobuf.Rpc.Candidates getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.Candidates getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11844,7 +11844,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.Candidates getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.Candidates getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11946,15 +11946,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Dynasty_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Dynasty_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Dynasty_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Dynasty_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.Dynasty.class, org.med4j.core.protobuf.Rpc.Dynasty.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.Dynasty.class, org.medibloc.panacea.core.protobuf.Rpc.Dynasty.Builder.class);
     }
 
     public static final int ADDRESSES_FIELD_NUMBER = 1;
@@ -12030,10 +12030,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.Dynasty)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.Dynasty)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.Dynasty other = (org.med4j.core.protobuf.Rpc.Dynasty) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.Dynasty other = (org.medibloc.panacea.core.protobuf.Rpc.Dynasty) obj;
 
       boolean result = true;
       result = result && getAddressesList()
@@ -12058,69 +12058,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Dynasty parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -12133,7 +12133,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.Dynasty prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.Dynasty prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -12154,21 +12154,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.Dynasty)
-            org.med4j.core.protobuf.Rpc.DynastyOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.DynastyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Dynasty_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Dynasty_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Dynasty_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Dynasty_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.Dynasty.class, org.med4j.core.protobuf.Rpc.Dynasty.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.Dynasty.class, org.medibloc.panacea.core.protobuf.Rpc.Dynasty.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.Dynasty.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.Dynasty.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -12194,17 +12194,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Dynasty_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Dynasty_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Dynasty getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.Dynasty.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.Dynasty getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.Dynasty.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Dynasty build() {
-        org.med4j.core.protobuf.Rpc.Dynasty result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.Dynasty build() {
+        org.medibloc.panacea.core.protobuf.Rpc.Dynasty result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -12212,8 +12212,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Dynasty buildPartial() {
-        org.med4j.core.protobuf.Rpc.Dynasty result = new org.med4j.core.protobuf.Rpc.Dynasty(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.Dynasty buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.Dynasty result = new org.medibloc.panacea.core.protobuf.Rpc.Dynasty(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
           addresses_ = addresses_.getUnmodifiableView();
@@ -12258,16 +12258,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.Dynasty) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.Dynasty)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.Dynasty) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.Dynasty)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.Dynasty other) {
-        if (other == org.med4j.core.protobuf.Rpc.Dynasty.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.Dynasty other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.Dynasty.getDefaultInstance()) return this;
         if (!other.addresses_.isEmpty()) {
           if (addresses_.isEmpty()) {
             addresses_ = other.addresses_;
@@ -12293,11 +12293,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.Dynasty parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.Dynasty parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.Dynasty) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.Dynasty) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -12418,12 +12418,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.Dynasty)
-    private static final org.med4j.core.protobuf.Rpc.Dynasty DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.Dynasty DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.Dynasty();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.Dynasty();
     }
 
-    public static org.med4j.core.protobuf.Rpc.Dynasty getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.Dynasty getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12448,7 +12448,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.Dynasty getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.Dynasty getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12598,15 +12598,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_MedState_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_MedState_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_MedState_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_MedState_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.MedState.class, org.med4j.core.protobuf.Rpc.MedState.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.MedState.class, org.medibloc.panacea.core.protobuf.Rpc.MedState.Builder.class);
     }
 
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
@@ -12778,10 +12778,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.MedState)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.MedState)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.MedState other = (org.med4j.core.protobuf.Rpc.MedState) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.MedState other = (org.medibloc.panacea.core.protobuf.Rpc.MedState) obj;
 
       boolean result = true;
       result = result && (getChainId()
@@ -12817,69 +12817,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.MedState parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.MedState parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -12892,7 +12892,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.MedState prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.MedState prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -12913,21 +12913,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.MedState)
-            org.med4j.core.protobuf.Rpc.MedStateOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.MedStateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_MedState_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_MedState_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_MedState_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_MedState_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.MedState.class, org.med4j.core.protobuf.Rpc.MedState.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.MedState.class, org.medibloc.panacea.core.protobuf.Rpc.MedState.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.MedState.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.MedState.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -12959,17 +12959,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_MedState_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_MedState_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.MedState getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.MedState.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.MedState getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.MedState.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.MedState build() {
-        org.med4j.core.protobuf.Rpc.MedState result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.MedState build() {
+        org.medibloc.panacea.core.protobuf.Rpc.MedState result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -12977,8 +12977,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.MedState buildPartial() {
-        org.med4j.core.protobuf.Rpc.MedState result = new org.med4j.core.protobuf.Rpc.MedState(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.MedState buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.MedState result = new org.medibloc.panacea.core.protobuf.Rpc.MedState(this);
         result.chainId_ = chainId_;
         result.tail_ = tail_;
         result.height_ = height_;
@@ -13021,16 +13021,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.MedState) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.MedState)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.MedState) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.MedState)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.MedState other) {
-        if (other == org.med4j.core.protobuf.Rpc.MedState.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.MedState other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.MedState.getDefaultInstance()) return this;
         if (other.getChainId() != 0) {
           setChainId(other.getChainId());
         }
@@ -13060,11 +13060,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.MedState parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.MedState parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.MedState) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.MedState) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -13344,12 +13344,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.MedState)
-    private static final org.med4j.core.protobuf.Rpc.MedState DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.MedState DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.MedState();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.MedState();
     }
 
-    public static org.med4j.core.protobuf.Rpc.MedState getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.MedState getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -13374,7 +13374,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.MedState getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.MedState getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -13387,12 +13387,12 @@ public final class Rpc {
     /**
      * <code>repeated .rpcpb.Transaction transactions = 1;</code>
      */
-    java.util.List<org.med4j.core.protobuf.Rpc.Transaction>
+    java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction>
     getTransactionsList();
     /**
      * <code>repeated .rpcpb.Transaction transactions = 1;</code>
      */
-    org.med4j.core.protobuf.Rpc.Transaction getTransactions(int index);
+    org.medibloc.panacea.core.protobuf.Rpc.Transaction getTransactions(int index);
     /**
      * <code>repeated .rpcpb.Transaction transactions = 1;</code>
      */
@@ -13400,12 +13400,12 @@ public final class Rpc {
     /**
      * <code>repeated .rpcpb.Transaction transactions = 1;</code>
      */
-    java.util.List<? extends org.med4j.core.protobuf.Rpc.TransactionOrBuilder>
+    java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder>
     getTransactionsOrBuilderList();
     /**
      * <code>repeated .rpcpb.Transaction transactions = 1;</code>
      */
-    org.med4j.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
+    org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
             int index);
   }
   /**
@@ -13450,11 +13450,11 @@ public final class Rpc {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                transactions_ = new java.util.ArrayList<org.med4j.core.protobuf.Rpc.Transaction>();
+                transactions_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.Rpc.Transaction>();
                 mutable_bitField0_ |= 0x00000001;
               }
               transactions_.add(
-                      input.readMessage(org.med4j.core.protobuf.Rpc.Transaction.parser(), extensionRegistry));
+                      input.readMessage(org.medibloc.panacea.core.protobuf.Rpc.Transaction.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -13481,29 +13481,29 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Transactions_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Transactions_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Transactions_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Transactions_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.Transactions.class, org.med4j.core.protobuf.Rpc.Transactions.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.Transactions.class, org.medibloc.panacea.core.protobuf.Rpc.Transactions.Builder.class);
     }
 
     public static final int TRANSACTIONS_FIELD_NUMBER = 1;
-    private java.util.List<org.med4j.core.protobuf.Rpc.Transaction> transactions_;
+    private java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction> transactions_;
     /**
      * <code>repeated .rpcpb.Transaction transactions = 1;</code>
      */
-    public java.util.List<org.med4j.core.protobuf.Rpc.Transaction> getTransactionsList() {
+    public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction> getTransactionsList() {
       return transactions_;
     }
     /**
      * <code>repeated .rpcpb.Transaction transactions = 1;</code>
      */
-    public java.util.List<? extends org.med4j.core.protobuf.Rpc.TransactionOrBuilder>
+    public java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder>
     getTransactionsOrBuilderList() {
       return transactions_;
     }
@@ -13516,13 +13516,13 @@ public final class Rpc {
     /**
      * <code>repeated .rpcpb.Transaction transactions = 1;</code>
      */
-    public org.med4j.core.protobuf.Rpc.Transaction getTransactions(int index) {
+    public org.medibloc.panacea.core.protobuf.Rpc.Transaction getTransactions(int index) {
       return transactions_.get(index);
     }
     /**
      * <code>repeated .rpcpb.Transaction transactions = 1;</code>
      */
-    public org.med4j.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
+    public org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
             int index) {
       return transactions_.get(index);
     }
@@ -13567,10 +13567,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.Transactions)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.Transactions)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.Transactions other = (org.med4j.core.protobuf.Rpc.Transactions) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.Transactions other = (org.medibloc.panacea.core.protobuf.Rpc.Transactions) obj;
 
       boolean result = true;
       result = result && getTransactionsList()
@@ -13595,69 +13595,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.Transactions parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Transactions parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -13670,7 +13670,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.Transactions prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.Transactions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -13691,21 +13691,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.Transactions)
-            org.med4j.core.protobuf.Rpc.TransactionsOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.TransactionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Transactions_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Transactions_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Transactions_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Transactions_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.Transactions.class, org.med4j.core.protobuf.Rpc.Transactions.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.Transactions.class, org.medibloc.panacea.core.protobuf.Rpc.Transactions.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.Transactions.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.Transactions.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -13736,17 +13736,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Transactions_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Transactions_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Transactions getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.Transactions.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.Transactions getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.Transactions.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Transactions build() {
-        org.med4j.core.protobuf.Rpc.Transactions result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.Transactions build() {
+        org.medibloc.panacea.core.protobuf.Rpc.Transactions result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -13754,8 +13754,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Transactions buildPartial() {
-        org.med4j.core.protobuf.Rpc.Transactions result = new org.med4j.core.protobuf.Rpc.Transactions(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.Transactions buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.Transactions result = new org.medibloc.panacea.core.protobuf.Rpc.Transactions(this);
         int from_bitField0_ = bitField0_;
         if (transactionsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -13804,16 +13804,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.Transactions) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.Transactions)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.Transactions) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.Transactions)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.Transactions other) {
-        if (other == org.med4j.core.protobuf.Rpc.Transactions.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.Transactions other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.Transactions.getDefaultInstance()) return this;
         if (transactionsBuilder_ == null) {
           if (!other.transactions_.isEmpty()) {
             if (transactions_.isEmpty()) {
@@ -13855,11 +13855,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.Transactions parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.Transactions parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.Transactions) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.Transactions) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -13870,22 +13870,22 @@ public final class Rpc {
       }
       private int bitField0_;
 
-      private java.util.List<org.med4j.core.protobuf.Rpc.Transaction> transactions_ =
+      private java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction> transactions_ =
               java.util.Collections.emptyList();
       private void ensureTransactionsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          transactions_ = new java.util.ArrayList<org.med4j.core.protobuf.Rpc.Transaction>(transactions_);
+          transactions_ = new java.util.ArrayList<org.medibloc.panacea.core.protobuf.Rpc.Transaction>(transactions_);
           bitField0_ |= 0x00000001;
         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.Rpc.Transaction, org.med4j.core.protobuf.Rpc.Transaction.Builder, org.med4j.core.protobuf.Rpc.TransactionOrBuilder> transactionsBuilder_;
+              org.medibloc.panacea.core.protobuf.Rpc.Transaction, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder, org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder> transactionsBuilder_;
 
       /**
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.Rpc.Transaction> getTransactionsList() {
+      public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction> getTransactionsList() {
         if (transactionsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(transactions_);
         } else {
@@ -13905,7 +13905,7 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Transaction getTransactions(int index) {
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction getTransactions(int index) {
         if (transactionsBuilder_ == null) {
           return transactions_.get(index);
         } else {
@@ -13916,7 +13916,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
       public Builder setTransactions(
-              int index, org.med4j.core.protobuf.Rpc.Transaction value) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -13933,7 +13933,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
       public Builder setTransactions(
-              int index, org.med4j.core.protobuf.Rpc.Transaction.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.set(index, builderForValue.build());
@@ -13946,7 +13946,7 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
-      public Builder addTransactions(org.med4j.core.protobuf.Rpc.Transaction value) {
+      public Builder addTransactions(org.medibloc.panacea.core.protobuf.Rpc.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -13963,7 +13963,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
       public Builder addTransactions(
-              int index, org.med4j.core.protobuf.Rpc.Transaction value) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Transaction value) {
         if (transactionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -13980,7 +13980,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
       public Builder addTransactions(
-              org.med4j.core.protobuf.Rpc.Transaction.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.add(builderForValue.build());
@@ -13994,7 +13994,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
       public Builder addTransactions(
-              int index, org.med4j.core.protobuf.Rpc.Transaction.Builder builderForValue) {
+              int index, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder builderForValue) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           transactions_.add(index, builderForValue.build());
@@ -14008,7 +14008,7 @@ public final class Rpc {
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
       public Builder addAllTransactions(
-              java.lang.Iterable<? extends org.med4j.core.protobuf.Rpc.Transaction> values) {
+              java.lang.Iterable<? extends org.medibloc.panacea.core.protobuf.Rpc.Transaction> values) {
         if (transactionsBuilder_ == null) {
           ensureTransactionsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -14048,14 +14048,14 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Transaction.Builder getTransactionsBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder getTransactionsBuilder(
               int index) {
         return getTransactionsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder getTransactionsOrBuilder(
               int index) {
         if (transactionsBuilder_ == null) {
           return transactions_.get(index);  } else {
@@ -14065,7 +14065,7 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
-      public java.util.List<? extends org.med4j.core.protobuf.Rpc.TransactionOrBuilder>
+      public java.util.List<? extends org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder>
       getTransactionsOrBuilderList() {
         if (transactionsBuilder_ != null) {
           return transactionsBuilder_.getMessageOrBuilderList();
@@ -14076,31 +14076,31 @@ public final class Rpc {
       /**
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Transaction.Builder addTransactionsBuilder() {
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder addTransactionsBuilder() {
         return getTransactionsFieldBuilder().addBuilder(
-                org.med4j.core.protobuf.Rpc.Transaction.getDefaultInstance());
+                org.medibloc.panacea.core.protobuf.Rpc.Transaction.getDefaultInstance());
       }
       /**
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
-      public org.med4j.core.protobuf.Rpc.Transaction.Builder addTransactionsBuilder(
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder addTransactionsBuilder(
               int index) {
         return getTransactionsFieldBuilder().addBuilder(
-                index, org.med4j.core.protobuf.Rpc.Transaction.getDefaultInstance());
+                index, org.medibloc.panacea.core.protobuf.Rpc.Transaction.getDefaultInstance());
       }
       /**
        * <code>repeated .rpcpb.Transaction transactions = 1;</code>
        */
-      public java.util.List<org.med4j.core.protobuf.Rpc.Transaction.Builder>
+      public java.util.List<org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder>
       getTransactionsBuilderList() {
         return getTransactionsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              org.med4j.core.protobuf.Rpc.Transaction, org.med4j.core.protobuf.Rpc.Transaction.Builder, org.med4j.core.protobuf.Rpc.TransactionOrBuilder>
+              org.medibloc.panacea.core.protobuf.Rpc.Transaction, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder, org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder>
       getTransactionsFieldBuilder() {
         if (transactionsBuilder_ == null) {
           transactionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  org.med4j.core.protobuf.Rpc.Transaction, org.med4j.core.protobuf.Rpc.Transaction.Builder, org.med4j.core.protobuf.Rpc.TransactionOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.Rpc.Transaction, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder, org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder>(
                   transactions_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -14126,12 +14126,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.Transactions)
-    private static final org.med4j.core.protobuf.Rpc.Transactions DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.Transactions DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.Transactions();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.Transactions();
     }
 
-    public static org.med4j.core.protobuf.Rpc.Transactions getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transactions getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14156,7 +14156,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.Transactions getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.Transactions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14251,15 +14251,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetTransactionRequest_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetTransactionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetTransactionRequest_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetTransactionRequest_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.GetTransactionRequest.class, org.med4j.core.protobuf.Rpc.GetTransactionRequest.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest.class, org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -14343,10 +14343,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.GetTransactionRequest)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.GetTransactionRequest other = (org.med4j.core.protobuf.Rpc.GetTransactionRequest) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest other = (org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -14369,69 +14369,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -14444,7 +14444,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.GetTransactionRequest prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -14465,21 +14465,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.GetTransactionRequest)
-            org.med4j.core.protobuf.Rpc.GetTransactionRequestOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetTransactionRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetTransactionRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetTransactionRequest_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetTransactionRequest_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.GetTransactionRequest.class, org.med4j.core.protobuf.Rpc.GetTransactionRequest.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest.class, org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.GetTransactionRequest.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -14505,17 +14505,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_GetTransactionRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_GetTransactionRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetTransactionRequest getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.GetTransactionRequest.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetTransactionRequest build() {
-        org.med4j.core.protobuf.Rpc.GetTransactionRequest result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest build() {
+        org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -14523,8 +14523,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.GetTransactionRequest buildPartial() {
-        org.med4j.core.protobuf.Rpc.GetTransactionRequest result = new org.med4j.core.protobuf.Rpc.GetTransactionRequest(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest result = new org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest(this);
         result.hash_ = hash_;
         onBuilt();
         return result;
@@ -14564,16 +14564,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.GetTransactionRequest) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.GetTransactionRequest)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.GetTransactionRequest other) {
-        if (other == org.med4j.core.protobuf.Rpc.GetTransactionRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest.getDefaultInstance()) return this;
         if (!other.getHash().isEmpty()) {
           hash_ = other.hash_;
           onChanged();
@@ -14593,11 +14593,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.GetTransactionRequest parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.GetTransactionRequest) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -14712,12 +14712,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.GetTransactionRequest)
-    private static final org.med4j.core.protobuf.Rpc.GetTransactionRequest DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.GetTransactionRequest();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest();
     }
 
-    public static org.med4j.core.protobuf.Rpc.GetTransactionRequest getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14742,7 +14742,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.GetTransactionRequest getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.GetTransactionRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14938,7 +14938,7 @@ public final class Rpc {
      *
      * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
      */
-    org.med4j.core.protobuf.Rpc.TransactionReceipt getReceipt();
+    org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt getReceipt();
     /**
      * <pre>
      * Transaction receipt
@@ -14946,7 +14946,7 @@ public final class Rpc {
      *
      * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
      */
-    org.med4j.core.protobuf.Rpc.TransactionReceiptOrBuilder getReceiptOrBuilder();
+    org.medibloc.panacea.core.protobuf.Rpc.TransactionReceiptOrBuilder getReceiptOrBuilder();
   }
   /**
    * Protobuf type {@code rpcpb.Transaction}
@@ -15062,11 +15062,11 @@ public final class Rpc {
               break;
             }
             case 322: {
-              org.med4j.core.protobuf.Rpc.TransactionReceipt.Builder subBuilder = null;
+              org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.Builder subBuilder = null;
               if (receipt_ != null) {
                 subBuilder = receipt_.toBuilder();
               }
-              receipt_ = input.readMessage(org.med4j.core.protobuf.Rpc.TransactionReceipt.parser(), extensionRegistry);
+              receipt_ = input.readMessage(org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(receipt_);
                 receipt_ = subBuilder.buildPartial();
@@ -15095,15 +15095,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Transaction_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Transaction_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Transaction_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Transaction_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.Transaction.class, org.med4j.core.protobuf.Rpc.Transaction.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.Transaction.class, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -15482,7 +15482,7 @@ public final class Rpc {
     }
 
     public static final int RECEIPT_FIELD_NUMBER = 40;
-    private org.med4j.core.protobuf.Rpc.TransactionReceipt receipt_;
+    private org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt receipt_;
     /**
      * <pre>
      * Transaction receipt
@@ -15500,8 +15500,8 @@ public final class Rpc {
      *
      * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
      */
-    public org.med4j.core.protobuf.Rpc.TransactionReceipt getReceipt() {
-      return receipt_ == null ? org.med4j.core.protobuf.Rpc.TransactionReceipt.getDefaultInstance() : receipt_;
+    public org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt getReceipt() {
+      return receipt_ == null ? org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.getDefaultInstance() : receipt_;
     }
     /**
      * <pre>
@@ -15510,7 +15510,7 @@ public final class Rpc {
      *
      * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
      */
-    public org.med4j.core.protobuf.Rpc.TransactionReceiptOrBuilder getReceiptOrBuilder() {
+    public org.medibloc.panacea.core.protobuf.Rpc.TransactionReceiptOrBuilder getReceiptOrBuilder() {
       return getReceipt();
     }
 
@@ -15623,10 +15623,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.Transaction)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.Transaction)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.Transaction other = (org.med4j.core.protobuf.Rpc.Transaction) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.Transaction other = (org.medibloc.panacea.core.protobuf.Rpc.Transaction) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -15700,69 +15700,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Transaction parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -15775,7 +15775,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.Transaction prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.Transaction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -15796,21 +15796,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.Transaction)
-            org.med4j.core.protobuf.Rpc.TransactionOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.TransactionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Transaction_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Transaction_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Transaction_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Transaction_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.Transaction.class, org.med4j.core.protobuf.Rpc.Transaction.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.Transaction.class, org.medibloc.panacea.core.protobuf.Rpc.Transaction.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.Transaction.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.Transaction.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -15862,17 +15862,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Transaction_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Transaction_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Transaction getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.Transaction.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.Transaction.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Transaction build() {
-        org.med4j.core.protobuf.Rpc.Transaction result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction build() {
+        org.medibloc.panacea.core.protobuf.Rpc.Transaction result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -15880,8 +15880,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Transaction buildPartial() {
-        org.med4j.core.protobuf.Rpc.Transaction result = new org.med4j.core.protobuf.Rpc.Transaction(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.Transaction buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.Transaction result = new org.medibloc.panacea.core.protobuf.Rpc.Transaction(this);
         result.hash_ = hash_;
         result.from_ = from_;
         result.to_ = to_;
@@ -15936,16 +15936,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.Transaction) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.Transaction)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.Transaction) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.Transaction)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.Transaction other) {
-        if (other == org.med4j.core.protobuf.Rpc.Transaction.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.Transaction other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.Transaction.getDefaultInstance()) return this;
         if (!other.getHash().isEmpty()) {
           hash_ = other.hash_;
           onChanged();
@@ -16005,11 +16005,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.Transaction parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.Transaction parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.Transaction) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.Transaction) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -16845,9 +16845,9 @@ public final class Rpc {
         return this;
       }
 
-      private org.med4j.core.protobuf.Rpc.TransactionReceipt receipt_ = null;
+      private org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt receipt_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-              org.med4j.core.protobuf.Rpc.TransactionReceipt, org.med4j.core.protobuf.Rpc.TransactionReceipt.Builder, org.med4j.core.protobuf.Rpc.TransactionReceiptOrBuilder> receiptBuilder_;
+              org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt, org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.Builder, org.medibloc.panacea.core.protobuf.Rpc.TransactionReceiptOrBuilder> receiptBuilder_;
       /**
        * <pre>
        * Transaction receipt
@@ -16865,9 +16865,9 @@ public final class Rpc {
        *
        * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
        */
-      public org.med4j.core.protobuf.Rpc.TransactionReceipt getReceipt() {
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt getReceipt() {
         if (receiptBuilder_ == null) {
-          return receipt_ == null ? org.med4j.core.protobuf.Rpc.TransactionReceipt.getDefaultInstance() : receipt_;
+          return receipt_ == null ? org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.getDefaultInstance() : receipt_;
         } else {
           return receiptBuilder_.getMessage();
         }
@@ -16879,7 +16879,7 @@ public final class Rpc {
        *
        * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
        */
-      public Builder setReceipt(org.med4j.core.protobuf.Rpc.TransactionReceipt value) {
+      public Builder setReceipt(org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt value) {
         if (receiptBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16900,7 +16900,7 @@ public final class Rpc {
        * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
        */
       public Builder setReceipt(
-              org.med4j.core.protobuf.Rpc.TransactionReceipt.Builder builderForValue) {
+              org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.Builder builderForValue) {
         if (receiptBuilder_ == null) {
           receipt_ = builderForValue.build();
           onChanged();
@@ -16917,11 +16917,11 @@ public final class Rpc {
        *
        * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
        */
-      public Builder mergeReceipt(org.med4j.core.protobuf.Rpc.TransactionReceipt value) {
+      public Builder mergeReceipt(org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt value) {
         if (receiptBuilder_ == null) {
           if (receipt_ != null) {
             receipt_ =
-                    org.med4j.core.protobuf.Rpc.TransactionReceipt.newBuilder(receipt_).mergeFrom(value).buildPartial();
+                    org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.newBuilder(receipt_).mergeFrom(value).buildPartial();
           } else {
             receipt_ = value;
           }
@@ -16957,7 +16957,7 @@ public final class Rpc {
        *
        * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
        */
-      public org.med4j.core.protobuf.Rpc.TransactionReceipt.Builder getReceiptBuilder() {
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.Builder getReceiptBuilder() {
 
         onChanged();
         return getReceiptFieldBuilder().getBuilder();
@@ -16969,12 +16969,12 @@ public final class Rpc {
        *
        * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
        */
-      public org.med4j.core.protobuf.Rpc.TransactionReceiptOrBuilder getReceiptOrBuilder() {
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionReceiptOrBuilder getReceiptOrBuilder() {
         if (receiptBuilder_ != null) {
           return receiptBuilder_.getMessageOrBuilder();
         } else {
           return receipt_ == null ?
-                  org.med4j.core.protobuf.Rpc.TransactionReceipt.getDefaultInstance() : receipt_;
+                  org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.getDefaultInstance() : receipt_;
         }
       }
       /**
@@ -16985,11 +16985,11 @@ public final class Rpc {
        * <code>.rpcpb.TransactionReceipt receipt = 40;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              org.med4j.core.protobuf.Rpc.TransactionReceipt, org.med4j.core.protobuf.Rpc.TransactionReceipt.Builder, org.med4j.core.protobuf.Rpc.TransactionReceiptOrBuilder>
+              org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt, org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.Builder, org.medibloc.panacea.core.protobuf.Rpc.TransactionReceiptOrBuilder>
       getReceiptFieldBuilder() {
         if (receiptBuilder_ == null) {
           receiptBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  org.med4j.core.protobuf.Rpc.TransactionReceipt, org.med4j.core.protobuf.Rpc.TransactionReceipt.Builder, org.med4j.core.protobuf.Rpc.TransactionReceiptOrBuilder>(
+                  org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt, org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.Builder, org.medibloc.panacea.core.protobuf.Rpc.TransactionReceiptOrBuilder>(
                   getReceipt(),
                   getParentForChildren(),
                   isClean());
@@ -17014,12 +17014,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.Transaction)
-    private static final org.med4j.core.protobuf.Rpc.Transaction DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.Transaction DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.Transaction();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.Transaction();
     }
 
-    public static org.med4j.core.protobuf.Rpc.Transaction getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.Transaction getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17044,7 +17044,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.Transaction getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.Transaction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17203,15 +17203,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_TransactionReceipt_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_TransactionReceipt_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_TransactionReceipt_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_TransactionReceipt_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.TransactionReceipt.class, org.med4j.core.protobuf.Rpc.TransactionReceipt.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.class, org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.Builder.class);
     }
 
     public static final int EXECUTED_FIELD_NUMBER = 1;
@@ -17407,10 +17407,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.TransactionReceipt)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.TransactionReceipt other = (org.med4j.core.protobuf.Rpc.TransactionReceipt) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt other = (org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt) obj;
 
       boolean result = true;
       result = result && (getExecuted()
@@ -17462,69 +17462,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -17537,7 +17537,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.TransactionReceipt prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -17558,21 +17558,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.TransactionReceipt)
-            org.med4j.core.protobuf.Rpc.TransactionReceiptOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.TransactionReceiptOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_TransactionReceipt_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_TransactionReceipt_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_TransactionReceipt_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_TransactionReceipt_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.TransactionReceipt.class, org.med4j.core.protobuf.Rpc.TransactionReceipt.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.class, org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.TransactionReceipt.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -17610,17 +17610,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_TransactionReceipt_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_TransactionReceipt_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.TransactionReceipt getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.TransactionReceipt.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.TransactionReceipt build() {
-        org.med4j.core.protobuf.Rpc.TransactionReceipt result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt build() {
+        org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -17628,8 +17628,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.TransactionReceipt buildPartial() {
-        org.med4j.core.protobuf.Rpc.TransactionReceipt result = new org.med4j.core.protobuf.Rpc.TransactionReceipt(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt result = new org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt(this);
         result.executed_ = executed_;
         result.timestamp_ = timestamp_;
         result.height_ = height_;
@@ -17675,16 +17675,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.TransactionReceipt) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.TransactionReceipt)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.TransactionReceipt other) {
-        if (other == org.med4j.core.protobuf.Rpc.TransactionReceipt.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt.getDefaultInstance()) return this;
         if (other.getExecuted() != false) {
           setExecuted(other.getExecuted());
         }
@@ -17723,11 +17723,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.TransactionReceipt parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.TransactionReceipt) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -18021,12 +18021,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.TransactionReceipt)
-    private static final org.med4j.core.protobuf.Rpc.TransactionReceipt DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.TransactionReceipt();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt();
     }
 
-    public static org.med4j.core.protobuf.Rpc.TransactionReceipt getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -18051,7 +18051,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.TransactionReceipt getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.TransactionReceipt getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -18326,15 +18326,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SendTransactionRequest_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SendTransactionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SendTransactionRequest_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SendTransactionRequest_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.SendTransactionRequest.class, org.med4j.core.protobuf.Rpc.SendTransactionRequest.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest.class, org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -18746,10 +18746,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.SendTransactionRequest)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.SendTransactionRequest other = (org.med4j.core.protobuf.Rpc.SendTransactionRequest) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest other = (org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -18805,69 +18805,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -18880,7 +18880,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.SendTransactionRequest prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -18901,21 +18901,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.SendTransactionRequest)
-            org.med4j.core.protobuf.Rpc.SendTransactionRequestOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SendTransactionRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SendTransactionRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SendTransactionRequest_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SendTransactionRequest_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.SendTransactionRequest.class, org.med4j.core.protobuf.Rpc.SendTransactionRequest.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest.class, org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.SendTransactionRequest.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -18957,17 +18957,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SendTransactionRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SendTransactionRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.SendTransactionRequest getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.SendTransactionRequest.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.SendTransactionRequest build() {
-        org.med4j.core.protobuf.Rpc.SendTransactionRequest result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest build() {
+        org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -18975,8 +18975,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.SendTransactionRequest buildPartial() {
-        org.med4j.core.protobuf.Rpc.SendTransactionRequest result = new org.med4j.core.protobuf.Rpc.SendTransactionRequest(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest result = new org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest(this);
         result.hash_ = hash_;
         result.to_ = to_;
         result.value_ = value_;
@@ -19024,16 +19024,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.SendTransactionRequest) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.SendTransactionRequest)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.SendTransactionRequest other) {
-        if (other == org.med4j.core.protobuf.Rpc.SendTransactionRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest.getDefaultInstance()) return this;
         if (!other.getHash().isEmpty()) {
           hash_ = other.hash_;
           onChanged();
@@ -19083,11 +19083,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.SendTransactionRequest parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.SendTransactionRequest) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -19812,12 +19812,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.SendTransactionRequest)
-    private static final org.med4j.core.protobuf.Rpc.SendTransactionRequest DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.SendTransactionRequest();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest();
     }
 
-    public static org.med4j.core.protobuf.Rpc.SendTransactionRequest getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19842,7 +19842,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.SendTransactionRequest getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.SendTransactionRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19937,15 +19937,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_TransactionHash_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_TransactionHash_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_TransactionHash_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_TransactionHash_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.TransactionHash.class, org.med4j.core.protobuf.Rpc.TransactionHash.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.TransactionHash.class, org.medibloc.panacea.core.protobuf.Rpc.TransactionHash.Builder.class);
     }
 
     public static final int HASH_FIELD_NUMBER = 1;
@@ -20029,10 +20029,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.TransactionHash)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.TransactionHash)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.TransactionHash other = (org.med4j.core.protobuf.Rpc.TransactionHash) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.TransactionHash other = (org.medibloc.panacea.core.protobuf.Rpc.TransactionHash) obj;
 
       boolean result = true;
       result = result && getHash()
@@ -20055,69 +20055,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.TransactionHash parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -20130,7 +20130,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.TransactionHash prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.TransactionHash prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -20151,21 +20151,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.TransactionHash)
-            org.med4j.core.protobuf.Rpc.TransactionHashOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.TransactionHashOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_TransactionHash_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_TransactionHash_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_TransactionHash_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_TransactionHash_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.TransactionHash.class, org.med4j.core.protobuf.Rpc.TransactionHash.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.TransactionHash.class, org.medibloc.panacea.core.protobuf.Rpc.TransactionHash.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.TransactionHash.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.TransactionHash.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -20191,17 +20191,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_TransactionHash_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_TransactionHash_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.TransactionHash getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.TransactionHash.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionHash getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.TransactionHash.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.TransactionHash build() {
-        org.med4j.core.protobuf.Rpc.TransactionHash result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionHash build() {
+        org.medibloc.panacea.core.protobuf.Rpc.TransactionHash result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -20209,8 +20209,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.TransactionHash buildPartial() {
-        org.med4j.core.protobuf.Rpc.TransactionHash result = new org.med4j.core.protobuf.Rpc.TransactionHash(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.TransactionHash buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.TransactionHash result = new org.medibloc.panacea.core.protobuf.Rpc.TransactionHash(this);
         result.hash_ = hash_;
         onBuilt();
         return result;
@@ -20250,16 +20250,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.TransactionHash) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.TransactionHash)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.TransactionHash) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.TransactionHash)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.TransactionHash other) {
-        if (other == org.med4j.core.protobuf.Rpc.TransactionHash.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.TransactionHash other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.TransactionHash.getDefaultInstance()) return this;
         if (!other.getHash().isEmpty()) {
           hash_ = other.hash_;
           onChanged();
@@ -20279,11 +20279,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.TransactionHash parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.TransactionHash parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.TransactionHash) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.TransactionHash) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -20398,12 +20398,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.TransactionHash)
-    private static final org.med4j.core.protobuf.Rpc.TransactionHash DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.TransactionHash DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.TransactionHash();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.TransactionHash();
     }
 
-    public static org.med4j.core.protobuf.Rpc.TransactionHash getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.TransactionHash getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -20428,7 +20428,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.TransactionHash getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.TransactionHash getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -20530,15 +20530,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SubscribeRequest_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SubscribeRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SubscribeRequest_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SubscribeRequest_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.SubscribeRequest.class, org.med4j.core.protobuf.Rpc.SubscribeRequest.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest.class, org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest.Builder.class);
     }
 
     public static final int TOPICS_FIELD_NUMBER = 1;
@@ -20614,10 +20614,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.SubscribeRequest)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.SubscribeRequest other = (org.med4j.core.protobuf.Rpc.SubscribeRequest) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest other = (org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest) obj;
 
       boolean result = true;
       result = result && getTopicsList()
@@ -20642,69 +20642,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -20717,7 +20717,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.SubscribeRequest prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -20738,21 +20738,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.SubscribeRequest)
-            org.med4j.core.protobuf.Rpc.SubscribeRequestOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SubscribeRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SubscribeRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SubscribeRequest_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SubscribeRequest_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.SubscribeRequest.class, org.med4j.core.protobuf.Rpc.SubscribeRequest.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest.class, org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.SubscribeRequest.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -20778,17 +20778,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SubscribeRequest_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SubscribeRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.SubscribeRequest getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.SubscribeRequest.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.SubscribeRequest build() {
-        org.med4j.core.protobuf.Rpc.SubscribeRequest result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest build() {
+        org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -20796,8 +20796,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.SubscribeRequest buildPartial() {
-        org.med4j.core.protobuf.Rpc.SubscribeRequest result = new org.med4j.core.protobuf.Rpc.SubscribeRequest(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest result = new org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
           topics_ = topics_.getUnmodifiableView();
@@ -20842,16 +20842,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.SubscribeRequest) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.SubscribeRequest)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.SubscribeRequest other) {
-        if (other == org.med4j.core.protobuf.Rpc.SubscribeRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest.getDefaultInstance()) return this;
         if (!other.topics_.isEmpty()) {
           if (topics_.isEmpty()) {
             topics_ = other.topics_;
@@ -20877,11 +20877,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.SubscribeRequest parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.SubscribeRequest) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -21002,12 +21002,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.SubscribeRequest)
-    private static final org.med4j.core.protobuf.Rpc.SubscribeRequest DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.SubscribeRequest();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest();
     }
 
-    public static org.med4j.core.protobuf.Rpc.SubscribeRequest getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21032,7 +21032,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.SubscribeRequest getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.SubscribeRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21153,15 +21153,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SubscribeResponse_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SubscribeResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SubscribeResponse_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SubscribeResponse_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.SubscribeResponse.class, org.med4j.core.protobuf.Rpc.SubscribeResponse.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse.class, org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse.Builder.class);
     }
 
     public static final int TOPIC_FIELD_NUMBER = 1;
@@ -21317,10 +21317,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.SubscribeResponse)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.SubscribeResponse other = (org.med4j.core.protobuf.Rpc.SubscribeResponse) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse other = (org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse) obj;
 
       boolean result = true;
       result = result && getTopic()
@@ -21351,69 +21351,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -21426,7 +21426,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.SubscribeResponse prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -21447,21 +21447,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.SubscribeResponse)
-            org.med4j.core.protobuf.Rpc.SubscribeResponseOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SubscribeResponse_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SubscribeResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SubscribeResponse_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SubscribeResponse_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.SubscribeResponse.class, org.med4j.core.protobuf.Rpc.SubscribeResponse.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse.class, org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.SubscribeResponse.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -21491,17 +21491,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_SubscribeResponse_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_SubscribeResponse_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.SubscribeResponse getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.SubscribeResponse.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.SubscribeResponse build() {
-        org.med4j.core.protobuf.Rpc.SubscribeResponse result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse build() {
+        org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -21509,8 +21509,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.SubscribeResponse buildPartial() {
-        org.med4j.core.protobuf.Rpc.SubscribeResponse result = new org.med4j.core.protobuf.Rpc.SubscribeResponse(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse result = new org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse(this);
         result.topic_ = topic_;
         result.hash_ = hash_;
         result.type_ = type_;
@@ -21552,16 +21552,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.SubscribeResponse) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.SubscribeResponse)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.SubscribeResponse other) {
-        if (other == org.med4j.core.protobuf.Rpc.SubscribeResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse.getDefaultInstance()) return this;
         if (!other.getTopic().isEmpty()) {
           topic_ = other.topic_;
           onChanged();
@@ -21589,11 +21589,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.SubscribeResponse parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.SubscribeResponse) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -21826,12 +21826,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.SubscribeResponse)
-    private static final org.med4j.core.protobuf.Rpc.SubscribeResponse DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.SubscribeResponse();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse();
     }
 
-    public static org.med4j.core.protobuf.Rpc.SubscribeResponse getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21856,7 +21856,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.SubscribeResponse getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.SubscribeResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21937,15 +21937,15 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
     getDescriptor() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Health_descriptor;
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Health_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
     internalGetFieldAccessorTable() {
-      return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Health_fieldAccessorTable
+      return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Health_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      org.med4j.core.protobuf.Rpc.Health.class, org.med4j.core.protobuf.Rpc.Health.Builder.class);
+                      org.medibloc.panacea.core.protobuf.Rpc.Health.class, org.medibloc.panacea.core.protobuf.Rpc.Health.Builder.class);
     }
 
     public static final int OK_FIELD_NUMBER = 1;
@@ -21997,10 +21997,10 @@ public final class Rpc {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof org.med4j.core.protobuf.Rpc.Health)) {
+      if (!(obj instanceof org.medibloc.panacea.core.protobuf.Rpc.Health)) {
         return super.equals(obj);
       }
-      org.med4j.core.protobuf.Rpc.Health other = (org.med4j.core.protobuf.Rpc.Health) obj;
+      org.medibloc.panacea.core.protobuf.Rpc.Health other = (org.medibloc.panacea.core.protobuf.Rpc.Health) obj;
 
       boolean result = true;
       result = result && (getOk()
@@ -22024,69 +22024,69 @@ public final class Rpc {
       return hash;
     }
 
-    public static org.med4j.core.protobuf.Rpc.Health parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseFrom(byte[] data)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseDelimitedFrom(java.io.InputStream input)
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseDelimitedFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
-    public static org.med4j.core.protobuf.Rpc.Health parseFrom(
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -22099,7 +22099,7 @@ public final class Rpc {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.med4j.core.protobuf.Rpc.Health prototype) {
+    public static Builder newBuilder(org.medibloc.panacea.core.protobuf.Rpc.Health prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -22120,21 +22120,21 @@ public final class Rpc {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:rpcpb.Health)
-            org.med4j.core.protobuf.Rpc.HealthOrBuilder {
+            org.medibloc.panacea.core.protobuf.Rpc.HealthOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Health_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Health_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Health_fieldAccessorTable
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Health_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        org.med4j.core.protobuf.Rpc.Health.class, org.med4j.core.protobuf.Rpc.Health.Builder.class);
+                        org.medibloc.panacea.core.protobuf.Rpc.Health.class, org.medibloc.panacea.core.protobuf.Rpc.Health.Builder.class);
       }
 
-      // Construct using org.med4j.core.protobuf.Rpc.Health.newBuilder()
+      // Construct using org.medibloc.panacea.core.protobuf.Rpc.Health.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -22160,17 +22160,17 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
-        return org.med4j.core.protobuf.Rpc.internal_static_rpcpb_Health_descriptor;
+        return org.medibloc.panacea.core.protobuf.Rpc.internal_static_rpcpb_Health_descriptor;
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Health getDefaultInstanceForType() {
-        return org.med4j.core.protobuf.Rpc.Health.getDefaultInstance();
+      public org.medibloc.panacea.core.protobuf.Rpc.Health getDefaultInstanceForType() {
+        return org.medibloc.panacea.core.protobuf.Rpc.Health.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Health build() {
-        org.med4j.core.protobuf.Rpc.Health result = buildPartial();
+      public org.medibloc.panacea.core.protobuf.Rpc.Health build() {
+        org.medibloc.panacea.core.protobuf.Rpc.Health result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -22178,8 +22178,8 @@ public final class Rpc {
       }
 
       @java.lang.Override
-      public org.med4j.core.protobuf.Rpc.Health buildPartial() {
-        org.med4j.core.protobuf.Rpc.Health result = new org.med4j.core.protobuf.Rpc.Health(this);
+      public org.medibloc.panacea.core.protobuf.Rpc.Health buildPartial() {
+        org.medibloc.panacea.core.protobuf.Rpc.Health result = new org.medibloc.panacea.core.protobuf.Rpc.Health(this);
         result.ok_ = ok_;
         onBuilt();
         return result;
@@ -22219,16 +22219,16 @@ public final class Rpc {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.med4j.core.protobuf.Rpc.Health) {
-          return mergeFrom((org.med4j.core.protobuf.Rpc.Health)other);
+        if (other instanceof org.medibloc.panacea.core.protobuf.Rpc.Health) {
+          return mergeFrom((org.medibloc.panacea.core.protobuf.Rpc.Health)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.med4j.core.protobuf.Rpc.Health other) {
-        if (other == org.med4j.core.protobuf.Rpc.Health.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.medibloc.panacea.core.protobuf.Rpc.Health other) {
+        if (other == org.medibloc.panacea.core.protobuf.Rpc.Health.getDefaultInstance()) return this;
         if (other.getOk() != false) {
           setOk(other.getOk());
         }
@@ -22247,11 +22247,11 @@ public final class Rpc {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        org.med4j.core.protobuf.Rpc.Health parsedMessage = null;
+        org.medibloc.panacea.core.protobuf.Rpc.Health parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.med4j.core.protobuf.Rpc.Health) e.getUnfinishedMessage();
+          parsedMessage = (org.medibloc.panacea.core.protobuf.Rpc.Health) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -22303,12 +22303,12 @@ public final class Rpc {
     }
 
     // @@protoc_insertion_point(class_scope:rpcpb.Health)
-    private static final org.med4j.core.protobuf.Rpc.Health DEFAULT_INSTANCE;
+    private static final org.medibloc.panacea.core.protobuf.Rpc.Health DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.med4j.core.protobuf.Rpc.Health();
+      DEFAULT_INSTANCE = new org.medibloc.panacea.core.protobuf.Rpc.Health();
     }
 
-    public static org.med4j.core.protobuf.Rpc.Health getDefaultInstance() {
+    public static org.medibloc.panacea.core.protobuf.Rpc.Health getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22333,7 +22333,7 @@ public final class Rpc {
     }
 
     @java.lang.Override
-    public org.med4j.core.protobuf.Rpc.Health getDefaultInstanceForType() {
+    public org.medibloc.panacea.core.protobuf.Rpc.Health getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22535,7 +22535,7 @@ public final class Rpc {
                     "eRequest\032\030.rpcpb.SubscribeResponse\"\025\202\323\344\223" +
                     "\002\017\022\r/v1/subscribe0\001\022M\n\013HealthCheck\022\026.rpc" +
                     "pb.NonParamRequest\032\r.rpcpb.Health\"\027\202\323\344\223\002" +
-                    "\021\022\017/v1/healthcheckB\031\n\027org.med4j.core.pro" +
+                    "\021\022\017/v1/healthcheckB\031\n\027org.medibloc.panacea.core.pro" +
                     "tobufb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

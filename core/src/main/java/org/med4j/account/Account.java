@@ -1,14 +1,14 @@
-package org.med4j.account;
+package org.medibloc.panacea.account;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.bouncycastle.crypto.generators.SCrypt;
-import org.med4j.crypto.CipherException;
-import org.med4j.crypto.ECKeyPair;
-import org.med4j.crypto.Hash;
-import org.med4j.crypto.Keys;
-import org.med4j.crypto.SecureRandomUtils;
-import org.med4j.utils.Numeric;
+import org.medibloc.panacea.crypto.CipherException;
+import org.medibloc.panacea.crypto.ECKeyPair;
+import org.medibloc.panacea.crypto.Hash;
+import org.medibloc.panacea.crypto.Keys;
+import org.medibloc.panacea.crypto.SecureRandomUtils;
+import org.medibloc.panacea.utils.Numeric;
 
 import javax.crypto.Cipher;
 import java.nio.charset.Charset;

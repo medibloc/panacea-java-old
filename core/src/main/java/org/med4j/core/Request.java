@@ -1,7 +1,7 @@
-package org.med4j.core;
+package org.medibloc.panacea.core;
 
 import io.reactivex.Flowable;
-import org.med4j.utils.Async;
+import org.medibloc.panacea.utils.Async;
 
 import java.io.IOException;
 import java.util.concurrent.Callable;

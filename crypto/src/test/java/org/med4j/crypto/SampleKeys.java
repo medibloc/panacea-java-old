@@ -1,4 +1,4 @@
-package org.med4j.crypto;
+package org.medibloc.panacea.crypto;
 
 public class SampleKeys {
     static final String[][] keyPairs = {

@@ -1,15 +1,15 @@
-package org.med4j.crypto;
+package org.medibloc.panacea.crypto;
 
 import org.bouncycastle.asn1.x9.X9IntegerConverter;
 import org.bouncycastle.math.ec.ECAlgorithms;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.custom.sec.SecP256K1Curve;
-import org.med4j.utils.Numeric;
+import org.medibloc.panacea.utils.Numeric;
 
 import java.math.BigInteger;
 import java.util.Arrays;
 
-import static org.med4j.utils.Assertions.verifyPrecondition;
+import static org.medibloc.panacea.utils.Assertions.verifyPrecondition;
 
 public class Sign {
     public static SignatureData signMessage(byte[] message, ECKeyPair keyPair) {

@@ -10,7 +10,7 @@ repositories {
 
 dependencies {
     // use jcenter
-    implementation "org.med4j:core:0.0.4"
+    implementation "org.medibloc.panacea:core:0.0.4"
 
     // use project
     //implementation project(':core')

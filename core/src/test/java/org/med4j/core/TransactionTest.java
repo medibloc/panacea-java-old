@@ -1,15 +1,15 @@
-package org.med4j.core;
+package org.medibloc.panacea.core;
 
 import com.google.protobuf.ByteString;
 import org.junit.Test;
-import org.med4j.account.Account;
-import org.med4j.account.AccountUtils;
-import org.med4j.core.protobuf.BlockChain;
-import org.med4j.core.protobuf.Rpc;
-import org.med4j.data.Data;
-import org.med4j.tx.Transaction;
-import org.med4j.utils.Numeric;
-import org.med4j.utils.Strings;
+import org.medibloc.panacea.account.Account;
+import org.medibloc.panacea.account.AccountUtils;
+import org.medibloc.panacea.core.protobuf.BlockChain;
+import org.medibloc.panacea.core.protobuf.Rpc;
+import org.medibloc.panacea.data.Data;
+import org.medibloc.panacea.tx.Transaction;
+import org.medibloc.panacea.utils.Numeric;
+import org.medibloc.panacea.utils.Strings;
 
 import java.math.BigInteger;
 
