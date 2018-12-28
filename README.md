@@ -37,8 +37,8 @@ dependencies {
 The sample_en/sample_ko projects describe how to use med4j library.
 
 Please see the
-[Main Class](https://github.com/medibloc/med4j/blob/master/sample_en/src/main/java/Main.java)
-[(Korean)](https://github.com/medibloc/med4j/blob/master/sample_ko/src/main/java/Main.java).
+[Main Class](https://github.com/medibloc/panacea-java/blob/master/sample_en/src/main/java/Main.java)
+[(Korean)](https://github.com/medibloc/panacea-java/blob/master/sample_ko/src/main/java/Main.java).
 
 ## License
 ```

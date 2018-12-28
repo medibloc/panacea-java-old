@@ -1,18 +1,18 @@
 apply plugin: 'java-library'
 
 ext {
-    bintrayRepo = "med4j"
+    bintrayRepo = "panacea"
     bintrayName = "org.medibloc.panacea.core"
 
     libraryName = "core"
 
     publishedGroupId = 'org.medibloc.panacea'
     artifact = 'core'
-    libraryVersion = '0.0.4'
+    libraryVersion = '0.0.5'
 
     libraryDescription = 'org.medibloc.panacea.core'
-    siteUrl = 'https://github.com/medibloc/med4j'
-    gitUrl = 'https://github.com/medibloc/med4j.git'
+    siteUrl = 'https://github.com/medibloc/panacea-java'
+    gitUrl = 'https://github.com/medibloc/panacea-java.git'
     developerId = 'medibloc'
     developerName = 'medibloc'
     developerEmail = 'dev@medibloc.org'

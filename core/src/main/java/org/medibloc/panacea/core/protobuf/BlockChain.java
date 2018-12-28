@@ -13731,7 +13731,7 @@ public final class BlockChain {
                     "\n\013GenesisMeta\022\020\n\010chain_id\030\001 \001(\r\022\024\n\014dynas" +
                     "ty_size\030\002 \001(\r\"<\n\030GenesisTokenDistributio" +
                     "n\022\017\n\007address\030\001 \001(\t\022\017\n\007balance\030\002 \001(\tB%\n\027o" +
-                    "rg.med4j.core.protobufB\nBlockChainb\006prot" +
+                    "rg.medibloc.panacea.core.protobufB\nBlockChainb\006prot" +
                     "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
