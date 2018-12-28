@@ -9,9 +9,6 @@
 .externalNativeBuild
 out/
 
-# Java
-*.jar
-
 # junit test result files
 *.testresult*
 
