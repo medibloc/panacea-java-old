@@ -2,6 +2,7 @@ package org.med4j.crypto;
 
 public class SampleKeys {
     static final String[][] keyPairs = {
+        {"9d10d24d7883c35f11dce98ba4da737f209808001748a595728dc326aa008b60", "027d31268680a3de375fb57d9fcf724fa95a7dfaa3a3381c910ccc24e1c0cb80ee"},
         {"a86a52fe76e0299298a4daf595174f94cbb2c21cc67c7d90505e4fec20511fce", "03349913aad7662ff63e3d200680a1773085184ccf34eca9022e76eabb53d55c98"},
         {"e8ee308f3b620dce537c3a4ce578d4aceff90147c54653a91a5cf5085e3368e7", "02bd4879f148079dee2bd096248ef3c4432ec1899681af4bdae2aa6a7451c72c7b"},
     };

@@ -26,12 +26,13 @@ public class KeysTest {
         }
     }
 
-    /*
     @Test
     public void testPubKeyFromPrivKey() throws Exception {
-        String[] keyPair = SampleKeys.keyPairs[0];
-        byte[] privKeyBytes = Numeric.hexStringToByteArray(keyPair[0]);
-        byte[] pubKeyBytes = Numeric.hexStringToByteArray(keyPair[1]);
+        for (String[] keyPair: SampleKeys.keyPairs) {
+            BigInteger actual = Keys.getPublicKeyFromPrivatekey(new BigInteger(keyPair[0], 16));
+            System.out.println("\nprivate key : " + keyPair[0]);
+            System.out.println("uncompressed public key : " + actual.toString(16));
+            assertEquals(keyPair[1], Keys.compressPubKey(actual));
+        }
     }
-    */
 }
