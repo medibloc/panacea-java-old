@@ -54,7 +54,6 @@ public class TransactionTest {
         assertEquals(Numeric.byteArrayToHex(builder.getTo().toByteArray()), to);
         assertEquals(Numeric.byteArrayToHex(builder.getFrom().toByteArray()), from);
 
-        builder.setTimestamp(1542702990085L);
         builder.setValue(getValue("1"));
         builder.setPayload(ByteString.EMPTY);
         builder.setTxType("transfer");
@@ -90,12 +89,9 @@ public class TransactionTest {
 
             Rpc.SendTransactionRequest expected
                     = Rpc.SendTransactionRequest.newBuilder()
-                    .setHashAlg(2)
                     .setHash(hash)
                     .setChainId(181112)
-                    .setCryptoAlg(1)
                     .setNonce(1)
-                    .setTimestamp(1540000000)
                     //.setPayerSign(null)
                     .setPayload(payload)
                     .setSign(sign)
@@ -106,7 +102,7 @@ public class TransactionTest {
 
             byte[] dataHash = Data.hashRecord(data);
             BlockChain.TransactionHashTarget transactionHashTarget
-                    = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, 181112, 1540000000);
+                    = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, 181112);
             Rpc.SendTransactionRequest actual = Transaction.getSignedTransactionRequest(transactionHashTarget, account, "sample");
 
 

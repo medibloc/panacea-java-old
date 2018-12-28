@@ -78,7 +78,7 @@ public class ApiClientTest {
         org.med4j.account.Account account = AccountUtils.loadAccount(AccountUtilsTest.SAMPLE_ACCOUNT_FILE_PATH);
         byte[] dataHash = Data.hashRecord("abc");
         BlockChain.TransactionHashTarget transactionHashTarget
-                = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, 181112, 1540000000);
+                = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, 181112);
         Rpc.SendTransactionRequest txReq = Transaction.getSignedTransactionRequest(transactionHashTarget, account, "sample");
 
 
