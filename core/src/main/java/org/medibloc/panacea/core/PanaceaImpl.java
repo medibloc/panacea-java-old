@@ -1,15 +1,14 @@
 package org.medibloc.panacea.core;
 
-import org.medibloc.panacea.Med4J;
-import org.medibloc.panacea.core.protobuf.Rpc.*;
+import org.medibloc.panacea.core.protobuf.Rpc;
 
 import java.io.IOException;
 import java.util.HashMap;
 
-public class Med4JImpl extends Med4J {
+public class PanaceaImpl extends Panacea {
     private final ProtobufService protobufService;
 
-    public Med4JImpl(ProtobufService protobufService) {
+    public PanaceaImpl(ProtobufService protobufService) {
         this.protobufService = protobufService;
     }
 
@@ -21,94 +20,93 @@ public class Med4JImpl extends Med4J {
     }
 
     @Override
-    public Request<MedState> getMedState() {
+    public Request<Rpc.MedState> getMedState() {
         return protobufService.getRequest(
-                NonParamRequest.newBuilder().build(),
+                Rpc.NonParamRequest.newBuilder().build(),
                 getHttpParams("GET", "/v1/node/medstate"),
-                MedState.class);
+                Rpc.MedState.class);
     }
 
     @Override
-    public Request<Transactions> getPendingTransactions() {
+    public Request<Rpc.Transactions> getPendingTransactions() {
         return protobufService.getRequest(
-                NonParamRequest.newBuilder().build(),
+                Rpc.NonParamRequest.newBuilder().build(),
                 getHttpParams("GET", "/v1/transactions/pending"),
-                Transactions.class);
+                Rpc.Transactions.class);
     }
 
     @Override
-    public Request<Transaction> getTransaction(String hash) {
+    public Request<Rpc.Transaction> getTransaction(String hash) {
         return protobufService.getRequest(
-                GetTransactionRequest.newBuilder().setHash(hash).build(),
+                Rpc.GetTransactionRequest.newBuilder().setHash(hash).build(),
                 getHttpParams("GET", "/v1/transaction"),
-                Transaction.class);
+                Rpc.Transaction.class);
     }
 
     @Override
-    public Request<TransactionReceipt> getTransactionReceipt(String hash) {
+    public Request<Rpc.TransactionReceipt> getTransactionReceipt(String hash) {
         return protobufService.getRequest(
-                GetTransactionRequest.newBuilder().setHash(hash).build(),
+                Rpc.GetTransactionRequest.newBuilder().setHash(hash).build(),
                 getHttpParams("GET", "/v1/transaction/receipt"),
-                TransactionReceipt.class);
+                Rpc.TransactionReceipt.class);
     }
 
     @Override
-    public Request<TransactionHash> sendTransaction(SendTransactionRequest request) {
+    public Request<Rpc.TransactionHash> sendTransaction(Rpc.SendTransactionRequest request) {
         return protobufService.getRequest(
                 request,
                 getHttpParams("POST", "/v1/transaction"),
-                TransactionHash.class);
+                Rpc.TransactionHash.class);
     }
 
     @Override
-    public Request<Health> healthCheck() {
+    public Request<Rpc.Health> healthCheck() {
         return protobufService.getRequest(
-                NonParamRequest.newBuilder().build(),
+                Rpc.NonParamRequest.newBuilder().build(),
                 getHttpParams("GET", "/v1/healthcheck"),
-                Health.class);
+                Rpc.Health.class);
     }
 
     @Override
-    public Request<Account> getAccount(GetAccountRequest request) {
+    public Request<Rpc.Account> getAccount(Rpc.GetAccountRequest request) {
         return protobufService.getRequest(
                 request,
                 getHttpParams("GET", "/v1/account"),
-                Account.class);
+                Rpc.Account.class);
     }
 
     @Override
-    public Request<Block> getBlock(GetBlockRequest request) {
+    public Request<Rpc.Block> getBlock(Rpc.GetBlockRequest request) {
         return protobufService.getRequest(
                 request,
                 getHttpParams("GET", "/v1/block"),
-                Block.class);
+                Rpc.Block.class);
     }
 
     @Override
-    public Request<Blocks> getBlocks(GetBlocksRequest request) {
+    public Request<Rpc.Blocks> getBlocks(Rpc.GetBlocksRequest request) {
         return protobufService.getRequest(
                 request,
                 getHttpParams("GET", "/v1/blocks"),
-                Blocks.class);
+                Rpc.Blocks.class);
     }
 
     @Override
-    public Request<Candidates> getCandidates() {
+    public Request<Rpc.Candidates> getCandidates() {
         return protobufService.getRequest(
-                NonParamRequest.newBuilder().build(),
+                Rpc.NonParamRequest.newBuilder().build(),
                 getHttpParams("GET", "/v1/candidates"),
-                Candidates.class);
+                Rpc.Candidates.class);
     }
 
     @Override
-    public Request<Dynasty> getDynasty() {
+    public Request<Rpc.Dynasty> getDynasty() {
         return protobufService.getRequest(
-                NonParamRequest.newBuilder().build(),
+                Rpc.NonParamRequest.newBuilder().build(),
                 getHttpParams("GET", "/v1/dynasty"),
-                Dynasty.class);
+                Rpc.Dynasty.class);
     }
 
-    @Override
     public void shutdown() {
         try {
             protobufService.close();

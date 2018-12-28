@@ -2,22 +2,26 @@ package org.medibloc.panacea.core;
 
 import org.medibloc.panacea.core.protobuf.Rpc.*;
 
-public interface Panacea {
-    Request<Account> getAccount(GetAccountRequest request);
+public abstract class Panacea {
+    public static Panacea create(ProtobufService service) {
+        return new PanaceaImpl(service);
+    }
 
-    Request<Block> getBlock(GetBlockRequest request);
-    Request<Blocks> getBlocks(GetBlocksRequest request);
+    public abstract Request<Account> getAccount(GetAccountRequest request);
 
-    Request<Candidates> getCandidates();
-    Request<Dynasty> getDynasty();
+    public abstract Request<Block> getBlock(GetBlockRequest request);
+    public abstract Request<Blocks> getBlocks(GetBlocksRequest request);
 
-    Request<MedState> getMedState();
+    public abstract Request<Candidates> getCandidates();
+    public abstract Request<Dynasty> getDynasty();
 
-    Request<Transactions> getPendingTransactions();
-    Request<Transaction> getTransaction(String hash);
-    Request<TransactionReceipt> getTransactionReceipt(String hash);
+    public abstract Request<MedState> getMedState();
 
-    Request<TransactionHash> sendTransaction(SendTransactionRequest request);
+    public abstract Request<Transactions> getPendingTransactions();
+    public abstract Request<Transaction> getTransaction(String hash);
+    public abstract Request<TransactionReceipt> getTransactionReceipt(String hash);
 
-    Request<Health> healthCheck();
+    public abstract Request<TransactionHash> sendTransaction(SendTransactionRequest request);
+
+    public abstract Request<Health> healthCheck();
 }

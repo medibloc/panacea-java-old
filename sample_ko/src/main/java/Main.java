@@ -1,8 +1,8 @@
 import com.google.protobuf.util.JsonFormat;
-import org.medibloc.panacea.Med4J;
 import org.medibloc.panacea.account.Account;
 import org.medibloc.panacea.account.AccountUtils;
 import org.medibloc.panacea.core.HttpService;
+import org.medibloc.panacea.core.Panacea;
 import org.medibloc.panacea.core.protobuf.BlockChain;
 import org.medibloc.panacea.core.protobuf.Rpc;
 import org.medibloc.panacea.data.Data;
@@ -19,7 +19,7 @@ public class Main {
     private static final String UPLOAD_DATA = "MyHealthDataForHashingAndUploading";
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Med4j sample 프로그램을 실행합니다.");
+        System.out.println("Panacea sample 프로그램을 실행합니다.");
 
 
         /*** 1. account 생성, 저장 및 불러오기 ***/
@@ -41,9 +41,9 @@ public class Main {
 
         /*** 2. data hash 업로드 ***/
 
-        // Blockchain 에 접근하기 위한 med4j client 를 생성 합니다.
-        // med4j client 를 이용하여 Blockchain 과 통신 할 때에는 Rpc(Remote Procedure Call) 패키지 내의 클래스가 사용 됩니다.
-        Med4J med4J = Med4J.create(new HttpService(TESTNET_URL));
+        // Blockchain 에 접근하기 위한 panacea client 를 생성 합니다.
+        // panacea client 를 이용하여 Blockchain 과 통신 할 때에는 Rpc(Remote Procedure Call) 패키지 내의 클래스가 사용 됩니다.
+        Panacea panacea = Panacea.create(new HttpService(TESTNET_URL));
 
         // Blockchain 에 업로드 할 data hash 값을 구합니다.
         byte[] dataHash = Data.hashRecord(UPLOAD_DATA);
@@ -53,11 +53,11 @@ public class Main {
                 .setAddress(account.getAddress())
                 .setType(ACCOUNT_REQUEST_TYPE_TAIL)
                 .build();
-        Rpc.Account accountBCInfo = med4J.getAccount(accountRequest).send();
+        Rpc.Account accountBCInfo = panacea.getAccount(accountRequest).send();
         long nextNonce = accountBCInfo.getNonce() + 1;
 
         // Blockchain 의 chainId 를 조회 합니다. 또는, 환경 설정 파일에 저장한 chainId 를 이용 할 수도 있습니다.
-        Rpc.MedState medState = med4J.getMedState().send();
+        Rpc.MedState medState = panacea.getMedState().send();
         int chainId = medState.getChainId();
 
         // Blockchain 에 등록 할 transaction 을 생성 합니다. 생성된 transaction 은 hash 및 sign 의 대상이 됩니다.
@@ -70,7 +70,7 @@ public class Main {
         System.out.println("블록체인에 새로운 transaction 을 업로드 합니다.\ntransaction : " + JsonFormat.printer().print(transactionRequest));
 
         // Blockchain 에 transaction 을 업로드 하고 결과를 반환 받습니다.
-        Rpc.TransactionHash resultHash = med4J.sendTransaction(transactionRequest).send();
+        Rpc.TransactionHash resultHash = panacea.sendTransaction(transactionRequest).send();
 
         if (transactionRequest.getHash().equals(resultHash.getHash())) {
             System.out.println("요청한 transaction 이 Blockchain transaction pool 에 등록 되었습니다.");

@@ -3,7 +3,6 @@ package org.medibloc.panacea.core;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.medibloc.panacea.Med4J;
 import org.medibloc.panacea.account.AccountUtils;
 import org.medibloc.panacea.core.protobuf.BlockChain;
 import org.medibloc.panacea.core.protobuf.Rpc;
@@ -17,22 +16,22 @@ public class ApiClientTest {
     private static final String TESTNET_URL = "https://testnet-node.medibloc.org";
     private static final int TESTNET_CHAIN_ID = 181112;
 
-    private Med4J getMed4J() {
-        return Med4J.create(new HttpService(TESTNET_URL));
+    private Panacea getPanacea() {
+        return Panacea.create(new HttpService(TESTNET_URL));
     }
 
     @Test
     public void testGetMedState() throws Exception {
-        Med4J med4J = getMed4J();
-        MedState response = med4J.getMedState().send();
+        Panacea panacea = getPanacea();
+        MedState response = panacea.getMedState().send();
         assertEquals(response.getChainId(), TESTNET_CHAIN_ID);
     }
 
     @Test
     public void testGetMedStateFlowable() throws Exception {
-        Med4J med4J = getMed4J();
+        Panacea panacea = getPanacea();
         TestSubscriber<MedState> subscriber = new TestSubscriber<MedState>();
-        med4J.getMedState().flowable()
+        panacea.getMedState().flowable()
                 .subscribe(subscriber);
         subscriber.assertComplete();
         subscriber.assertNoErrors();
@@ -52,21 +51,21 @@ public class ApiClientTest {
         reqBuilder.setType("tail");
 
         Account expected = expectedResBuilder.build();
-        Account actual = getMed4J().getAccount(reqBuilder.build()).sendAsync().get();
+        Account actual = getPanacea().getAccount(reqBuilder.build()).sendAsync().get();
 
         assertEquals(expected, actual);
     }
 
     @Test
     public void testGetCandidates() throws Exception {
-        Med4J med4J = getMed4J();
-        med4J.getCandidates().send();
+        Panacea panacea = getPanacea();
+        panacea.getCandidates().send();
     }
 
     @Test
     public void testGetDynasty() throws Exception {
-        Med4J med4J = getMed4J();
-        med4J.getDynasty().send();
+        Panacea panacea = getPanacea();
+        panacea.getDynasty().send();
     }
 
     @Test
@@ -82,30 +81,30 @@ public class ApiClientTest {
         Rpc.SendTransactionRequest txReq = Transaction.getSignedTransactionRequest(transactionHashTarget, account, "sample");
 
 
-        Med4J med4J = getMed4J();
-        Rpc.TransactionHash actual = med4J.sendTransaction(txReq).sendAsync().get();
+        Panacea panacea = getPanacea();
+        Rpc.TransactionHash actual = panacea.sendTransaction(txReq).sendAsync().get();
 
         assertEquals(expected, actual);
     }
 
     @Test
     public void testHealthCheck() throws Exception {
-        Med4J med4J = getMed4J();
-        med4J.healthCheck().send();
+        Panacea panacea = getPanacea();
+        panacea.healthCheck().send();
     }
 
     @Test
     public void testHeathCheckAsync() throws Exception {
-        Med4J med4J = getMed4J();
-        Health health = med4J.healthCheck().sendAsync().get();
+        Panacea panacea = getPanacea();
+        Health health = panacea.healthCheck().sendAsync().get();
         assertTrue(health.getOk());
     }
 
     @Test
     public void testHealthCheckFlowable() throws Exception {
-        Med4J med4J = getMed4J();
+        Panacea panacea = getPanacea();
         TestSubscriber<Health> subscriber = new TestSubscriber<Health>();
-        med4J.healthCheck().flowable().subscribe(subscriber);
+        panacea.healthCheck().flowable().subscribe(subscriber);
 
         subscriber.assertComplete();
         subscriber.assertNoErrors();

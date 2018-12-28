@@ -8,13 +8,13 @@ import java.util.Map;
 public interface ProtobufService {
 
     /**
-     * Get Med4J Request Object
+     * Get Panacea Request Object
      *
      * @param requestMessage protobuf request message
      * @param params additional informations need for make Request(ex. HTTP method, HTTP url path)
      * @param responseType protobuf response message type
      * @param <T> protobuf response message
-     * @return med4j Request object
+     * @return panacea Request object
      * @throws IOException thrown if failed to perform a request
      */
     <T extends Message> Request<T> getRequest(Message requestMessage, Map<String, String> params, Class<T> responseType);

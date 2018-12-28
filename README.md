@@ -1,4 +1,4 @@
-# medjs
+# Panacea
 
 Official client-side Java library for the [medibloc blockchain](https://github.com/medibloc/go-medibloc).
 
@@ -34,7 +34,7 @@ dependencies {
 ```
 
 ## Usage
-The sample_en/sample_ko projects describe how to use med4j library.
+The sample_en/sample_ko projects describe how to use panacea library.
 
 Please see the
 [Main Class](https://github.com/medibloc/panacea-java/blob/master/sample_en/src/main/java/Main.java)

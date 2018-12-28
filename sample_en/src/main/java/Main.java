@@ -1,8 +1,8 @@
 import com.google.protobuf.util.JsonFormat;
-import org.medibloc.panacea.Med4J;
 import org.medibloc.panacea.account.Account;
 import org.medibloc.panacea.account.AccountUtils;
 import org.medibloc.panacea.core.HttpService;
+import org.medibloc.panacea.core.Panacea;
 import org.medibloc.panacea.core.protobuf.BlockChain;
 import org.medibloc.panacea.core.protobuf.Rpc;
 import org.medibloc.panacea.data.Data;
@@ -19,7 +19,7 @@ public class Main {
     private static final String UPLOAD_DATA = "MyHealthDataForHashingAndUploading";
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Start Med4j sample module.");
+        System.out.println("Start panacea sample module.");
 
 
         /*** 1. create, save, and load account ***/
@@ -41,9 +41,9 @@ public class Main {
 
         /*** 2. Upload data hash ***/
 
-        // Create med4j client to access to MediBloc blockchain.
+        // Create panacea client to access to MediBloc blockchain.
         // When communicating with the blockchain, Rpc(Remote Procedure Call) package's classes are used.
-        Med4J med4J = Med4J.create(new HttpService(TESTNET_URL));
+        Panacea panacea = Panacea.create(new HttpService(TESTNET_URL));
 
         // Get hash value of the data for uploading to the blockchain.
         byte[] dataHash = Data.hashRecord(UPLOAD_DATA);
@@ -53,11 +53,11 @@ public class Main {
                 .setAddress(account.getAddress())
                 .setType(ACCOUNT_REQUEST_TYPE_TAIL)
                 .build();
-        Rpc.Account accountBCInfo = med4J.getAccount(accountRequest).send();
+        Rpc.Account accountBCInfo = panacea.getAccount(accountRequest).send();
         long nextNonce = accountBCInfo.getNonce() + 1;
 
         // Get the chain ID of the blockchain. You can use a configuration file to save&load the chain ID.
-        Rpc.MedState medState = med4J.getMedState().send();
+        Rpc.MedState medState = panacea.getMedState().send();
         int chainId = medState.getChainId();
 
         // Generate a transaction for uploading to the blockchain. The generated transaction will be hashed and signed.
@@ -70,7 +70,7 @@ public class Main {
         System.out.println("Upload transaction to blockchain.\ntransaction : " + JsonFormat.printer().print(transactionRequest));
 
         // Upload the transaction to blockchain and get the result.
-        Rpc.TransactionHash resultHash = med4J.sendTransaction(transactionRequest).send();
+        Rpc.TransactionHash resultHash = panacea.sendTransaction(transactionRequest).send();
 
         if (transactionRequest.getHash().equals(resultHash.getHash())) {
             System.out.println("The transaction is sent to blockchain transaction pool.");
