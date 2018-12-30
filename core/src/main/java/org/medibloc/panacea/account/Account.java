@@ -39,6 +39,9 @@ public class Account {
 
     private String address;
 
+    /** Default constructor is used to deserialize JSON value. */
+    Account() { }
+
     Account(String password, ECKeyPair ecKeyPair, AccountOption accountOption) throws CipherException {
         setAddress(Keys.compressPubKey(ecKeyPair.getPubKey()));
         setV3Settings(accountOption);

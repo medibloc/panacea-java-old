@@ -1,6 +1,7 @@
 package org.medibloc.panacea.core;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Assert;
 import org.junit.Test;
 import org.medibloc.panacea.account.Account;
 import org.medibloc.panacea.account.AccountUtils;
@@ -18,7 +19,7 @@ public class AccountUtilsTest {
     final static String SAMPLE_PASSWORD = "sample";
 
     @Test
-    public void testAccountEquals() {
+    public void testAccountNotEquals() {
         try {
             Account account1 = AccountUtils.createAccount(SAMPLE_PASSWORD, null);
             Account account2 = AccountUtils.createAccount(SAMPLE_PASSWORD, null);
@@ -26,6 +27,7 @@ public class AccountUtilsTest {
             assertNotEquals(account1, account2);
         } catch (Exception ex) {
             ex.printStackTrace();
+            Assert.fail();
         }
     }
 
@@ -42,6 +44,7 @@ public class AccountUtilsTest {
             assertEquals(account, parsedAccount);
         } catch (Exception ex) {
             ex.printStackTrace();
+            Assert.fail();
         }
     }
 
@@ -57,6 +60,7 @@ public class AccountUtilsTest {
             assertEquals(createdAccount, parsedAccount);
         } catch (Exception ex) {
             ex.printStackTrace();
+            Assert.fail();
         }
     }
 
@@ -75,6 +79,7 @@ public class AccountUtilsTest {
             savedFile.delete();
         } catch (Exception ex) {
             ex.printStackTrace();
+            Assert.fail();
         }
     }
 
