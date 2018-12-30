@@ -9,12 +9,16 @@ import org.medibloc.panacea.core.protobuf.Rpc;
 import org.medibloc.panacea.core.protobuf.Rpc.*;
 
 import io.reactivex.subscribers.TestSubscriber;
+import org.medibloc.panacea.crypto.ECKeyPair;
 import org.medibloc.panacea.data.Data;
 import org.medibloc.panacea.tx.Transaction;
+
+import java.math.BigInteger;
 
 public class ApiClientTest {
     private static final String TESTNET_URL = "https://testnet-node.medibloc.org";
     private static final int TESTNET_CHAIN_ID = 181112;
+    private static final String PASSWORD = "MediBlocPassWord123!";
 
     private Panacea getPanacea() {
         return Panacea.create(new HttpService(TESTNET_URL));
@@ -74,12 +78,15 @@ public class ApiClientTest {
                 .setHash("ae22802a287a8c3e81076a3455b2f437b3f73f51601ca547e382114cd6cfa06c")
                 .build();
 
-        org.medibloc.panacea.account.Account account = AccountUtils.loadAccount(AccountUtilsTest.SAMPLE_ACCOUNT_FILE_PATH);
+        ECKeyPair ecKeyPair = new ECKeyPair(
+                new BigInteger("9d10d24d7883c35f11dce98ba4da737f209808001748a595728dc326aa008b60", 16)
+                , new BigInteger("7d31268680a3de375fb57d9fcf724fa95a7dfaa3a3381c910ccc24e1c0cb80ee8dd8acd6a4474e95d7ec81866f63e0b48651cdc9fd3fddf3316a8d18fe3bf8c0", 16));
+        org.medibloc.panacea.account.Account account = AccountUtils.createAccount(PASSWORD, ecKeyPair, null);
+
         byte[] dataHash = Data.hashRecord("abc");
         BlockChain.TransactionHashTarget transactionHashTarget
                 = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, 181112);
-        Rpc.SendTransactionRequest txReq = Transaction.getSignedTransactionRequest(transactionHashTarget, account, "sample");
-
+        Rpc.SendTransactionRequest txReq = Transaction.getSignedTransactionRequest(transactionHashTarget, account, PASSWORD);
 
         Panacea panacea = getPanacea();
         Rpc.TransactionHash actual = panacea.sendTransaction(txReq).sendAsync().get();
