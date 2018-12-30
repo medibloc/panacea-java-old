@@ -10,9 +10,9 @@ repositories {
 
 dependencies {
     // use jcenter
-    //implementation "org.medibloc.panacea:core:0.0.4"
+    implementation "org.medibloc.panacea:core:0.0.6"
 
     // use project
-    implementation project(':core')
-    implementation 'com.google.protobuf:protobuf-java-util:3.6.1'
+    //implementation project(':core')
+    //implementation 'com.google.protobuf:protobuf-java-util:3.6.1'
 }
