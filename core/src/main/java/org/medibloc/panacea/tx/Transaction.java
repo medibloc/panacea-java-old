@@ -13,7 +13,7 @@ import org.medibloc.panacea.utils.Numeric;
 
 public class Transaction {
     private static final int VALUE_SIZE = 16;
-    private static final int ADDRESS_SIZE = 16;
+    private static final int ADDRESS_SIZE = 33;
 
     private class Type {
         static final String ADD_RECORD = "add_record";
