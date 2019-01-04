@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.medibloc.panacea.account.Account;
 import org.medibloc.panacea.account.AccountUtils;
 import org.medibloc.panacea.crypto.ECKeyPair;
+import org.medibloc.panacea.crypto.Keys;
 
 import java.io.File;
 import java.math.BigInteger;
@@ -97,12 +98,10 @@ public class AccountUtilsTest {
 
     @Test
     public void testGetKeyPair() throws Exception {
-        ECKeyPair expected = new ECKeyPair(
-                new BigInteger("4627e66cd55fe54500bb0397663254564249b276f3bf81c21a3a06bd72dfcf74", 16)
-                , new BigInteger("cb2bde8309a4bfde8e53be4e96a99082920fdccea0b5fddaf9d782d25a0e454f6cd4bbd19345cc3f3de58a8c11bb45e764bbacad507873e28e33c7f724bca1eb", 16));
+        BigInteger privKey = new BigInteger("4627e66cd55fe54500bb0397663254564249b276f3bf81c21a3a06bd72dfcf74", 16);
+        ECKeyPair expected = new ECKeyPair(privKey, Keys.getPublicKeyFromPrivatekey(privKey));
 
         Account account = AccountUtils.createAccount(SAMPLE_PASSWORD, expected, null);
-
         ECKeyPair actual = AccountUtils.getKeyPair(account, SAMPLE_PASSWORD);
 
         assertEquals(expected, actual);
