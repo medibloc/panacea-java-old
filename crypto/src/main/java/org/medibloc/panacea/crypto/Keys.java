@@ -5,6 +5,7 @@ import org.bouncycastle.crypto.ec.CustomNamedCurves;
 import org.bouncycastle.crypto.params.ECDomainParameters;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
+import org.medibloc.panacea.utils.Numeric;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -27,6 +28,7 @@ public class Keys {
             CURVE_PARAMS.getCurve(), CURVE_PARAMS.getG(), CURVE_PARAMS.getN(), CURVE_PARAMS.getH());
     static final BigInteger HALF_CURVE_ORDER = CURVE_PARAMS.getN().shiftRight(1);
 
+    private static int KEY_SOURCE_SIZE = 64;
     private static byte[] PBKDF2_SALT = "medibloc".getBytes();
     private static int PBKDF2_ITERATIONS = 32768;
     static int PBKDF2_KEY_SIZE = 32;
@@ -67,8 +69,14 @@ public class Keys {
         return new BigInteger(1, Arrays.copyOfRange(encoded, 1, encoded.length)); // remove prefix
     }
 
-    public static ECKeyPair generateKeysFromPassphrase(String passphrase) throws NoSuchAlgorithmException, InvalidKeySpecException {
-        byte[] privKeyBytes = generatePrivateKeyFromPassphrase(passphrase);
+    public static ECKeyPair generateKeyPair() throws NoSuchAlgorithmException, InvalidKeySpecException {
+        String keySource1 = Numeric.toHexStringNoPrefix(SecureRandomUtils.generateRandomBytes(KEY_SOURCE_SIZE/2));
+        String keySource2 = Numeric.toHexStringNoPrefix(SecureRandomUtils.generateRandomBytes(KEY_SOURCE_SIZE/2));
+        return generateKeyPair(keySource1 + keySource2);
+    }
+
+    public static ECKeyPair generateKeyPair(String source) throws NoSuchAlgorithmException, InvalidKeySpecException {
+        byte[] privKeyBytes = generatePrivateKeyFromPassphrase(source);
         BigInteger privKey = new BigInteger(1, privKeyBytes);
         BigInteger pubKey = getPublicKeyFromPrivatekey(privKey);
 

@@ -14,7 +14,7 @@ public class KeysTest {
     @Test
     public void testKeyPairFromPassphrase() throws Exception {
         for (String[] mnemonicKey: SampleKeys.mnemonicKeys) {
-            ECKeyPair ecKeyPair = Keys.generateKeysFromPassphrase(mnemonicKey[0]);
+            ECKeyPair ecKeyPair = Keys.generateKeyPair(mnemonicKey[0]);
 
             BigInteger privKey = ecKeyPair.getPrivKey();
             BigInteger pubKey = ecKeyPair.getPubKey();

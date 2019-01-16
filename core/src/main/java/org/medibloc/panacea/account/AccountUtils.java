@@ -25,7 +25,7 @@ public class AccountUtils {
 
     /** Create new Account. A new key pair will be generated internally. */
     public static Account createAccount(String password, AccountOption accountOption) throws Exception {
-        ECKeyPair ecKeyPair = Keys.generateKeysFromPassphrase(password);
+        ECKeyPair ecKeyPair = Keys.generateKeyPair();
         return createAccount(password, ecKeyPair, accountOption);
     }
 
