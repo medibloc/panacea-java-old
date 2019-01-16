@@ -16,6 +16,7 @@ import java.math.BigInteger;
 import static org.junit.Assert.assertEquals;
 
 public class TransactionTest {
+    private static final int TESTNET_CHAIN_ID = 181112;
 
     private ByteString hexToByteString(String hex) {
         int len = hex.length();
@@ -91,7 +92,7 @@ public class TransactionTest {
             Rpc.SendTransactionRequest expected
                     = Rpc.SendTransactionRequest.newBuilder()
                     .setHash(hash)
-                    .setChainId(181112)
+                    .setChainId(TESTNET_CHAIN_ID)
                     .setNonce(1)
                     //.setPayerSign(null)
                     .setPayload(payload)
@@ -103,7 +104,7 @@ public class TransactionTest {
 
             byte[] dataHash = Data.hashRecord(data);
             BlockChain.TransactionHashTarget transactionHashTarget
-                    = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, 181112);
+                    = Transaction.getAddRecordTransactionHashTarget(dataHash, account.getAddress(), 1, TESTNET_CHAIN_ID);
             Rpc.SendTransactionRequest actual = Transaction.getSignedTransactionRequest(transactionHashTarget, account, "sample");
 
             assertEquals(expected, actual);
