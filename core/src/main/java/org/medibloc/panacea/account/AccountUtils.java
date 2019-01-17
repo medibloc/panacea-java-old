@@ -88,7 +88,7 @@ public class AccountUtils {
         }
 
         byte[] encryptKey = Arrays.copyOfRange(derivedKey, 0, 16);
-        BigInteger privateKey = new BigInteger(Keys.decryptPrivateKey(cipherText, encryptKey, iv));
+        BigInteger privateKey = new BigInteger(1, Keys.decryptPrivateKey(cipherText, encryptKey, iv));
         return new ECKeyPair(privateKey, Keys.getPublicKeyFromPrivatekey(privateKey));
     }
 
