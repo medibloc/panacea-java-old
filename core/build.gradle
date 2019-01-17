@@ -8,7 +8,7 @@ ext {
 
     publishedGroupId = 'org.medibloc.panacea'
     artifact = 'core'
-    libraryVersion = '0.1.1'
+    libraryVersion = '0.1.2'
 
     libraryDescription = 'Official client-side Java library for the medibloc blockchain.'
     siteUrl = 'https://github.com/medibloc/panacea-java'
