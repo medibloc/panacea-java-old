@@ -5,16 +5,21 @@ import org.medibloc.panacea.core.HttpService;
 import org.medibloc.panacea.core.Panacea;
 import org.medibloc.panacea.core.protobuf.BlockChain;
 import org.medibloc.panacea.core.protobuf.Rpc;
+import org.medibloc.panacea.crypto.ECKeyPair;
 import org.medibloc.panacea.data.Data;
 import org.medibloc.panacea.tx.Transaction;
 
 import java.io.File;
+import java.math.BigInteger;
 
 public class Main {
-    private static final String TESTNET_URL = "https://testnet-node.medibloc.org";
+    private static final String TESTNET_URL = "https://stg-testnet-node.medibloc.org";
     private static final String ACCOUNT_REQUEST_TYPE_TAIL = "tail";
 
     private static final String ACCOUNT_FILE_PATH = "sample_ko/sample_accounts";
+    private static final BigInteger PRIVATE_KEY = new BigInteger("4da8bc28a095870433d8a7d57ca140d6132e722f177c9a94f70a6963b4b8f708", 16);
+    // address: 02e34caca7b7653eb6cbb64cdd9e7c691545cbbe002a5ef9ed86e71577d9c7c296
+    private static final BigInteger PUBLIC_KEY = new BigInteger("e34caca7b7653eb6cbb64cdd9e7c691545cbbe002a5ef9ed86e71577d9c7c2960da413ededc3216df47f27ba6d46babe0ba54ca35d682182d26a6c6aa63f7930", 16);
     private static final String PASSWORD = "myPassWord123!";
     private static final String UPLOAD_DATA = "MyHealthDataForHashingAndUploading";
 
@@ -26,7 +31,9 @@ public class Main {
 
         // 새로운 account 를 생성합니다.
         // 옵션이 주어지지 않으면 기본 옵션 값이 설정 됩니다.
-        Account newAccount = AccountUtils.createAccount(PASSWORD, null);
+        ECKeyPair keyPair = new ECKeyPair(PRIVATE_KEY, PUBLIC_KEY); // 기 생성 된 keyPair 이용
+        Account newAccount = AccountUtils.createAccount(PASSWORD, keyPair, null);
+        // Account newAccount = AccountUtils.createAccount(PASSWORD, null); // 새로운 keyPair 를 생성 하는 경우
 
         // 생성한 account 를 주어진 경로에 저장합니다.
         // 저장되는 파일명은 "UTC--시간--account주소.json" 형식입니다.
