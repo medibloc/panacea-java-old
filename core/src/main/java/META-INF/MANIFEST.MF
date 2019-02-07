@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: reactive-streams-1.0.2.jar proto-google-common-protos-1.12
+ .0.jar rxjava-2.2.3.jar okio-1.14.0.jar jackson-databind-2.9.7.jar ok
+ http-3.11.0.jar guava-19.0.jar protobuf-java-util-3.6.1.jar protobuf-
+ java-3.6.1.jar jackson-core-2.9.7.jar gson-2.7.jar jackson-annotation
+ s-2.9.0.jar slf4j-api-1.7.25.jar bcprov-jdk15on-1.60.jar
+

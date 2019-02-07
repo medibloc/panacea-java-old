@@ -46,3 +46,10 @@ if (project.rootProject.file('local.properties').exists()) {
     apply from: 'https://raw.githubusercontent.com/brightec/JCenter/master/installv1.gradle'
     apply from: 'https://raw.githubusercontent.com/brightec/JCenter/master/bintrayv1.gradle'
 }
+
+jar {
+    doFirst {
+        from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
+}
