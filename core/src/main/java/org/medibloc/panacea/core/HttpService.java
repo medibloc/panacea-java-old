@@ -21,6 +21,8 @@ public class HttpService implements ProtobufService {
     static final String METHOD_KEY = "method";
     static final String PATH_KEY = "path";
 
+    static final int HTTP_OK = 200;
+
     private OkHttpClient client = new OkHttpClient();
     private String baseUrl;
 
@@ -57,6 +59,10 @@ public class HttpService implements ProtobufService {
                 ResponseBody body = response.body();
                 if (body == null) {
                     throw new IOException("body is null");
+                }
+
+                if (response.code() != HTTP_OK) {
+                    throw new RuntimeException("The server returns error - HTTP status " + response.code() + "\n" + body.string());
                 }
 
                 Message.Builder builder;
