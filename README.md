@@ -17,7 +17,7 @@ You can download org.medibloc.panacea.core library from jcenter.
 <dependency>
   <groupId>org.medibloc.panacea</groupId>
   <artifactId>core</artifactId>
-  <version>0.1.2</version>
+  <version>0.1.3</version>
   <type>pom</type>
 </dependency>
 ```
@@ -29,7 +29,7 @@ repositories {
 }
 
 dependencies {
-    implementation "org.medibloc.panacea:core:0.1.2"
+    implementation "org.medibloc.panacea:core:0.1.3"
 }
 ```
 
