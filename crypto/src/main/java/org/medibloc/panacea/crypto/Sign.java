@@ -12,6 +12,13 @@ import java.util.Arrays;
 import static org.medibloc.panacea.utils.Assertions.verifyPrecondition;
 
 public class Sign {
+    public static String signMessage(String message, ECKeyPair keyPair) {
+        SignatureData sign = Sign.signMessage(Numeric.hexStringToByteArray(message), keyPair);
+
+        int recoveryCode = (sign.getV() & 0xFF) - 27;
+        return Numeric.toHexStringNoPrefix(sign.getR()) + Numeric.toHexStringNoPrefix(sign.getS()) + String.format("%02x", recoveryCode & 0xFF);
+    }
+
     public static SignatureData signMessage(byte[] message, ECKeyPair keyPair) {
         BigInteger publicKey = keyPair.getPubKey();
 

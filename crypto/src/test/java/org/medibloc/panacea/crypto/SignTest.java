@@ -18,10 +18,7 @@ public class SignTest {
         String expected = "77ca0fb1f8907030be5fe7386020e66a30e98220d9344cc3acdf6cfdd7b579db239732ec31e08ccb635a40561c28ae3dc440ad7c5904886776463edda538668001";
 
         ECKeyPair ecKeyPair = new ECKeyPair(PRIVATE_KEY, PUBLIC_KEY);
-        Sign.SignatureData sign = Sign.signMessage(Numeric.hexStringToByteArray(sampleNonce), ecKeyPair);
-        int recoveryCode = (sign.getV() & 0xFF) - 27;
-        String actual = Numeric.toHexStringNoPrefix(sign.getR()) + Numeric.toHexStringNoPrefix(sign.getS()) + String.format("%02x", recoveryCode & 0xFF);
-
+        String actual = Sign.signMessage(sampleNonce, ecKeyPair);
         assertEquals(expected, actual);
     }
 }
