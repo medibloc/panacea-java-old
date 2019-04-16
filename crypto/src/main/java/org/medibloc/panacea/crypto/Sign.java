@@ -7,6 +7,7 @@ import org.bouncycastle.math.ec.custom.sec.SecP256K1Curve;
 import org.medibloc.panacea.utils.Numeric;
 
 import java.math.BigInteger;
+import java.security.SignatureException;
 import java.util.Arrays;
 
 import static org.medibloc.panacea.utils.Assertions.verifyPrecondition;
@@ -45,6 +46,18 @@ public class Sign {
         byte[] s = Numeric.toBytesPadded(sig.s, 32);
 
         return new SignatureData(v, r, s);
+    }
+
+    public static boolean verifyMessage(String blockchainAddress, String message, String signature) {
+        SignatureData sig = SignatureData.parse(signature);
+        byte[] bMessage = Numeric.hexStringToByteArray(message);
+
+        try {
+            BigInteger publicKey = signedMessageHashToKey(bMessage, sig);
+            return blockchainAddress.equals(Keys.compressPubKey(publicKey));
+        } catch (SignatureException ex) {
+            return false;
+        }
     }
 
     /**
@@ -135,6 +148,33 @@ public class Sign {
         return Keys.CURVE.getCurve().decodePoint(compEnc);
     }
 
+    private static BigInteger signedMessageHashToKey(
+            byte[] messageHash, SignatureData signatureData) throws SignatureException {
+
+        byte[] r = signatureData.getR();
+        byte[] s = signatureData.getS();
+        verifyPrecondition(r != null && r.length == 32, "r must be 32 bytes");
+        verifyPrecondition(s != null && s.length == 32, "s must be 32 bytes");
+
+        int header = signatureData.getV() & 0xFF;
+        // The header byte: 0x1B = first key with even y, 0x1C = first key with odd y,
+        //                  0x1D = second key with even y, 0x1E = second key with odd y
+        if (header < 27 || header > 34) {
+            throw new SignatureException("Header byte out of range: " + header);
+        }
+
+        ECDSASignature sig = new ECDSASignature(
+                new BigInteger(1, signatureData.getR()),
+                new BigInteger(1, signatureData.getS()));
+
+        int recId = header - 27;
+        BigInteger key = recoverFromSignature(recId, sig, messageHash);
+        if (key == null) {
+            throw new SignatureException("Could not recover public key from signature");
+        }
+        return key;
+    }
+
 
     public static class SignatureData {
         private final byte v;
@@ -145,6 +185,19 @@ public class Sign {
             this.v = v;
             this.r = r;
             this.s = s;
+        }
+
+        public static SignatureData parse(String signature) {
+            if (signature.length() != 130) {
+                throw new IllegalArgumentException("The length of signature should be 130.");
+            }
+
+            byte[] r = Numeric.hexStringToByteArray(signature.substring(0, 64));
+            byte[] s = Numeric.hexStringToByteArray(signature.substring(64, 128));
+            int recoveryCode = (Integer.parseInt(signature.substring(128)) & 0xFF) + 27;
+            byte v = (byte)recoveryCode;
+
+            return new SignatureData(v, r, s);
         }
 
         public byte getV() {
