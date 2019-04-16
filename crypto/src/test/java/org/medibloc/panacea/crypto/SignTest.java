@@ -29,15 +29,15 @@ public class SignTest {
 
             ECKeyPair ecKeyPair = new ECKeyPair(new BigInteger(keySet[1], 16), new BigInteger(keySet[2], 16));
             String signature = Sign.signMessage(message, ecKeyPair);
-            boolean actual = Sign.verifyMessage(keySet[3], message, signature);
+            boolean actual = Sign.verifySignature(keySet[3], message, signature);
             assertTrue(actual);
 
             String invalidMessage = "invalidMessage";
-            actual = Sign.verifyMessage(BLOCKCHAIN_ADDRESS, invalidMessage, signature);
+            actual = Sign.verifySignature(BLOCKCHAIN_ADDRESS, invalidMessage, signature);
             assertFalse(actual);
 
             String wrongAddress = "03F07c5eae25e0443be09496162362fee885402379ee4c0fca30af8dbaa340e507";
-            actual = Sign.verifyMessage(wrongAddress, message, signature);
+            actual = Sign.verifySignature(wrongAddress, message, signature);
             assertFalse(actual);
         }
     }

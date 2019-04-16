@@ -48,7 +48,7 @@ public class Sign {
         return new SignatureData(v, r, s);
     }
 
-    public static boolean verifyMessage(String blockchainAddress, String message, String signature) {
+    public static boolean verifySignature(String blockchainAddress, String message, String signature) {
         SignatureData sig = SignatureData.parse(signature);
         byte[] bMessage = Numeric.hexStringToByteArray(message);
 
