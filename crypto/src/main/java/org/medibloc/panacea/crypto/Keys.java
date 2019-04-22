@@ -1,8 +1,12 @@
 package org.medibloc.panacea.crypto;
 
 import org.bouncycastle.asn1.x9.X9ECParameters;
+import org.bouncycastle.asn1.x9.X9IntegerConverter;
+import org.bouncycastle.crypto.agreement.ECDHBasicAgreement;
 import org.bouncycastle.crypto.ec.CustomNamedCurves;
 import org.bouncycastle.crypto.params.ECDomainParameters;
+import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
+import org.bouncycastle.crypto.params.ECPublicKeyParameters;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.medibloc.panacea.utils.Numeric;
@@ -62,6 +66,13 @@ public class Keys {
             privKey = privKey.mod(CURVE.getN());
         }
         return new FixedPointCombMultiplier().multiply(CURVE.getG(), privKey);
+    }
+
+    public static ECKeyPair getEcKeyPair(String privateKey) {
+        BigInteger privKey = new BigInteger(privateKey, 16);
+        BigInteger pubKey = getPublicKeyFromPrivatekey(privKey);
+
+        return new ECKeyPair(privKey, pubKey);
     }
 
     public static BigInteger getPublicKeyFromPrivatekey(BigInteger privateKey) {
@@ -124,5 +135,27 @@ public class Keys {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    /** Decompress a compressed public key (x co-ord and low-bit of y-coord). */
+    static ECPoint decompressKey(String publicKey) {
+        return decompressKey(new BigInteger(publicKey, 16), publicKey.startsWith("03"));
+    }
+
+    /** Decompress a compressed public key (x co-ord and low-bit of y-coord). */
+    static ECPoint decompressKey(BigInteger xBN, boolean yBit) {
+        X9IntegerConverter x9 = new X9IntegerConverter();
+        byte[] compEnc = x9.integerToBytes(xBN, 1 + x9.getByteLength(Keys.CURVE.getCurve()));
+        compEnc[0] = (byte)(yBit ? 0x03 : 0x02);
+        return Keys.CURVE.getCurve().decodePoint(compEnc);
+    }
+
+    public static String getSharedSecretKey(String myPrivateKey, String otherPublicKey) {
+        ECPrivateKeyParameters privKey = new ECPrivateKeyParameters(new BigInteger(myPrivateKey, 16), Keys.CURVE);
+        ECPublicKeyParameters pubKey = new ECPublicKeyParameters(decompressKey(otherPublicKey), Keys.CURVE);
+
+        ECDHBasicAgreement agreement = new ECDHBasicAgreement();
+        agreement.init(privKey);
+        return agreement.calculateAgreement(pubKey).toString(16);
     }
 }
