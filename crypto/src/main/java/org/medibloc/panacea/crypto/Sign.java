@@ -107,7 +107,7 @@ public class Sign {
         }
         // Compressed keys require you to know an extra bit of data about the y-coord as there are
         // two possibilities. So it's encoded in the recId.
-        ECPoint R = decompressKey(x, (recId & 1) == 1);
+        ECPoint R = Keys.decompressKey(x, (recId & 1) == 1);
         //   1.4. If nR != point at infinity, then do another iteration of Step 1 (callers
         //        responsibility).
         if (!R.multiply(n).isInfinity()) {
@@ -138,14 +138,6 @@ public class Sign {
         byte[] qBytes = q.getEncoded(false);
         // We remove the prefix
         return new BigInteger(1, Arrays.copyOfRange(qBytes, 1, qBytes.length));
-    }
-
-    /** Decompress a compressed public key (x co-ord and low-bit of y-coord). */
-    private static ECPoint decompressKey(BigInteger xBN, boolean yBit) {
-        X9IntegerConverter x9 = new X9IntegerConverter();
-        byte[] compEnc = x9.integerToBytes(xBN, 1 + x9.getByteLength(Keys.CURVE.getCurve()));
-        compEnc[0] = (byte)(yBit ? 0x03 : 0x02);
-        return Keys.CURVE.getCurve().decodePoint(compEnc);
     }
 
     private static BigInteger signedMessageHashToKey(

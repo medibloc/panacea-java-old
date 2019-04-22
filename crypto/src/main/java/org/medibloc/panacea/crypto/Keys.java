@@ -1,21 +1,26 @@
 package org.medibloc.panacea.crypto;
 
 import org.bouncycastle.asn1.x9.X9ECParameters;
+import org.bouncycastle.asn1.x9.X9IntegerConverter;
+import org.bouncycastle.crypto.agreement.ECDHBasicAgreement;
 import org.bouncycastle.crypto.ec.CustomNamedCurves;
 import org.bouncycastle.crypto.params.ECDomainParameters;
-import org.bouncycastle.jce.ECNamedCurveTable;
-import org.bouncycastle.jce.spec.ECParameterSpec;
-import org.bouncycastle.jce.spec.ECPrivateKeySpec;
-import org.bouncycastle.jce.spec.ECPublicKeySpec;
+import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
+import org.bouncycastle.crypto.params.ECPublicKeyParameters;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.medibloc.panacea.utils.Numeric;
 
-import javax.crypto.*;
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.math.BigInteger;
-import java.security.*;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Arrays;
 
@@ -132,37 +137,25 @@ public class Keys {
         }
     }
 
-    public static PublicKey loadPublicKey (byte [] data) throws Exception
-    {
-		/*KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
-		return kf.generatePublic(new X509EncodedKeySpec(data));*/
-
-        ECParameterSpec params = ECNamedCurveTable.getParameterSpec("secp256k1");
-        ECPublicKeySpec pubKey = new ECPublicKeySpec(params.getCurve().decodePoint(data), params);
-        KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
-        return kf.generatePublic(pubKey);
+    /** Decompress a compressed public key (x co-ord and low-bit of y-coord). */
+    static ECPoint decompressKey(String publicKey) {
+        return decompressKey(new BigInteger(publicKey, 16), publicKey.startsWith("03"));
     }
 
-    public static PrivateKey loadPrivateKey (byte [] data) throws Exception
-    {
-        //KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
-        //return kf.generatePrivate(new PKCS8EncodedKeySpec(data));
-
-        ECParameterSpec params = ECNamedCurveTable.getParameterSpec("secp256k1");
-        ECPrivateKeySpec prvkey = new ECPrivateKeySpec(new BigInteger(data), params);
-        KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
-        return kf.generatePrivate(prvkey);
+    /** Decompress a compressed public key (x co-ord and low-bit of y-coord). */
+    static ECPoint decompressKey(BigInteger xBN, boolean yBit) {
+        X9IntegerConverter x9 = new X9IntegerConverter();
+        byte[] compEnc = x9.integerToBytes(xBN, 1 + x9.getByteLength(Keys.CURVE.getCurve()));
+        compEnc[0] = (byte)(yBit ? 0x03 : 0x02);
+        return Keys.CURVE.getCurve().decodePoint(compEnc);
     }
 
-    public static String getSharedSecretKey(String myPrivateKey, String otherPublicKey) throws Exception {
-        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+    public static String getSharedSecretKey(String myPrivateKey, String otherPublicKey) {
+        ECPrivateKeyParameters privKey = new ECPrivateKeyParameters(new BigInteger(myPrivateKey, 16), Keys.CURVE);
+        ECPublicKeyParameters pubKey = new ECPublicKeyParameters(decompressKey(otherPublicKey), Keys.CURVE);
 
-        byte[] privKey = Numeric.hexStringToByteArray(myPrivateKey);
-        byte[] pubKey = Numeric.hexStringToByteArray(otherPublicKey);
-        KeyAgreement ka = KeyAgreement.getInstance("ECDH", "BC");
-        ka.init(loadPrivateKey(privKey));
-        ka.doPhase(loadPublicKey(pubKey), true);
-        byte [] secret = ka.generateSecret();
-        return Numeric.byteArrayToHex(secret);
+        ECDHBasicAgreement agreement = new ECDHBasicAgreement();
+        agreement.init(privKey);
+        return agreement.calculateAgreement(pubKey).toString(16);
     }
 }
