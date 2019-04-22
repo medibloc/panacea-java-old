@@ -3,20 +3,19 @@ package org.medibloc.panacea.crypto;
 import org.bouncycastle.asn1.x9.X9ECParameters;
 import org.bouncycastle.crypto.ec.CustomNamedCurves;
 import org.bouncycastle.crypto.params.ECDomainParameters;
+import org.bouncycastle.jce.ECNamedCurveTable;
+import org.bouncycastle.jce.spec.ECParameterSpec;
+import org.bouncycastle.jce.spec.ECPrivateKeySpec;
+import org.bouncycastle.jce.spec.ECPublicKeySpec;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.medibloc.panacea.utils.Numeric;
 
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
+import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.math.BigInteger;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
+import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Arrays;
 
@@ -62,6 +61,13 @@ public class Keys {
             privKey = privKey.mod(CURVE.getN());
         }
         return new FixedPointCombMultiplier().multiply(CURVE.getG(), privKey);
+    }
+
+    public static ECKeyPair getEcKeyPair(String privateKey) {
+        BigInteger privKey = new BigInteger(privateKey, 16);
+        BigInteger pubKey = getPublicKeyFromPrivatekey(privKey);
+
+        return new ECKeyPair(privKey, pubKey);
     }
 
     public static BigInteger getPublicKeyFromPrivatekey(BigInteger privateKey) {
@@ -124,5 +130,39 @@ public class Keys {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    public static PublicKey loadPublicKey (byte [] data) throws Exception
+    {
+		/*KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
+		return kf.generatePublic(new X509EncodedKeySpec(data));*/
+
+        ECParameterSpec params = ECNamedCurveTable.getParameterSpec("secp256k1");
+        ECPublicKeySpec pubKey = new ECPublicKeySpec(params.getCurve().decodePoint(data), params);
+        KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
+        return kf.generatePublic(pubKey);
+    }
+
+    public static PrivateKey loadPrivateKey (byte [] data) throws Exception
+    {
+        //KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
+        //return kf.generatePrivate(new PKCS8EncodedKeySpec(data));
+
+        ECParameterSpec params = ECNamedCurveTable.getParameterSpec("secp256k1");
+        ECPrivateKeySpec prvkey = new ECPrivateKeySpec(new BigInteger(data), params);
+        KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
+        return kf.generatePrivate(prvkey);
+    }
+
+    public static String getSharedSecretKey(String myPrivateKey, String otherPublicKey) throws Exception {
+        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+
+        byte[] privKey = Numeric.hexStringToByteArray(myPrivateKey);
+        byte[] pubKey = Numeric.hexStringToByteArray(otherPublicKey);
+        KeyAgreement ka = KeyAgreement.getInstance("ECDH", "BC");
+        ka.init(loadPrivateKey(privKey));
+        ka.doPhase(loadPublicKey(pubKey), true);
+        byte [] secret = ka.generateSecret();
+        return Numeric.byteArrayToHex(secret);
     }
 }

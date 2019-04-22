@@ -46,4 +46,18 @@ public class KeysTest {
             assertEquals(mnemonicKey[3], compressPubKey(publicKey));
         }
     }
+
+    @Test
+    public void testGetSharedSecretKey() throws Exception {
+        for (int my = 0; my < SampleKeys.keyPairs.length - 1; my++) {
+            int other = my + 1;
+
+//            String secretKey1 = Keys.getSharedSecretKey(SampleKeys.keyPairs[my][0], SampleKeys.keyPairs[other][1]);
+//            String secretKey2 = Keys.getSharedSecretKey(SampleKeys.keyPairs[other][0], SampleKeys.keyPairs[my][1]);
+            String secretKey1 = Keys.getSharedSecretKey("9d10d24d7883c35f11dce98ba4da737f209808001748a595728dc326aa008b60", "03349913aad7662ff63e3d200680a1773085184ccf34eca9022e76eabb53d55c98");
+            String secretKey2 = Keys.getSharedSecretKey("a86a52fe76e0299298a4daf595174f94cbb2c21cc67c7d90505e4fec20511fce", "027d31268680a3de375fb57d9fcf724fa95a7dfaa3a3381c910ccc24e1c0cb80ee");
+            assertEquals(secretKey1, secretKey2);
+            System.out.println(secretKey1);
+        }
+    }
 }
