@@ -14,9 +14,13 @@ import org.medibloc.panacea.utils.Numeric;
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+import javax.xml.bind.DatatypeConverter;
+import java.io.Console;
 import java.math.BigInteger;
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.security.spec.X509EncodedKeySpec;
 import java.util.Arrays;
 
 public class Keys {
@@ -139,27 +143,54 @@ public class Keys {
 
         ECParameterSpec params = ECNamedCurveTable.getParameterSpec("secp256k1");
         ECPublicKeySpec pubKey = new ECPublicKeySpec(params.getCurve().decodePoint(data), params);
-        KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
+//        KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
+        KeyFactory kf = KeyFactory.getInstance("EC");
         return kf.generatePublic(pubKey);
     }
 
     public static PrivateKey loadPrivateKey (byte [] data) throws Exception
     {
-        //KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
-        //return kf.generatePrivate(new PKCS8EncodedKeySpec(data));
+        byte[] privatekey_enc = DatatypeConverter.parseHexBinary(
+                "303E020100301006072A8648CE3D020106052B8104000A042730250201010420"+
+                        "1184CD2CDD640CA42CFC3A091C51D549B2F016D454B2774019C2B2D2E08529FD");
+//        KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
+        KeyFactory kf = KeyFactory.getInstance("EC");
+        return kf.generatePrivate(new PKCS8EncodedKeySpec(privatekey_enc));
 
-        ECParameterSpec params = ECNamedCurveTable.getParameterSpec("secp256k1");
-        ECPrivateKeySpec prvkey = new ECPrivateKeySpec(new BigInteger(data), params);
-        KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
-        return kf.generatePrivate(prvkey);
+//        ECParameterSpec params = ECNamedCurveTable.getParameterSpec("secp256k1");
+//        ECPrivateKeySpec prvkey = new ECPrivateKeySpec(new BigInteger(data), params);
+////        KeyFactory kf = KeyFactory.getInstance("ECDH", "BC");
+//        KeyFactory kf = KeyFactory.getInstance("EC");
+//        return kf.generatePrivate(prvkey);
     }
 
     public static String getSharedSecretKey(String myPrivateKey, String otherPublicKey) throws Exception {
         Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
 
-        byte[] privKey = Numeric.hexStringToByteArray(myPrivateKey);
+        byte[] privKey = DatatypeConverter.parseHexBinary(myPrivateKey);
         byte[] pubKey = Numeric.hexStringToByteArray(otherPublicKey);
-        KeyAgreement ka = KeyAgreement.getInstance("ECDH", "BC");
+
+        // Generate ephemeral ECDH keypair
+        KeyPairGenerator kpg = KeyPairGenerator.getInstance("EC", "BC");
+        kpg.initialize(256);
+        KeyPair kp = kpg.generateKeyPair();
+        byte[] ourPrivk = kp.getPrivate().getEncoded();
+        byte[] ourPubk = kp.getPublic().getEncoded();
+
+        // Display our public key
+        System.out.println("Private Key: " + Numeric.toHexStringNoPrefix(ourPrivk));
+        System.out.println("Public Key: " + Numeric.toHexStringNoPrefix(ourPubk));
+
+        // Read other's public key:
+        byte[] otherPk = Numeric.hexStringToByteArray(otherPublicKey);
+
+        KeyFactory kf = KeyFactory.getInstance("EC");
+        X509EncodedKeySpec pkSpec = new X509EncodedKeySpec(otherPk);
+        PublicKey otherPubKey = kf.generatePublic(pkSpec);
+
+
+//        KeyAgreement ka = KeyAgreement.getInstance("ECDH", "BC");
+        KeyAgreement ka = KeyAgreement.getInstance("ECDH");
         ka.init(loadPrivateKey(privKey));
         ka.doPhase(loadPublicKey(pubKey), true);
         byte [] secret = ka.generateSecret();
