@@ -14,8 +14,23 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
 public class AES256CTR {
-    public static String encryptData(String accessKey, String data) {
-        return "enc";
+    private static final int IV_SIZE = 16;
+
+    public static String encryptData(String accessKey, String data)
+            throws NoSuchAlgorithmException, NoSuchPaddingException, UnsupportedEncodingException, InvalidKeyException,
+            InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
+        Cipher encryptionCipher = Cipher.getInstance("AES/CTR/NoPadding");
+
+        byte[] secretBytes = accessKey.getBytes("UTF-8");
+        byte[] hashedAccessKey = Hash.sha3256(secretBytes);
+        byte[] iv = SecureRandomUtils.generateRandomBytes(IV_SIZE);
+        encryptionCipher.init(Cipher.ENCRYPT_MODE
+                , new SecretKeySpec(hashedAccessKey, "AES")
+                , new IvParameterSpec(iv));
+
+        byte[] cipherText = encryptionCipher.doFinal(data.getBytes());
+
+        return Numeric.toHexStringNoPrefix(iv) + ":" + Numeric.toHexStringNoPrefix(cipherText);
     }
 
     public static String decryptData(String accessKey, String encryptedData)

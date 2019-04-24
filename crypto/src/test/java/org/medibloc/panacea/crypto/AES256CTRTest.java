@@ -17,6 +17,7 @@ public class AES256CTRTest {
         String accessKey = "this is access key !";
         String data = "hello medibloc!";
         String encryptedData = AES256CTR.encryptData(accessKey, data);
+        System.out.println("encryptedData: " + encryptedData);
         assertEquals(data, AES256CTR.decryptData(accessKey, encryptedData));
     }
 }
