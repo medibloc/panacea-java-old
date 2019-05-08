@@ -5,12 +5,19 @@ import org.medibloc.panacea.utils.Numeric;
 
 import java.math.BigInteger;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.medibloc.panacea.crypto.Keys.PBKDF2_KEY_SIZE;
 import static org.medibloc.panacea.crypto.Keys.compressPubKey;
 
 public class KeysTest {
+    @Test
+    public void testGenerateKeyPair() throws Exception {
+        ECKeyPair ecKeyPair = Keys.generateKeyPair();
+        System.out.println("private key - " + ecKeyPair.getPrivKey().toString(16));
+        System.out.println("public  key - " + ecKeyPair.getPubKey().toString(16));
+        System.out.println("blockchain address - " + Keys.compressPubKey(ecKeyPair.getPubKey()));
+    }
 
     @Test
     public void testKeyPairFromPassphrase() throws Exception {
