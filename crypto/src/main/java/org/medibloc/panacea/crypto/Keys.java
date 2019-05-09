@@ -150,7 +150,14 @@ public class Keys {
         return Keys.CURVE.getCurve().decodePoint(compEnc);
     }
 
-    public static String getSharedSecretKey(String myPrivateKey, String otherPublicKey) {
+    public static String getSharedSecretKey(String myPrivateKey, String otherPublicKey) throws CipherException {
+        if (myPrivateKey.length() != 64) {
+            throw new CipherException("The length of private key should be 64.");
+        }
+        if (otherPublicKey.length() != 66) {
+            throw new CipherException("The length of public key should be 66.");
+        }
+
         ECPrivateKeyParameters privKey = new ECPrivateKeyParameters(new BigInteger(myPrivateKey, 16), Keys.CURVE);
         ECPublicKeyParameters pubKey = new ECPublicKeyParameters(decompressKey(otherPublicKey), Keys.CURVE);
 

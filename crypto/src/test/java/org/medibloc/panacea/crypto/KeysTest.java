@@ -55,7 +55,17 @@ public class KeysTest {
     }
 
     @Test
-    public void testGetSharedSecretKey() {
+    public void testGetSharedSecretKey() throws CipherException {
+        try {
+            // 2019.05.09 This private key is generated on Android. It has weird 3 zeros..
+            Keys.getSharedSecretKey("623f5fb79c55b744a69e7a589fbb62f91d1af2a186726f519233ae14103b000"
+                    , "028f684cb16d7f53a58c9f2d24e9dd0315e13c33e446c8bb3a50369d6395014a1e");
+
+            throw new RuntimeException("ChipherException should occur.");
+        } catch (CipherException ex) {
+            assertEquals("The length of private key should be 64.", ex.getMessage());
+        }
+
         assertEquals("8b9726caa6bce4b438adbe41fcc9822c34714e1185fdff8eee5483282dd58f42",
                 Keys.getSharedSecretKey("9d10d24d7883c35f11dce98ba4da737f209808001748a595728dc326aa008b60"
                         , "02dc01a49f2867a44e7a0fd08fb4a3e5a3c628d35ac6c444b1acc48617b4158458"));
