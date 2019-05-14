@@ -20,6 +20,16 @@ public class AccountUtilsTest {
     final static String SAMPLE_PASSWORD = "sample";
 
     @Test
+    public void extractKeysFromSampleAccountFile() throws Exception {
+        Account account = AccountUtils.loadAccount(SAMPLE_ACCOUNT_FILE_PATH);
+        ECKeyPair ecKeyPair = AccountUtils.getKeyPair(account, SAMPLE_PASSWORD);
+
+        System.out.println("private key - " + ecKeyPair.getPrivKey().toString(16));
+        System.out.println("public  key - " + ecKeyPair.getPubKey().toString(16));
+        System.out.println("blockchain address - " + Keys.compressPubKey(ecKeyPair.getPubKey()));
+    }
+
+    @Test
     public void testAccountNotEquals() {
         try {
             Account account1 = AccountUtils.createAccount(SAMPLE_PASSWORD, null);
