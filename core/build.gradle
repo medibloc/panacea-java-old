@@ -4,11 +4,11 @@ ext {
     bintrayRepo = "panacea"
     bintrayName = "org.medibloc.panacea.core"
 
-    libraryName = "core"
+    libraryName = "panacea-core"
 
     publishedGroupId = 'org.medibloc.panacea'
-    artifact = 'core'
-    libraryVersion = '0.1.9'
+    artifact = 'panacea-core'
+    libraryVersion = '1.0.0'
 
     libraryDescription = 'Official client-side Java library for the medibloc blockchain.'
     siteUrl = 'https://github.com/medibloc/panacea-java'
