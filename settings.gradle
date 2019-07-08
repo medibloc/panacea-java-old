@@ -1,4 +1,4 @@
-include ':crypto', ':utils', ':core'
+include ':panacea-crypto', ':panacea-utils', ':panacea-core'
 include 'sample_ko'
 include 'sample_en'
 

@@ -22,7 +22,7 @@ ext {
 }
 
 dependencies {
-    implementation project(':utils')
+    implementation project(':panacea-utils')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.bouncycastle:bcprov-jdk15on:$bouncycastleVersion"
     implementation "org.slf4j:slf4j-api:$slf4jVersion"
