@@ -4,7 +4,7 @@ ext {
     bintrayRepo = "panacea"
     bintrayName = "org.medibloc.panacea.crypto"
 
-    libraryName = "panacea-rypto"
+    libraryName = "panacea-crypto"
 
     publishedGroupId = 'org.medibloc.panacea'
     artifact = 'panacea-crypto'
