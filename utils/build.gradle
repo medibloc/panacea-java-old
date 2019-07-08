@@ -2,13 +2,13 @@ apply plugin: 'java-library'
 
 ext {
     bintrayRepo = "panacea"
-    bintrayName = "org.medibloc.panacea.utils"
+    bintrayName = "org.medibloc.panacea.panacea-utils"
 
     libraryName = "panacea-utils"
 
     publishedGroupId = 'org.medibloc.panacea'
     artifact = 'panacea-utils'
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.2'
 
     libraryDescription = 'Official client-side Java library for the medibloc blockchain.'
     siteUrl = 'https://github.com/medibloc/panacea-java'
