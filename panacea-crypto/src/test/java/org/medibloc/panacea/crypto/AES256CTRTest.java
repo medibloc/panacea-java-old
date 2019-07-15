@@ -7,15 +7,15 @@ public class AES256CTRTest {
     @Test
     public void testDecryptData() throws Exception {
         String accessKey = "this is access key !";
-        String data = "hello medibloc!";
-        String encryptedData = "cc3ecbfc39c59fcab796d63458ff27fb:a32ae9c5c19068c6a3c90f57cc8662";
+        String data = "Hello 메디블록!";
+        String encryptedData = "def57dee8ad895d44924506e264dde6a:c589a3451b71e769777dd03e5121400b3d4525";
         assertEquals(data, AES256CTR.decryptData(accessKey, encryptedData));
     }
 
     @Test
     public void testEncryptAndDecryptData() throws Exception {
         String accessKey = "this is access key !";
-        String data = "hello medibloc!";
+        String data = "Hello 메디블록!";
         String encryptedData = AES256CTR.encryptData(accessKey, data);
         System.out.println("encryptedData: " + encryptedData);
         assertEquals(data, AES256CTR.decryptData(accessKey, encryptedData));
