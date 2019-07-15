@@ -29,7 +29,6 @@ public class AES256CTR {
                 , new SecretKeySpec(hashedAccessKey, "AES")
                 , new IvParameterSpec(iv));
 
-        System.out.println(Arrays.toString(data.getBytes()));
         byte[] cipherText = encryptionCipher.doFinal(data.getBytes());
 
         return Numeric.toHexStringNoPrefix(iv) + ":" + Numeric.toHexStringNoPrefix(cipherText);
@@ -50,9 +49,6 @@ public class AES256CTR {
         IvParameterSpec ivSpec = new IvParameterSpec(Numeric.hexStringToByteArray(ivString));
 
         cipher.init(Cipher.DECRYPT_MODE, skey, ivSpec);
-        byte[] output = cipher.doFinal(Numeric.hexStringToByteArray(encodedString));
-        System.out.println(Arrays.toString(output));
-
-        return output;
+        return cipher.doFinal(Numeric.hexStringToByteArray(encodedString));
     }
 }
