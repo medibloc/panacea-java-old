@@ -49,15 +49,15 @@ task uploadAll(type: Exec) {
 
 task uploadUtils(type: Exec) {
     commandLine "./gradlew"
-    args = ["utils:bintrayUpload"]
+    args = ["panacea-utils:bintrayUpload"]
 }
 
 task uploadCrypto(type: Exec) {
     commandLine "./gradlew"
-    args = ["crypto:bintrayUpload"]
+    args = ["panacea-crypto:bintrayUpload"]
 }
 
 task uploadCore(type: Exec) {
     commandLine "./gradlew"
-    args = ["core:bintrayUpload"]
+    args = ["panacea-core:bintrayUpload"]
 }

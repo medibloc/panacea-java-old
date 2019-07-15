@@ -12,6 +12,7 @@ import java.io.UnsupportedEncodingException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 
 public class AES256CTR {
     private static final int IV_SIZE = 16;
@@ -28,12 +29,13 @@ public class AES256CTR {
                 , new SecretKeySpec(hashedAccessKey, "AES")
                 , new IvParameterSpec(iv));
 
+        System.out.println(Arrays.toString(data.getBytes()));
         byte[] cipherText = encryptionCipher.doFinal(data.getBytes());
 
         return Numeric.toHexStringNoPrefix(iv) + ":" + Numeric.toHexStringNoPrefix(cipherText);
     }
 
-    public static String decryptData(String accessKey, String encryptedData)
+    public static byte[] decryptData(String accessKey, String encryptedData)
             throws NoSuchAlgorithmException, NoSuchPaddingException, UnsupportedEncodingException, InvalidKeyException,
             InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
         String[] parts = encryptedData.split(":");
@@ -49,7 +51,8 @@ public class AES256CTR {
 
         cipher.init(Cipher.DECRYPT_MODE, skey, ivSpec);
         byte[] output = cipher.doFinal(Numeric.hexStringToByteArray(encodedString));
+        System.out.println(Arrays.toString(output));
 
-        return new String(output);
+        return output;
     }
 }
