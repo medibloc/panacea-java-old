@@ -3,15 +3,11 @@ package org.medibloc.panacea.account;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.medibloc.panacea.crypto.CipherException;
 import org.medibloc.panacea.crypto.ECKeyPair;
 import org.medibloc.panacea.crypto.Keys;
-import org.medibloc.panacea.utils.Numeric;
 
 import java.io.File;
-import java.math.BigInteger;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -67,29 +63,7 @@ public class AccountUtils {
     }
 
     public static ECKeyPair getKeyPair(Account account, String password) throws Exception {
-        Account.Crypto crypto = account.getCrypto();
-
-        byte[] cipherText = Numeric.hexStringToByteArray(crypto.getCiphertext());
-        byte[] iv = Numeric.hexStringToByteArray(crypto.getCipherparams().getIv());
-        byte[] mac = Numeric.hexStringToByteArray(crypto.getMac());
-
-        byte[] derivedKey;
-        Account.KdfParams kdfParams = crypto.getKdfparams();
-        if (kdfParams instanceof Account.ScryptKdfParams) {
-            derivedKey = account.getDerivedKey(password, (Account.ScryptKdfParams)kdfParams);
-        } else {
-            throw new IllegalArgumentException("Unsupported kdf");
-        }
-
-        byte[] derivedMac = account.generateMac(derivedKey, cipherText);
-
-        if (!Arrays.equals(derivedMac, mac)) {
-            throw new CipherException("Invalid password provided");
-        }
-
-        byte[] encryptKey = Arrays.copyOfRange(derivedKey, 0, 16);
-        BigInteger privateKey = new BigInteger(1, Keys.decryptPrivateKey(cipherText, encryptKey, iv));
-        return new ECKeyPair(privateKey, Keys.getPublicKeyFromPrivatekey(privateKey));
+        return account.getKeyStore().getKeyPair(password);
     }
 
     private static void validatePassword(String password) {
