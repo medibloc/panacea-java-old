@@ -1,4 +1,4 @@
-package org.medibloc.panacea.keystore;
+package org.medibloc.panacea.key;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -12,7 +12,7 @@ import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.UUID;
 
-public class KeyStore {
+public class KeyHolder {
     private static final int CURRENT_VERSION = 3;
 
     private static final String AES_128_CTR = "aes-128-ctr";
@@ -35,11 +35,18 @@ public class KeyStore {
     private Crypto crypto; // = encryptedPrivKey in medjs
 
     /** Default constructor is used to deserialize JSON value. */
-    KeyStore() { }
+    public KeyHolder() { }
 
-    public KeyStore(String password, ECKeyPair ecKeyPair, KeyStoreOption keyStoreOption) throws CipherException {
-        setV3Settings(keyStoreOption);
-        generateCryptoValues(password, ecKeyPair, keyStoreOption);
+    public KeyHolder(String password, ECKeyPair ecKeyPair, KeyHolderOption keyHolderOption) throws CipherException {
+        if (keyHolderOption == null) {
+            keyHolderOption = new KeyHolderOption();
+        }
+
+        validatePassword(password);
+        Keys.validateECKeyPair(ecKeyPair);
+
+        setV3Settings(keyHolderOption);
+        generateCryptoValues(password, ecKeyPair, keyHolderOption);
     }
 
     public int getVersion() {
@@ -66,7 +73,19 @@ public class KeyStore {
         this.crypto = crypto;
     }
 
-    private void setV3Settings(KeyStoreOption option) {
+    private static void validatePassword(String password) {
+        if (password == null) {
+            throw new IllegalArgumentException("Password can not be null.");
+        }
+
+        if (password.isEmpty()) {
+            throw new IllegalArgumentException("Password can not be empty.");
+        }
+
+        // TODO - add validation
+    }
+
+    private void setV3Settings(KeyHolderOption option) {
         setVersion(CURRENT_VERSION);
 
         Crypto crypto = new Crypto();
@@ -92,7 +111,7 @@ public class KeyStore {
         setCrypto(crypto);
     }
 
-    private void generateCryptoValues(String password, ECKeyPair ecKeyPair, KeyStoreOption option) throws CipherException {
+    private void generateCryptoValues(String password, ECKeyPair ecKeyPair, KeyHolderOption option) throws CipherException {
         if (this.version == 0 || this.crypto == null || this.crypto.kdfparams == null) {
             throw new IllegalArgumentException("Account options was not set. Valid Crypto values should be set before call generateCryptoValues() method.");
         }
@@ -167,11 +186,11 @@ public class KeyStore {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof KeyStore)) {
+        if (!(o instanceof KeyHolder)) {
             return false;
         }
 
-        KeyStore that = (KeyStore) o;
+        KeyHolder that = (KeyHolder) o;
 
         if (getVersion() != that.getVersion()) {
             return false;

@@ -1,6 +1,6 @@
-package org.medibloc.panacea.keystore;
+package org.medibloc.panacea.key;
 
-public class KeyStoreOption {
+public class KeyHolderOption {
     private String uuid = null;
     private byte[] salt = null;
     private byte[] iv = null;

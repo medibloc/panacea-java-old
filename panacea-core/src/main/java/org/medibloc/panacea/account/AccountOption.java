@@ -1,15 +1,15 @@
 package org.medibloc.panacea.account;
 
-import org.medibloc.panacea.keystore.KeyStoreOption;
+import org.medibloc.panacea.key.KeyHolderOption;
 
 public class AccountOption {
-    private KeyStoreOption keyStoreOption;
+    private KeyHolderOption keyHolderOption;
 
-    public KeyStoreOption getKeyStoreOption() {
-        return keyStoreOption;
+    public KeyHolderOption getKeyStoreOption() {
+        return keyHolderOption;
     }
 
-    public void setKeyStoreOption(KeyStoreOption keyStoreOption) {
-        this.keyStoreOption = keyStoreOption;
+    public void setKeyStoreOption(KeyHolderOption keyHolderOption) {
+        this.keyHolderOption = keyHolderOption;
     }
 }
